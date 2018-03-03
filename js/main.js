@@ -15,10 +15,12 @@ function u(n,r){return(n=Math.floor(n))+" "+r+(1==n?"":"s")+", "}return t%=60,o%
 		document.getElementById('label').innerHTML = "The Button was last clicked <strong>"+x(lastPress.t)+"</strong> by <strong>"+cleanse(lastPress.u)+"</strong>"
 	},10);
 	document.getElementById('TheButton').onclick = function(event) {
+		if(username!=lastPress.u) {
 		firebase.database().ref("/button/").set({t: Date.now(),u:username});
 		gtag('event', 'ButtonPressed', {
   		'event_category': 'engagement',
   		'event_label': username
 		});
+		}
 	};
 }
