@@ -16,5 +16,9 @@ function u(n,r){return(n=Math.floor(n))+" "+r+(1==n?"":"s")+", "}return t%=60,o%
 	},10);
 	document.getElementById('TheButton').onclick = function(event) {
 		firebase.database().ref("/button/").set({t: Date.now(),u:username});
+		gtag('event', 'ButtonPressed', {
+  		'event_category': 'engagement',
+  		'event_label': username
+		});
 	};
 }
