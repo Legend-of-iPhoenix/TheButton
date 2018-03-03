@@ -1,7 +1,7 @@
 var lastPress;
 window.onload = function() {
 	var username = false;
-	while (!username && username.length > 32) {
+	while (!username || username.length > 32) {
 		username = prompt("Username: ");
 	}
 	var cleanse = x=>{var d=document.createElement('p');d.innerText=x;return d.innerHTML}
