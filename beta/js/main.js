@@ -22,8 +22,12 @@ function j(user, error) {
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
-    document.body.innerHTML = '<button id="TheButton" style="width: 20%; height: 10vh; border-radius: 2px; font-size: 20pt;">Click me.</button><p id="label"></p>';
-    ready();
+    if (user.photoURL == "https://legend-of-iphoenix.github.io/TheButton/img/authenticated.png") {
+      document.body.innerHTML = '<button id="TheButton" style="width: 20%; height: 10vh; border-radius: 2px; font-size: 20pt;">Click me.</button><p id="label"></p>';
+      ready();
+    } else {
+      j(user);
+    }
   } else {
     // No user is signed in.
   }
@@ -91,6 +95,6 @@ ui.start('#firebaseui-auth-container', {
   // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
   signInFlow: 'popup',
   signInOptions: [
-    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-  ],
+    firebase.auth.GoogleAuthProvider.PROVIDER_ID
+  ]
 });
