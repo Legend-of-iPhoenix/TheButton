@@ -43,7 +43,7 @@ function ready() {
   firebase.database().ref("/button/latest/").on('value', function (snapshot) {
     lastPress = snapshot.val();
   });
-  document.getElementById("TheButton").click = x=>console.log("Abuse is not tolerated.");
+  document.getElementById("TheButton").click=x=>console.log("Abuse is not tolerated.");
   //some code I've used before to format timestamps.
   setInterval(function () {
     var x = n => {
@@ -81,9 +81,9 @@ function ready() {
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 ui.start('#firebaseui-auth-container', {
   callbacks: {
-    signInSuccess: function(currentUser) {
-      if (result.user.photoURL !== "https://legend-of-iphoenix.github.io/TheButton/img/authenticated.png") {
-        j(result.user);
+    signInSuccess: function(user) {
+      if (user.photoURL !== "https://legend-of-iphoenix.github.io/TheButton/img/authenticated.png") {
+        j(.user);
       } else {
         document.body.innerHTML = '<button id="TheButton" style="width: 20%; height: 10vh; border-radius: 2px; font-size: 20pt;">Click me.</button><p id="label"></p>';
       }
@@ -97,5 +97,6 @@ ui.start('#firebaseui-auth-container', {
   signInFlow: 'popup',
   signInOptions: [
     firebase.auth.GoogleAuthProvider.PROVIDER_ID
-  ]
+  ],
+  tosURL = "https://legend-of-iphoenix.github.io/TheButton/terms.txt";
 });
