@@ -2,7 +2,7 @@ var lastPress;
 
 function j(user, error) {
   var nextName = prompt("Please select a username: " + (error || ""));
-  if (/^\w{1,32}$/.test(nextName)) {
+  if (/^\w{1,32}$/.test(nextName) && nextName) {
     firebase.database().ref("/button/users/" + nextName).transaction(function (data) {
       if (data) {
         j(user, "Username is already in use.")
