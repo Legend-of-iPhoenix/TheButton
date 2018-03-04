@@ -77,9 +77,9 @@ function ready() {
     snapshot.forEach(function(childSnapshot) {
       scores.innerHTML+="<tr><td>"+cleanse(childSnapshot.key)+"</td><td>"+x(childSnapshot.val())+"</td></tr>"
     });
-    scores.innerHTML += "<tr><th>Username</th><th>Time</th></tr>"
     //reverse ordering of elements
     (e=>{for(var d=0;d<e.childNodes.length;d++)e.insertBefore(e.childNodes[d],e.firstChild)})(document.getElementById("highscores"));
+    scores.innerHTML = "<tr><th>Username</th><th>Time</th></tr>" + scores.innerHTML;
   });
   document.getElementById("TheButton").click=x=>console.log("Abuse is not tolerated.");
   document.getElementById("TheButton").onfocus=x=>document.getElementById("TheButton").blur();
