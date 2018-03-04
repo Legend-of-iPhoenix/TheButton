@@ -7,12 +7,12 @@ function j(user, error) {
       if (data) {
         j(user, "Username is already in use.")
       } else {
-      	firebase.auth().currentUser.updateProfile({
-			  	displayName: nextName,
-			  	photoURL: "https://legend-of-iphoenix.github.io/TheButton/img/authenticated.png"
-				});
-				document.body.innerHTML = '<button id="TheButton" style="width: 20%; height: 10vh; border-radius: 2px; font-size: 20pt;">Click me.</button><p id="label"></p>';
-       	return 0;
+        firebase.auth().currentUser.updateProfile({
+          displayName: nextName,
+          photoURL: "https://legend-of-iphoenix.github.io/TheButton/img/authenticated.png"
+        });
+        document.body.innerHTML = '<button id="TheButton" style="width: 20%; height: 10vh; border-radius: 2px; font-size: 20pt;">Click me.</button><p id="label"></p>';
+        return 0;
       }
     });
   } else {
@@ -29,10 +29,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 });
 
 function ready() {
-  var username = false;
-  while (!username || username.length > 32) {
-    username = prompt("Username: ");
-  }
+  var username = firebase.auth().currentUser.displayName;
   var cleanse = x => {
     var d = document.createElement('p');
     d.innerText = x;
@@ -80,10 +77,10 @@ ui.start('#firebaseui-auth-container', {
   callbacks: {
     signInSuccess: function(currentUser) {
       if (result.user.photoURL !== "https://legend-of-iphoenix.github.io/TheButton/img/authenticated.png") {
-  			j(result.user);
-  		} else {
-  			document.body.innerHTML = '<button id="TheButton" style="width: 20%; height: 10vh; border-radius: 2px; font-size: 20pt;">Click me.</button><p id="label"></p>';
-  		}
+        j(result.user);
+      } else {
+        document.body.innerHTML = '<button id="TheButton" style="width: 20%; height: 10vh; border-radius: 2px; font-size: 20pt;">Click me.</button><p id="label"></p>';
+      }
     },
     uiShown: function() {
       // Hide the loader.
