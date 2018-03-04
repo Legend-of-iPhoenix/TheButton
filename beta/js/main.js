@@ -43,6 +43,7 @@ function ready() {
   firebase.database().ref("/button/latest/").on('value', function (snapshot) {
     lastPress = snapshot.val();
   });
+  document.getElementById("TheButton").click = x=>console.log("Abuse is not tolerated.");
   //some code I've used before to format timestamps.
   setInterval(function () {
     var x = n => {
