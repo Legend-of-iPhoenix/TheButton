@@ -98,5 +98,5 @@ ui.start('#firebaseui-auth-container', {
   signInOptions: [
     firebase.auth.GoogleAuthProvider.PROVIDER_ID
   ],
-  tosURL = "https://legend-of-iphoenix.github.io/TheButton/terms.txt";
+  tosURL: "https://legend-of-iphoenix.github.io/TheButton/terms.txt"
 });
