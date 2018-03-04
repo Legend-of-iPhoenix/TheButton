@@ -36,7 +36,7 @@ function ready() {
     d.innerText = x;
     return d.innerHTML
   }
-  firebase.database().ref("/button/").on('value', function (snapshot) {
+  firebase.database().ref("/button/latest/").on('value', function (snapshot) {
     lastPress = snapshot.val();
   });
   //some code I've used before to format timestamps.
@@ -62,7 +62,7 @@ function ready() {
       ts += Date.now() - lastPress.t;
       return ts;
     }).then(function () {
-      firebase.database().ref("/button/").set({
+      firebase.database().ref("/button/latest/").set({
         t: Date.now(),
         u: username
       });
