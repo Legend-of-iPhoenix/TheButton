@@ -57,7 +57,7 @@ function ready() {
     }
     document.getElementById('label').innerHTML = "The Button was last clicked <strong>" + x(lastPress.t) + "</strong> by <strong>" + cleanse(lastPress.u) + "</strong>"
   }, 100);
-  firebase.database().ref("/button/users/").orderByValue().limitToLast(10).on('value',function(snapshot) {
+  firebase.database().ref("/button/users/").orderByValue().limitToLast(5).on('value',function(snapshot) {
     var scores = document.getElementById("highscores");
     scores.innerHTML = "";
     var x = n => {
