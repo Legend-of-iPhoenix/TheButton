@@ -69,11 +69,11 @@ function ready() {
     }).then(function () {
       firebase.database().ref("/button/latest/").set({
         t: Date.now(),
-        u: username
+        u: firebase.auth().currentUser.displayName
       });
       gtag('event', 'ButtonPressed', {
         'event_category': 'engagement',
-        'event_label': username
+        'event_label': firebase.auth().currentUser.displayName
       });
     });
   }
