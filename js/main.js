@@ -5,7 +5,7 @@ window.onload = function() {
 		username = prompt("Username: ");
 	}
 	var cleanse = x=>{var d=document.createElement('p');d.innerText=x;return d.innerHTML}
-	firebase.database().ref("/button/").on('value',function(snapshot) {
+	firebase.database().ref("/button/latest/").on('value',function(snapshot) {
 		lastPress = snapshot.val();
 	});
 	//some code I've used before to format timestamps.
@@ -16,7 +16,7 @@ function u(n,r){return(n=Math.floor(n))+" "+r+(1==n?"":"s")+", "}return t%=60,o%
 	},10);
 	document.getElementById('TheButton').onclick = function(event) {
 		if(username!=lastPress.u) {
-		firebase.database().ref("/button/").set({t: Date.now(),u:username});
+		firebase.database().ref("/button/latest/").set({t: Date.now(),u:username});
 		gtag('event', 'ButtonPressed', {
   		'event_category': 'engagement',
   		'event_label': username
