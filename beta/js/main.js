@@ -22,6 +22,7 @@ function j(user, error) {
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
+    document.body.innerHTML = '<button id="TheButton" style="width: 20%; height: 10vh; border-radius: 2px; font-size: 20pt;">Click me.</button><p id="label"></p>';
     ready();
   } else {
     // No user is signed in.
