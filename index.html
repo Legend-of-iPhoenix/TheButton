@@ -7,11 +7,14 @@
 <script>
 firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDomain:"demos-and-stuff.firebaseapp.com",databaseURL:"https://demos-and-stuff.firebaseio.com",projectId:"demos-and-stuff",storageBucket:"demos-and-stuff.appspot.com",messagingSenderId:"66793199620"})
 </script>
+	<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
 	<script type="text/javascript" src="js/main.js"></script>
-
 </head>
 <body>
-	<button id="TheButton" style="width: 20%; height: 10vh; border-radius: 2px; font-size: 20pt;">Click me.</button>
-	<p id="label"></p>
+	<p> TheButton is a King-of-the-Hill-esque game where the username of the last person to click a button is broadcast to everyone.</p>
+	<p> To join in on the fun, you can register or sign in with Google.</p>
+	<div id="firebaseui-auth-container"></div>
+	<div id="loading-auth">Loading authentication scripts...</div>
 </body>
 </html>
