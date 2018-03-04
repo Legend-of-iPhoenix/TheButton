@@ -42,7 +42,7 @@ function ready() {
   });
   setInterval(function () {
     var x = n => {
-      if ((n = Date.now() - n) > 0) {
+      if ((n = firebase.database.ServerValue.TIMESTAMP - n) > 0) {
         var r = n / 1e3,
           t = r / 60,
           o = t / 60,
@@ -86,11 +86,11 @@ function ready() {
   document.getElementById('TheButton').onclick = function (event) {
     if (firebase.auth().currentUser.displayName != lastPress.u) {
       firebase.database().ref("/button/users/" + lastPress.u).transaction(function (ts) {
-        ts += Date.now() - lastPress.t;
+        ts += firebase.database.ServerValue.TIMESTAMP - lastPress.t;
         return ts;
       }).then(function () {
         firebase.database().ref("/button/latest/").set({
-          t: Date.now(),
+          t: firebase.database.ServerValue.TIMESTAMP,
           u: firebase.auth().currentUser.displayName
         });
         gtag('event', 'ButtonPressed', {
