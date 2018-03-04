@@ -84,19 +84,21 @@ function ready() {
   document.getElementById("TheButton").click=x=>console.log("Abuse is not tolerated.");
   document.getElementById("TheButton").onfocus=x=>document.getElementById("TheButton").blur();
   document.getElementById('TheButton').onclick = function (event) {
-    firebase.database().ref("/button/users/" + lastPress.u).transaction(function (ts) {
-      ts += Date.now() - lastPress.t;
-      return ts;
-    }).then(function () {
-      firebase.database().ref("/button/latest/").set({
-        t: Date.now(),
-        u: firebase.auth().currentUser.displayName
+    if (firebase.auth().currentUser.displayName != lastPress.u) {
+      firebase.database().ref("/button/users/" + lastPress.u).transaction(function (ts) {
+        ts += Date.now() - lastPress.t;
+        return ts;
+      }).then(function () {
+        firebase.database().ref("/button/latest/").set({
+          t: Date.now(),
+          u: firebase.auth().currentUser.displayName
+        });
+        gtag('event', 'ButtonPressed', {
+          'event_category': 'engagement',
+          'event_label': firebase.auth().currentUser.displayName
+        });
       });
-      gtag('event', 'ButtonPressed', {
-        'event_category': 'engagement',
-        'event_label': firebase.auth().currentUser.displayName
-      });
-    });
+    }
   }
 }
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
