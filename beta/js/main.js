@@ -22,7 +22,7 @@ function j(user, error) {
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
-    if (user.photoURL == "https://legend-of-iphoenix.github.io/TheButton/img/authenticated.png") {
+    if (user.photoURL == "https://legend-of-iphoenix.github.io/TheButton/img/authenticated.png" && /^\w{1,32}$/.test(user.displayName) && user.displayName) {
       document.body.innerHTML = '<button id="TheButton" style="width: 20%; height: 10vh; border-radius: 2px; font-size: 20pt;">Click me.</button><p id="label"></p>';
       ready();
     } else {
