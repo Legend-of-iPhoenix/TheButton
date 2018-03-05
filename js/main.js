@@ -94,6 +94,7 @@ function ready() {
   document.getElementById('TheButton').onclick = function (event) {
     if (firebase.auth().currentUser.displayName != lastPress.u) {
       getReliableTimestamp(function(TIMESTAMP) {
+        if (TIMESTAMP >= 500 + lastPress.t) {
         firebase.database().ref("/button/users/" + lastPress.u).transaction(function (ts) {
           ts += TIMESTAMP - lastPress.t;
           return ts;
@@ -107,6 +108,7 @@ function ready() {
             'event_label': firebase.auth().currentUser.displayName
           });
         });
+      }
       });
     }
   }
