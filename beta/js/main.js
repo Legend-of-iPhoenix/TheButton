@@ -1,4 +1,13 @@
 var lastPress;
+/*
+function getReliableTimestamp(callback) {
+  firebase.database().ref("/button/temp/"+firebase.auth().currentUser.displayName).set(firebase.database.ServerValue.TIMESTAMP).then(function() {
+    firebase.database().ref("/button/temp/"+firebase.auth().currentUser.displayName).once('value').then(function(snapshot) {
+      callback(snapshot.val());
+    }
+  }
+}
+*/
 
 function j(user, error) {
   var nextName = prompt("Please select a username: " + (error || ""));
