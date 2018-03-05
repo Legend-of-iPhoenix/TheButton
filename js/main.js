@@ -32,6 +32,13 @@ firebase.auth().onAuthStateChanged(function (user) {
 });
 
 function ready() {
+  function getReliableTimestamp(callback) {
+    firebase.database().ref("/button/temp/"+firebase.auth().currentUser.displayName).set(firebase.database.ServerValue.TIMESTAMP).then(function() {
+      firebase.database().ref("/button/temp/"+firebase.auth().currentUser.displayName).once('value').then(function(snapshot) {
+        callback(snapshot.val());
+      });
+    });
+  }
   var cleanse = x => {
     var d = document.createElement('p');
     d.innerText = x;
@@ -85,17 +92,19 @@ function ready() {
   document.getElementById("TheButton").onfocus=x=>document.getElementById("TheButton").blur();
   document.getElementById('TheButton').onclick = function (event) {
     if (firebase.auth().currentUser.displayName != lastPress.u) {
-      firebase.database().ref("/button/users/" + lastPress.u).transaction(function (ts) {
-        ts += Date.now() - lastPress.t;
-        return ts;
-      }).then(function () {
-        firebase.database().ref("/button/latest/").set({
-          t: Date.now(),
-          u: firebase.auth().currentUser.displayName
-        });
-        gtag('event', 'ButtonPressed', {
-          'event_category': 'engagement',
-          'event_label': firebase.auth().currentUser.displayName
+      getReliableTimestamp(function(TIMESTAMP) {
+        firebase.database().ref("/button/users/" + lastPress.u).transaction(function (ts) {
+          ts += TIMESTAMP - lastPress.t;
+          return ts;
+        }).then(function () {
+          firebase.database().ref("/button/latest/").set({
+            t: TIMESTAMP,
+            u: firebase.auth().currentUser.displayName
+          });
+          gtag('event', 'ButtonPressed', {
+            'event_category': 'engagement',
+            'event_label': firebase.auth().currentUser.displayName
+          });
         });
       });
     }
