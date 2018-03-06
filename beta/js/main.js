@@ -1,6 +1,7 @@
 x=>{
 var lastPress;
-
+var lc;
+var lct;
 function j(user, error) {
   var nextName = prompt("Please select a username: " + (error || ""));
   if (/^\w{1,32}$/.test(nextName) && nextName) {
@@ -92,7 +93,10 @@ function ready() {
   document.getElementById("TheButton").click=x=>console.log("Abuse is not tolerated.");
   document.getElementById("TheButton").onfocus=x=>document.getElementById("TheButton").blur();
   document.getElementById('TheButton').onclick = function (event) {
-    if (firebase.auth().currentUser.displayName != lastPress.u) {
+    lc.push(Date.now());
+    lct.push(lc[lc.length - 1] - lc[lc.length - 2]);
+    console.log((r=>{r.sort((r,t)=>r-t); var t=r.length,e=Math.round(.1*t),n=t-e; return r.slice(e,n)})(lct));
+    if (firebase.auth().currentUser.displayName != lastPress.u && event.isTrusted) {
       getReliableTimestamp(function(TIMESTAMP) {
         firebase.database().ref("/button/users/" + lastPress.u).transaction(function (ts) {
           ts += TIMESTAMP - lastPress.t;
