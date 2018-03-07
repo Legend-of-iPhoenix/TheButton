@@ -10,4 +10,5 @@ You are trying to get the highest time you can in total. When you click, a clock
 Abuse is not tolerated. You may not use any form of cheating totry to get you a better score. Something that is not allowed is an auto-clicker (Defined as a script that clicks faster than you can, or anything that clicks while you're away). If you find something else that can help people cheat, please report it to \_iPhoenix\_ via Cemetech PM or IRC. 
 
 ## Credits
-\_iPhoenix\_ made this whole thing and fixed most, if not all, of the bugs reported so far. 
+- \_iPhoenix\_ made this whole thing and fixed most, if not all, of the bugs reported so far. 
+- jcgter777 helped expand the README file, and helped \_iPhoenix\_ fix several bugs.
