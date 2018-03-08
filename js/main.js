@@ -1,5 +1,5 @@
 (x=>{
-var lastPress;
+var lastPress,lu;
 
 function j(user, error) {
   var nextName = prompt("Please select a username: " + (error || ""));
@@ -24,6 +24,13 @@ function j(user, error) {
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     if (user.photoURL == "https://legend-of-iphoenix.github.io/TheButton/img/authenticated.png" && /^\w{1,32}$/.test(user.displayName) && user.displayName) {
+      if (user.displayName !== lu) {
+        gtag('event', 'UserEvent', {
+            'event_category': 'general',
+            'event_label': lu + " -> " + user.displayName
+          });
+        lu = user.displayName;
+      }
       document.body.innerHTML = '<button id="TheButton" style="width: 20%; height: 10vh; border-radius: 2px; font-size: 20pt;">Click me.</button><p id="label"></p><table id="highscores"><tr><th>Username</th><th>Time</th></tr></table>';
       ready();
     } else {
