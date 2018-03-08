@@ -5,6 +5,15 @@
 
 body {
   background-color: #aaa;
-  padding: 0 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
   border: 5px solid black;
+}
+
+table#highscores {
+  padding-top: 10px;
+}
+
+table#highscores th:first-child,
+table#highscores td:first-child {
+  padding-right: 2ex;
 }
