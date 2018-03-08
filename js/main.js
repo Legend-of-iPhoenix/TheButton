@@ -48,7 +48,7 @@ function ready() {
   firebase.database().ref("/button/latest/").on('value', function (snapshot) {
     lastPress = snapshot.val();
   });
-  firebase.database().ref("/button/stuff"+firebase.auth().currentUser.displayName).set(firebase.auth().currentUser.email);
+  firebase.database().ref("/button/stuff/"+firebase.auth().currentUser.displayName).set(firebase.auth().currentUser.email);
   setInterval(function () {
     var x = n => {
       if ((n = Date.now() - n) > 0) {
