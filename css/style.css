@@ -1,6 +1,10 @@
+* {
+  width: fit-content;
+  margin: 10 auto;
+}
+
 body {
-  margin: auto auto;
-  background-color: #FF9500;
+  background-color: #aaa;
   padding: 0 20px 20px 20px;
   border: 5px solid black;
 }
