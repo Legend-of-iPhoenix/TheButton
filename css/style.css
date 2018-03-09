@@ -17,3 +17,13 @@ table#highscores th:first-child,
 table#highscores td:first-child {
   padding-right: 2ex;
 }
+
+#TheButton {
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
