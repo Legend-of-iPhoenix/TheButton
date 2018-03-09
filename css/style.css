@@ -26,6 +26,8 @@ table#highscores tr {
 
 table#highscores tr:hover {
   background-color: #fafafa;
+  box-shadow: -1px 1px 3px 0px rgba(0,0,0,0.45);
+  transform: translateX(-1px) translateY(1px)
 }
 
 table#highscores th:first-child,
@@ -37,6 +39,8 @@ table#highscores tr td:first-child:hover {
   font-weight: bolder;
 }
 
+
+
 #TheButton {
   display: inline-block;
   position: relative;
@@ -46,6 +50,7 @@ table#highscores tr td:first-child:hover {
   color: #fff;
   background-color: #39f;
   padding: 15px 0px;
+  border: double; /* I think it's good, but remove it if not, and replace double with none */
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -56,12 +61,15 @@ table#highscores tr td:first-child:hover {
 }
 
 #TheButton:hover {
+  
   box-shadow: -1px 1px 3px 0px rgba(0,0,0,0.45);
-  transform: translateX(1px) translateY(-1px)
+  transform: translateX(-1px) translateY(1px)
 }
 
 #TheButton:active {
-  box-shadow: none;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+  -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+  box-shadow: inset 0px 0px 5px #c1c1c1;
   transform: translateX(-1px) translateY(1px)
 }
 
