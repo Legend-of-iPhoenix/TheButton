@@ -34,7 +34,7 @@ table#highscores td:first-child {
   border: none;
   color: #fff;
   background-color: #39f;
-  padding-left: 20px; padding-right: 20px;
+  padding: 18px 45px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
