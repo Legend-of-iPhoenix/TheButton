@@ -4,13 +4,20 @@
 }
 
 body {
-  background-color: #eee;
-  padding: 20px 20px 20px 20px;
-  border: 2px solid black;
+  background-color: #fff;
+  padding: 20px;
 }
 
 table#highscores {
   padding-top: 10px;
+}
+
+table#highscores tr {
+  transition: all .1s;
+}
+
+table#highscores tr:hover {
+  background-color: #fafafa;
 }
 
 table#highscores th:first-child,
@@ -19,11 +26,23 @@ table#highscores td:first-child {
 }
 
 #TheButton {
+  display: block;
+  position: relative;
+  left: 40%;
+  width: 20%;
+  transition: all .1s;
   border: none;
-  color: black;
+  color: #fff;
+  background-color: #39f;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  margin: 20px;
+}
+
+#TheButton:hover {
+  box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.45);
+  transform: translateX(1px) translateY(-1px)
 }
