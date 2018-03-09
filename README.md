@@ -12,3 +12,4 @@ Abuse is not tolerated. You may not use any form of cheating to try to get you a
 ## Credits
 - \_iPhoenix\_ made this whole thing and fixed most, if not all, of the bugs reported so far. 
 - jcgter777 helped expand the README file, and helped \_iPhoenix\_ fix several bugs.
+- tev (ticalc-travis) helped jcgter777 with a lot of css stuff. 
