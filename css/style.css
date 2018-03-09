@@ -80,3 +80,7 @@ p#label {
 /*.rainbow {
   #TheButton
 } // I need help with this, and google is not helping. */
+
+/*.highscores:before {
+  content: "1-5"
+} //I also need help with this. */
