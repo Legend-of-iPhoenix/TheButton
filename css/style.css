@@ -31,10 +31,11 @@ table#highscores td:first-child {
   left: 40%;
   width: 20%;
   transition: all .1s;
-  border: none;
+  border-color: #000;
+  border: groove;
   color: #fff;
   background-color: #39f;
-  padding: 15px 1px;
+  padding: 15px 0px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
