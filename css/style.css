@@ -46,3 +46,7 @@ table#highscores td:first-child {
   box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.45);
   transform: translateX(1px) translateY(-1px)
 }
+
+p#label { 
+  text-align: center; 
+}
