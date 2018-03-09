@@ -13,6 +13,6 @@ Abuse is not tolerated. You may not use any form of cheating to try to get you a
 As this is still in development, there may still be bugs. If you find one, please make a GitHub issue.
 
 ## Credits
-- \_iPhoenix\_ made this whole thing, did a bit of styling, and fixed most, if not all, of the bugs reported so far. 
+- \_iPhoenix\_ (Legend-of-iPhoenix) made this whole thing, did a bit of styling, and fixed most, if not all, of the bugs reported so far. 
 - jcgter777 helped expand the README file, style with CSS, and helped \_iPhoenix\_ fix several bugs.
 - tev (ticalc-travis) helped jcgter777 with a lot of css stuff. 
