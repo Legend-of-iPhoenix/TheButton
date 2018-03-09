@@ -22,7 +22,7 @@ table#highscores tr:hover {
 
 table#highscores th:first-child,
 table#highscores td:first-child {
-  padding-right: 2ex;
+  padding-right: 2px;
 }
 
 #TheButton {
@@ -50,7 +50,7 @@ table#highscores td:first-child {
   transform: translateX(1px) translateY(-1px)
 }
 
-#TheButton:click {
+#TheButton:active {
   box-shadow: -1px -1px -3px 0px rgba(0,0,0,0.45);
   transform: translateX(-1px) translateY(1px)
 }
