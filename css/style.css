@@ -33,6 +33,10 @@ table#highscores td:first-child {
   padding-right: 2px;
 }
 
+table#highscores tr td:first-child:hover {
+  font-weight: bolder;
+}
+
 #TheButton {
   display: inline-block;
   position: relative;
