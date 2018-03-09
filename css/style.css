@@ -42,6 +42,7 @@ table#highscores td:first-child {
   font-size: 16px;
   margin: 20px;
   border-radius: 20px;
+  cursor: pointer;
 }
 
 #TheButton:hover {
