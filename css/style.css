@@ -34,7 +34,7 @@ table#highscores td:first-child {
   border: none;
   color: #fff;
   background-color: #39f;
-  padding: 18px 45px;
+  padding: 20px 50px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -45,6 +45,10 @@ table#highscores td:first-child {
 #TheButton:hover {
   box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.45);
   transform: translateX(1px) translateY(-1px)
+}
+
+#TheButton:click {
+  display: inline-block;
 }
 
 p#label { 
