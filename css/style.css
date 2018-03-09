@@ -22,29 +22,37 @@ table#highscores tr:hover {
 
 table#highscores th:first-child,
 table#highscores td:first-child {
-  padding-right: 2ex;
+  padding-right: 2px;
 }
 
 #TheButton {
   display: inline-block;
   position: relative;
-  left: 40%;
-  width: 20%;
+  left: 30%;
+  width: 40%;
   transition: all .1s;
-  border: none;
+  border-color: #000;
+  border: groove;
   color: #fff;
   background-color: #39f;
-  padding: 15px 32px;
+  padding: 15px 0px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 20px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 #TheButton:hover {
   box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.45);
   transform: translateX(1px) translateY(-1px)
+}
+
+#TheButton:active {
+  box-shadow: -1px -1px -3px 0px rgba(0,0,0,0.45);
+  transform: translateX(-1px) translateY(1px)
 }
 
 p#label { 
