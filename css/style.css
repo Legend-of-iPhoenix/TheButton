@@ -26,7 +26,7 @@ table#highscores td:first-child {
 }
 
 #TheButton {
-  display: block;
+  display: inline-block;
   position: relative;
   left: 40%;
   width: 20%;
