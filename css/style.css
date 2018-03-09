@@ -41,6 +41,7 @@ table#highscores td:first-child {
   display: inline-block;
   font-size: 16px;
   margin: 20px;
+  border-radius: 20px; // maybe, maybe not
 }
 
 #TheButton:hover {
