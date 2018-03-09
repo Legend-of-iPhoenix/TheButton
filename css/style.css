@@ -3,9 +3,17 @@
   margin: auto auto;
 }
 
+html {
+  margin: 0 0;
+}
+
 body {
+  width: 100%;
+  position: fixed;
+  margin: auto auto;
+  padding: 0;
   background-color: #fff;
-  padding: 20px;
+  padding-top: 20px;
 }
 
 table#highscores {
@@ -31,8 +39,6 @@ table#highscores td:first-child {
   left: 30%;
   width: 40%;
   transition: all .1s;
-  border-color: #000;
-  border: groove;
   color: #fff;
   background-color: #39f;
   padding: 15px 0px;
@@ -41,17 +47,17 @@ table#highscores td:first-child {
   display: inline-block;
   font-size: 16px;
   margin: 20px;
-  border-radius: 20px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 #TheButton:hover {
-  box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.45);
+  box-shadow: -1px 1px 3px 0px rgba(0,0,0,0.45);
   transform: translateX(1px) translateY(-1px)
 }
 
 #TheButton:active {
-  box-shadow: -1px -1px -3px 0px rgba(0,0,0,0.45);
+  box-shadow: none;
   transform: translateX(-1px) translateY(1px)
 }
 
