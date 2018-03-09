@@ -12,7 +12,7 @@ function j(user, error) {
           displayName: nextName,
           photoURL: "https://legend-of-iphoenix.github.io/TheButton/img/authenticated.png"
         });
-        document.body.innerHTML = '<button id="TheButton" style="width: 20%; height: 10vh; border-radius: 2px; font-size: 20pt;">Click me.</button><p id="label"></p><table id="highscores"><tr><th>Username</th><th>Time</th></tr></table>';
+        document.body.innerHTML = '<div class="button-center"><button id="TheButton" style="width: 20%; height: 10vh; border-radius: 2px; font-size: 20pt;">Click me.</button></div><p id="label"></p><table id="highscores"><tr><th>Username</th><th>Time</th></tr></table>';
         return 0;
       }
     }).then(ready);
