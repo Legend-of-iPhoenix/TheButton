@@ -128,7 +128,7 @@ ui.start('#firebaseui-auth-container', {
       if (user.photoURL !== "https://legend-of-iphoenix.github.io/TheButton/img/authenticated.png") {
         j(user);
       } else {
-        document.body.innerHTML = '<button id="TheButton">Click me.</button><p id="label"></p><table id="highscores"><tr><th>Username</th><th>Time</th></tr></table>' document.body.innerHTML = '<button id="ToggleHCM">Toggle High Contrast Mode</button>;
+        document.body.innerHTML = '<button id="TheButton">Click me.</button><p id="label"></p><table id="highscores"><tr><th>Username</th><th>Time</th></tr></table><br><button id="ToggleHCM">Toggle High Contrast Mode</button>';
       }
     },
     uiShown: function() {
