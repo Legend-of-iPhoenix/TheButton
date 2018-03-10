@@ -1,6 +1,17 @@
 * {
+  font-family: 'Oswald', sans-serif;
   width: fit-content;
   margin: auto auto;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.visible {
+  display: block;
+  visibility: visible;
 }
 
 html {
@@ -46,6 +57,7 @@ table#highscores tr td:first-child:hover {
   color: #fff;
   background-color: #39f;
   padding: 15px 0px;
+  border: none;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -56,8 +68,9 @@ table#highscores tr td:first-child:hover {
 }
 
 #TheButton:hover {
+  
   box-shadow: -1px 1px 3px 0px rgba(0,0,0,0.45);
-  transform: translateX(1px) translateY(-1px)
+  transform: translateX(-1px) translateY(1px)
 }
 
 #TheButton:active {
