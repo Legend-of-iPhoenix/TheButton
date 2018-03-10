@@ -32,8 +32,9 @@ div#main-div {
 }
 
 table#highscores {
+  border: 
   background-color: #fafafa;
-  padding-top: 10px;
+  margin-top: 10px;
 }
 
 table#highscores tr {
@@ -46,6 +47,10 @@ table#highscores td {
 
 table#highscores tr:hover {
   background-color: #eee;
+}
+
+table#highscores th {
+  border-bottom: 1px solid black;
 }
 
 table#highscores th:first-child,
