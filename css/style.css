@@ -46,6 +46,8 @@ table#highscores td {
 
 table#highscores tr:hover {
   background-color: #eee;
+  font-weight: bolder;
+  cursor: pointer;
 }
 
 table#highscores th:first-child,
