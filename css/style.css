@@ -27,12 +27,20 @@ body {
   padding-top: 20px;
 }
 
+div#main-div {
+  text-align: center;
+}
+
 table#highscores {
   padding-top: 10px;
 }
 
 table#highscores tr {
   transition: all .1s;
+}
+
+table#highscores td {
+  text-align: left;
 }
 
 table#highscores tr:hover {
@@ -49,10 +57,7 @@ table#highscores tr td:first-child:hover {
 }
 
 #TheButton {
-  display: inline-block;
-  position: relative;
-  left: 30%;
-  width: 40%;
+  width: 400px;
   transition: all .1s;
   color: #fff;
   background-color: #39f;
@@ -60,7 +65,6 @@ table#highscores tr td:first-child:hover {
   border: none;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
   margin: 20px;
   border-radius: 5px;
@@ -78,8 +82,12 @@ table#highscores tr td:first-child:hover {
   transform: translateX(-1px) translateY(1px)
 }
 
-p#label { 
+p {
   text-align: center; 
+}
+
+p#about {
+  margin-top: 20px;
 }
 
 strong {
