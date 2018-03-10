@@ -12,13 +12,17 @@ function j(user, error) {
           displayName: nextName,
           photoURL: "https://legend-of-iphoenix.github.io/TheButton/img/authenticated.png"
         });
-        document.body.innerHTML = '<button id="TheButton">Click me.</button><p id="label"></p><table id="highscores"><tr><th>Username</th><th>Time</th></tr></table>';
+        go();
         return 0;
       }
     }).then(ready);
   } else {
     j(user, "Invalid username! Usernames can only contain up to 32 letters, numbers, or underscores.");
   }
+}
+function go() {
+  document.getElementById('main-div').classList = 'visible';
+  document.getElementById('login-div').classList = 'hidden';
 }
 
 firebase.auth().onAuthStateChanged(function (user) {
@@ -31,7 +35,7 @@ firebase.auth().onAuthStateChanged(function (user) {
           });
         lu = user.displayName;
       }
-      document.body.innerHTML = '<button id="TheButton">Click me.</button><p id="label"></p><table id="highscores"><tr><th>Username</th><th>Time</th></tr></table>';
+      go();
       ready();
     } else {
       j(user);
@@ -128,7 +132,8 @@ ui.start('#firebaseui-auth-container', {
       if (user.photoURL !== "https://legend-of-iphoenix.github.io/TheButton/img/authenticated.png") {
         j(user);
       } else {
-        document.body.innerHTML = '<button id="TheButton">Click me.</button><p id="label"></p><table id="highscores"><tr><th>Username</th><th>Time</th></tr></table>';
+        go();
+        ready();
       }
     },
     uiShown: function() {
