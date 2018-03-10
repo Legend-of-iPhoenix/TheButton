@@ -77,16 +77,3 @@ table#highscores tr td:first-child:hover {
 p#label { 
   text-align: center; 
 }
-
-#ToggleHCM:click {
-  -webkit-filter: invert(1) hue-rotate(180deg) !important;
-  filter: invert(1) hue-rotate(180deg) !important;
-} /*Can there be a button that activates high contrast mode? */
-
-/*.rainbow {
-  #TheButton
-} // I need help with this, and google is not helping. */
-
-/*.highscores:before {
-  content: "1-5"
-} //I also need help with this. */
