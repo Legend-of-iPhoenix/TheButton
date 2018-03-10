@@ -1,0 +1,70 @@
+* {
+  width: fit-content;
+  margin: auto auto;
+}
+
+html {
+  margin: 0 0;
+}
+
+body {
+  width: 100%;
+  position: fixed;
+  margin: auto auto;
+  padding: 0;
+  background-color: #fff;
+  padding-top: 20px;
+}
+
+table#highscores {
+  padding-top: 10px;
+}
+
+table#highscores tr {
+  transition: all .1s;
+}
+
+table#highscores tr:hover {
+  background-color: #fafafa;
+}
+
+table#highscores th:first-child,
+table#highscores td:first-child {
+  padding-right: 2px;
+}
+
+table#highscores tr td:first-child:hover {
+  font-weight: bolder;
+}
+
+#TheButton {
+  display: inline-block;
+  position: relative;
+  left: 30%;
+  width: 40%;
+  transition: all .1s;
+  color: #fff;
+  background-color: #39f;
+  padding: 15px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#TheButton:hover {
+  box-shadow: -1px 1px 3px 0px rgba(0,0,0,0.45);
+  transform: translateX(1px) translateY(-1px)
+}
+
+#TheButton:active {
+  box-shadow: none;
+  transform: translateX(-1px) translateY(1px)
+}
+
+p#label { 
+  text-align: center; 
+}
