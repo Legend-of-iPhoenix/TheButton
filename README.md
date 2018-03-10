@@ -19,7 +19,7 @@ As this is still in development, there may still be some bugs. If you find one, 
 If you want to help with anything on this, make a fork of this repository, make your edits there, and make a Pull Request from that to this repository when you're done. Make sure to test it before submitting. Keeping your fork updated is your responsibility. 
 
 ## Reporting abuse
-If you see someone's time increasing faster than normal, live-updating, or see them clicking after they send a message on a chatting service or something like that, report it to \_iPhoenix\_ because that person could either be the victim of a bug, a hacker, or be a hacker themselves. 
+If you see someone's time increasing faster than normal, live-updating, or see them clicking like immediately after they send a message on a chatting service such as SAX or IRC or something like that, report it to \_iPhoenix\_ because that person could either be the victim of a bug, a hacker, or be a hacker themselves. 
 
 ## Credits
 - *\_iPhoenix\_ (Legend-of-iPhoenix)* made this whole thing, did a bit of styling, helped jcgter777 with some CSS, and fixed most, if not all, of the bugs reported so far. 
