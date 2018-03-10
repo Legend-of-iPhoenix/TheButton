@@ -81,3 +81,7 @@ table#highscores tr td:first-child:hover {
 p#label { 
   text-align: center; 
 }
+
+strong {
+  font-weight: 600;
+}
