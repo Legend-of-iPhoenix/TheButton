@@ -78,6 +78,12 @@ p#label {
   text-align: center; 
 }
 
+/* .highcontrast {
+  background-color: black;
+  color: white;
+  a, a:visited { color: white;  }
+} //Can there be a button that activates high contrast mode? */
+
 /*.rainbow {
   #TheButton
 } // I need help with this, and google is not helping. */
