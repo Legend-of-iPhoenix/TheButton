@@ -16,7 +16,7 @@ There is a scoreboard of the 5 people with the highest scores, with 1st place at
 As this is still in development, there may still be some bugs. If you find one, please make a GitHub issue so we know about it, and then we can try to fix it. Any hacks available that allow users to gain unfair advantages over others should be reported to \_iPhoenix\_ so it can be patched. 
 
 ## Development
-If you want to help with anything on this, make a fork of this repository, make your edits there, and make a Pull Request from that to this repository when you're done. Make sure to test it before submitting. Keeping your fork updated is your responsibility. 
+If you want to help with anything on this, make a fork of this repository, make your edits there, and make a pull request from that to this repository when you're done. Make sure to test it before submitting. Keeping your fork updated is your responsibility. Optimizations are always welcome. If you changed the style or the layout, when you make a pull request, include a screenshot of your new version. Please do not fake the image. 
 
 ## Reporting abuse
 If you see someone's time increasing faster than normal, live-updating, or see them clicking like immediately after they send a message on a chatting service such as SAX or IRC or something like that, report it to \_iPhoenix\_ because that person could either be the victim of a bug, a hacker, or be a hacker themselves. If they are consistently on, like after a long period of time, clicking right after you, report that, and we can check their clicking history. We are trying to create as user-friendly an environment as possible. 
