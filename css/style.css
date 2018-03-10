@@ -95,6 +95,8 @@ p {
 }
 
 p#about {
+  color: blue;
+  transition: all .25s .1s;
   margin-top: 20px;
 }
 
@@ -103,9 +105,9 @@ strong {
 }
 
 #about:hover {
-  color: red;
+  color: white;
 }
 
 #about:visited {
-  color: blue;
+  color: #0af;
 }
