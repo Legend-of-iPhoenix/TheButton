@@ -51,7 +51,7 @@ table#highscores tr td:first-child:hover {
   color: #fff;
   background-color: #39f;
   padding: 15px 0px;
-  border: double; /* I think it's good, but remove it if not, and replace double with none */
+  border: none;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -68,9 +68,7 @@ table#highscores tr td:first-child:hover {
 }
 
 #TheButton:active {
-  webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-  moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-  box-shadow: inset 0px 0px 5px #c1c1c1;
+  box-shadow: none;
   transform: translateX(-1px) translateY(1px)
 }
 
