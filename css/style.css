@@ -47,6 +47,8 @@ table#highscores td {
 
 table#highscores tr:hover {
   background-color: #eee;
+  font-weight: 300;
+  cursor: pointer;
 }
 
 table#highscores th {
@@ -59,7 +61,7 @@ table#highscores td:first-child {
 }
 
 table#highscores tr td:first-child:hover {
-  font-weight: bolder;
+  font-weight: 300;
 }
 
 #TheButton {
@@ -93,9 +95,19 @@ p {
 }
 
 p#about {
+  color: blue;
+  transition: all .25s .1s;
   margin-top: 20px;
 }
 
 strong {
   font-weight: 600;
+}
+
+#about:hover {
+  color: white;
+}
+
+#about:visited {
+  color: #0af;
 }
