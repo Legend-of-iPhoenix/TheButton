@@ -23,7 +23,7 @@ body {
   position: fixed;
   margin: auto auto;
   padding: 5px;
-  background-color: #fff;
+  background-color: #87CEEB;
   padding-top: 20px;
 }
 
@@ -47,7 +47,7 @@ table#highscores td {
 
 table#highscores tr:hover {
   background-color: #eee;
-  font-weight: 300;
+  font-weight: 500;
   cursor: pointer;
 }
 
@@ -61,14 +61,14 @@ table#highscores td:first-child {
 }
 
 table#highscores tr td:first-child:hover {
-  font-weight: 300;
+  font-weight: 500;
 }
 
 #TheButton {
   width: 400px;
   transition: all .1s;
   color: #fff;
-  background-color: #39f;
+  background-color: #1E90FF;
   padding: 15px 0px;
   border: none;
   text-align: center;
