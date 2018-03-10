@@ -14,10 +14,14 @@ firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDom
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<p> TheButton is a King-of-the-Hill-esque game where the username of the last person to click a button is broadcast to everyone.</p>
-	<p> To join in on the fun, you can register or sign in with Google.</p>
-	<div id="firebaseui-auth-container"></div>
-	<div id="loading-auth">Loading authentication scripts...</div>
+	<div class='visible' id='login-div'>
+		<p> TheButton is a King-of-the-Hill-esque game where the username of the last person to click a button is broadcast to everyone.</p>
+		<p> To join in on the fun, you can register or sign in with Google.</p>
+		<div id="firebaseui-auth-container"></div>
+		<div id="loading-auth">Loading authentication scripts...</div>
+	</div>
+	<div class='hidden' id='main-div'>
+	</div>
 </body>
 <a href="/TheButton/terms.txt">Terms and conditions.</a>
 </html>
