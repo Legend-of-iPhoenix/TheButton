@@ -4,6 +4,16 @@
   margin: auto auto;
 }
 
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.visible {
+  display: block;
+  visibility: visible;
+}
+
 html {
   margin: 0 0;
 }
@@ -37,8 +47,6 @@ table#highscores td:first-child {
 table#highscores tr td:first-child:hover {
   font-weight: bolder;
 }
-
-
 
 #TheButton {
   display: inline-block;
