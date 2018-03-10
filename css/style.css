@@ -51,8 +51,8 @@ table#highscores tr td:first-child:hover {
 #TheButton {
   display: inline-block;
   position: relative;
-  left: 30%;
-  width: 40%;
+  left: 20%;
+  width: 400px;
   transition: all .1s;
   color: #fff;
   background-color: #39f;
