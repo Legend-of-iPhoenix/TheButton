@@ -26,8 +26,8 @@ table#highscores tr {
 
 table#highscores tr:hover {
   background-color: #fafafa;
-  box-shadow: -1px 1px 3px 0px rgba(0,0,0,0.45);
-  transform: translateX(-1px) translateY(1px)
+  box-shadow: -0.2px 0.2px 0.6px 0px rgba(0,0,0,0.45);
+  transform: translateX(-0.2px) translateY(0.2px)
 }
 
 table#highscores th:first-child,
