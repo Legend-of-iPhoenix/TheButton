@@ -10,11 +10,27 @@ firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDom
 	<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
 	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
 	<script type="text/javascript" src="js/main.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,600" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<p> TheButton is a King-of-the-Hill-esque game where the username of the last person to click a button is broadcast to everyone.</p>
-	<p> To join in on the fun, you can register or sign in with Google.</p>
-	<div id="firebaseui-auth-container"></div>
-	<div id="loading-auth">Loading authentication scripts...</div>
+	<div class='visible' id='login-div'>
+		<p> TheButton is a King-of-the-Hill-esque game where the username of the last person to click a button is broadcast to everyone.</p>
+		<p> To join in on the fun, you can register or sign in with Google.</p>
+		<div id="firebaseui-auth-container"></div>
+		<div id="loading-auth">Loading authentication scripts...</div>
+	</div>
+	<div class='hidden' id='main-div'>
+		<button id="TheButton"><p class="rainbow">Click me.</p></button>
+		
+		<p id="label">Loading... (If this doesn't disappear in a few seconds, reload the page)</p>
+		
+		<table id="highscores">
+			<tr>
+				<th>Username</th> <th>Time</th>
+			</tr>
+		</table>
+	</div>
+	<p id="about"><a href="https://github.com/Legend-of-iPhoenix/TheButton/blob/master/README.md#thebutton">About</a></p>
 </body>
 </html>

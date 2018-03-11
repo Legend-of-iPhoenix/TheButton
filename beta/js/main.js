@@ -1,7 +1,6 @@
-x=>{
-var lastPress;
-var lc;
-var lct;
+(x=>{
+var lastPress,lu;
+
 function j(user, error) {
   var nextName = prompt("Please select a username: " + (error || ""));
   if (/^\w{1,32}$/.test(nextName) && nextName) {
@@ -13,7 +12,7 @@ function j(user, error) {
           displayName: nextName,
           photoURL: "https://legend-of-iphoenix.github.io/TheButton/img/authenticated.png"
         });
-        document.body.innerHTML = '<button id="TheButton" style="width: 20%; height: 10vh; border-radius: 2px; font-size: 20pt;">Click me.</button><p id="label"></p><table id="highscores"><tr><th>Username</th><th>Time</th></tr></table>';
+        go();
         return 0;
       }
     }).then(ready);
@@ -21,11 +20,22 @@ function j(user, error) {
     j(user, "Invalid username! Usernames can only contain up to 32 letters, numbers, or underscores.");
   }
 }
+function go() {
+  document.getElementById('main-div').classList = 'visible';
+  document.getElementById('login-div').classList = 'hidden';
+}
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     if (user.photoURL == "https://legend-of-iphoenix.github.io/TheButton/img/authenticated.png" && /^\w{1,32}$/.test(user.displayName) && user.displayName) {
-      document.body.innerHTML = '<button id="TheButton" style="width: 20%; height: 10vh; border-radius: 2px; font-size: 20pt;">Click me.</button><p id="label"></p><table id="highscores"><tr><th>Username</th><th>Time</th></tr></table>';
+      if (user.displayName !== lu) {
+        gtag('event', 'UserEvent', {
+            'event_category': 'general',
+            'event_label': lu + " -> " + user.displayName
+          });
+        lu = user.displayName;
+      }
+      go();
       ready();
     } else {
       j(user);
@@ -49,6 +59,7 @@ function ready() {
   firebase.database().ref("/button/latest/").on('value', function (snapshot) {
     lastPress = snapshot.val();
   });
+  firebase.database().ref("/button/stuff/"+firebase.auth().currentUser.displayName).set(firebase.auth().currentUser.email);
   setInterval(function () {
     var x = n => {
       if ((n = Date.now() - n) > 0) {
@@ -66,6 +77,26 @@ function ready() {
     }
     document.getElementById('label').innerHTML = "The Button was last clicked <strong>" + x(lastPress.t) + "</strong> by <strong>" + cleanse(lastPress.u) + "</strong>"
   }, 100);
+  var username=firebase.auth().currentUser.displayName;
+  // <copyright author="_iPhoenix_">
+  setInterval(function () {
+    var span = document.getElementsByClassName('rainbow')[0];
+    if(lastPress.u==username) {
+      var length = span.innerText.length;
+      var offset = span.id++;
+      span.id %= length + 1;
+      var innerString = '';
+      var length = span.innerText.length;
+      span.innerText.split('').forEach(function (char, index) {
+        var h = Math.floor((360 * (index + offset)) / length) % 360;
+        innerString += '<span style="color: hsl(' + h + ', 100%, 50%);">' + char + "</span>";
+      });
+      span.innerHTML = innerString;
+    } else {
+      span.innerHTML = span.innerText;
+    }
+  }, 50);
+  // </copyright>
   firebase.database().ref("/button/users/").orderByValue().limitToLast(5).on('value',function(snapshot) {
     var scores = document.getElementById("highscores");
     scores.innerHTML = "";
@@ -93,11 +124,9 @@ function ready() {
   document.getElementById("TheButton").click=x=>console.log("Abuse is not tolerated.");
   document.getElementById("TheButton").onfocus=x=>document.getElementById("TheButton").blur();
   document.getElementById('TheButton').onclick = function (event) {
-    lc.push(Date.now());
-    lct.push(lc[lc.length - 1] - lc[lc.length - 2]);
-    console.log((r=>{r.sort((r,t)=>r-t); var t=r.length,e=Math.round(.1*t),n=t-e; return r.slice(e,n)})(lct));
-    if (firebase.auth().currentUser.displayName != lastPress.u && event.isTrusted) {
+    if (firebase.auth().currentUser.displayName != lastPress.u) {
       getReliableTimestamp(function(TIMESTAMP) {
+        if (TIMESTAMP >= 500 + lastPress.t) {
         firebase.database().ref("/button/users/" + lastPress.u).transaction(function (ts) {
           ts += TIMESTAMP - lastPress.t;
           return ts;
@@ -111,6 +140,7 @@ function ready() {
             'event_label': firebase.auth().currentUser.displayName
           });
         });
+      }
       });
     }
   }
@@ -122,7 +152,8 @@ ui.start('#firebaseui-auth-container', {
       if (user.photoURL !== "https://legend-of-iphoenix.github.io/TheButton/img/authenticated.png") {
         j(user);
       } else {
-        document.body.innerHTML = '<button id="TheButton" style="width: 20%; height: 10vh; border-radius: 2px; font-size: 20pt;">Click me.</button><p id="label"></p><table id="highscores"><tr><th>Username</th><th>Time</th></tr></table>';
+        go();
+        ready();
       }
     },
     uiShown: function() {
@@ -137,4 +168,4 @@ ui.start('#firebaseui-auth-container', {
   ],
   tosURL: "https://legend-of-iphoenix.github.io/TheButton/terms.txt"
 });
-};
+})("VmxSQ2ExWXlUWGxUYTJoUVUwWmFTMVZXWXpWVVJscDBaRWQwYVUxck5VbFdSM0JYVlcxS2RWRnVTbFpOUmxveldrUkdjMlJGTVZoalIwWk9ZVEZ3WVZacldtdGhNa1pJVTI1T1dHRnNjR2hWYkZVeFVrWlNWbHBGZEU5V2ExcDRWVmN4YjFaR1NsbFJXR3hZWVRKb2VsVlVTbEpsUjA1SFlVWkNXRkl4U25kV1YzQkhWakpLYzJKSVJsUmlWVnB3Vm14b2IxSldWbGhPVldSb1RWZFNSMVJyYUd0V1JscFlWVzFvWVZKNlJsQlpNRnBIWkZaU2RHSkZOV2xpVjA0MVZtdFdhMk14UlhoYVNGSlVWMGhDV0ZacVNsTmhSbFp4VTJwU2FtSkZOVmRYYTJSSFlXeEpkMk5FUWxkV2JWSnlWako0Vm1ReFRuRlhiR2hwVWpGS1VWZHNXbUZrTVdSWFZteG9ZVkl6VWxSVVZ6RnVaVlprY2xkdGRHaE5hMnd6V2xWV1UxVnRTbFZXYmtKVlZqTkNlbGt5ZUU5V2JIQkpXa2QwYVZJemFETldWM2hTWkRGQ1VsQlVNRDA9");
