@@ -75,12 +75,11 @@ table#highscores tr td:first-child:hover {
   text-decoration: none;
   font-size: 16px;
   margin: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
 #TheButton:hover {
-  
   box-shadow: -1px 1px 3px 0px rgba(0,0,0,0.45);
   transform: translateX(-1px) translateY(1px)
 }
