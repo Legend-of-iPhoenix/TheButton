@@ -1,7 +1,7 @@
 # TheButton
 _Who last pressed TheButton?_
 
-TheButton is a King-of-the-Hill-esque game where the username of the last person to click the button is broadcasted to everyone. To join in on the fun, you can register or sign in with Google.
+TheButton is a King-of-the-Hill-esque game where the username of the last person to click the button is broadcast to everyone. To join in on the fun, you can register or sign in with Google.
 
 ## Basic Gameplay
 You are trying to get the highest time you can in total. Whenever you click, a clock starts ticking up. Someone else can click, and start their timer. The amount of time your username is shown on screen is recorded on a leaderboard, which is occasionally reset.
