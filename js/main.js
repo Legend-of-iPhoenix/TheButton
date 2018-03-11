@@ -91,8 +91,8 @@ function ready() {
         }
         return t %= 60, o %= 24, r = u(r %= 60, "second"), t = u(t, "minute"), o = u(o, "hour"), (e = u(e, "day")) + o + t + "and " + (r = r.substring(0, r.length - 2))
       }
-      return "No time.")(snapshot.val())
-    }
+      return "No time."
+      })(snapshot.val())
   }
   // <copyright author="_iPhoenix_">
   setInterval(function () {
