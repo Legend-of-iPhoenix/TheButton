@@ -93,7 +93,7 @@ function ready() {
       }
       return "No time."
       })(snapshot.val())
-  }
+  });
   // <copyright author="_iPhoenix_">
   setInterval(function () {
     var span = document.getElementsByClassName('rainbow')[0];
