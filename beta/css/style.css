@@ -1,0 +1,113 @@
+* {
+  font-family: 'Raleway', sans-serif;
+  width: fit-content;
+  margin: auto auto;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.visible {
+  display: block;
+  visibility: visible;
+}
+
+html {
+  margin: 0 0;
+}
+
+body {
+  width: 100%;
+  position: fixed;
+  margin: auto auto;
+  padding: 5px;
+  background-color: #fff;
+  padding-top: 20px;
+}
+
+div#main-div {
+  text-align: center;
+}
+
+table#highscores {
+  border: 
+  background-color: #fafafa;
+  margin-top: 10px;
+}
+
+table#highscores tr {
+  transition: all .1s;
+}
+
+table#highscores td {
+  text-align: left;
+}
+
+table#highscores tr:hover {
+  background-color: #eee;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+table#highscores th {
+  border-bottom: 1px solid black;
+}
+
+table#highscores th:first-child,
+table#highscores td:first-child {
+  padding-right: 2px;
+}
+
+table#highscores tr td:first-child:hover {
+  font-weight: 300;
+}
+
+#TheButton {
+  width: 400px;
+  transition: all .1s;
+  color: #fff;
+  background-color: #39f;
+  padding: 15px 0px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#TheButton:hover {
+  
+  box-shadow: -1px 1px 3px 0px rgba(0,0,0,0.45);
+  transform: translateX(-1px) translateY(1px)
+}
+
+#TheButton:active {
+  box-shadow: none;
+  transform: translateX(-1px) translateY(1px)
+}
+
+p {
+  text-align: center; 
+}
+
+p#about {
+  color: blue;
+  transition: all .25s .1s;
+  margin-top: 20px;
+}
+
+strong {
+  font-weight: 600;
+}
+
+#about:hover {
+  color: white;
+}
+
+#about:visited {
+  color: #0af;
+}
