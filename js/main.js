@@ -77,6 +77,26 @@ function ready() {
     }
     document.getElementById('label').innerHTML = "The Button was last clicked <strong>" + x(lastPress.t) + "</strong> by <strong>" + cleanse(lastPress.u) + "</strong>"
   }, 100);
+  var username=firebase.auth().currentUser.displayName;
+  // <copyright author="_iPhoenix_">
+  setInterval(function () {
+    var span = document.getElementsByClassName('rainbow')[0];
+    if(lastPress.u==username) {
+      var length = span.innerText.length;
+      var offset = span.id++;
+      span.id %= length + 1;
+      var innerString = '';
+      var length = span.innerText.length;
+      span.innerText.split('').forEach(function (char, index) {
+        var h = Math.floor((360 * (index + offset)) / length) % 360;
+        innerString += '<span style="color: hsl(' + h + ', 100%, 50%);">' + char + "</span>";
+      });
+      span.innerHTML = innerString;
+    } else {
+      span.innerHTML = span.innerText;
+    }
+  }, 50);
+  // </copyright>
   firebase.database().ref("/button/users/").orderByValue().limitToLast(5).on('value',function(snapshot) {
     var scores = document.getElementById("highscores");
     scores.innerHTML = "";
