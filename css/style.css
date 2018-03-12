@@ -91,13 +91,13 @@ table#highscores tr td:first-child:hover {
   }
 
 #TheButton:hover {
-  background-color: #00e6e6;
-  box-shadow: 0px 15px 20px rgb(179, 255, 255);
+  background-color: #DDDDDD;
+  box-shadow: 0px 15px 20px rgb(204, 255, 255);
   transform: translateY(-7px);
 }
 
 #TheButton:active {
-  background-color: #00e6e6;
+  background-color: #DDDDDD;
   box-shadow: none;
   transform: translateY(3px);
 }
