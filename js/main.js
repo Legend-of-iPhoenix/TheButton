@@ -110,7 +110,7 @@ function ready() {
     } else {
       span.innerHTML = span.innerText;
     }
-  }, 40);
+  }, 50);
   // </copyright>
   firebase.database().ref("/button/users/").orderByValue().limitToLast(5).on('value',function(snapshot) {
     var scores = document.getElementById("highscores");
