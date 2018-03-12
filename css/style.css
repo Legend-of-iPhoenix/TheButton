@@ -85,7 +85,7 @@ table#highscores tr td:first-child:hover {
   cursor: pointer;
   font-size: 11px;
   letter-spacing: 2.5px;
-  /* font-weight values for anything besides 300 or 600 don't work. Those are the two font weights we loaded in our HTML. */
+  /* font-weight values for anything besides 300 or 600 don't work. Those are the two font weights we loaded in our HTML. Can we load more?*/
   font-weight: 600;
   color: #000;
   border: none;
