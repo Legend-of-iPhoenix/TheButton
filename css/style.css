@@ -27,14 +27,13 @@ body {
   padding-top: 80px;
 }
 
-h1#title {
-  text-align: center;
-}
-
 div#main-div {
   text-align: center;
 }
 
+#title {
+  font-weight: 600;
+}
 table#highscores {
   border: 
   background-color: #fafafa;
@@ -70,7 +69,7 @@ table#highscores tr td:first-child:hover {
 
 #TheButton {
   width: 400px;
-  height: auto;
+  height: px;
   transition: all .1s;
   color: #fff;
   background-color: #DCDCDC;
