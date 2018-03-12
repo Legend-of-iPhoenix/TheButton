@@ -2,6 +2,9 @@
 <html>
 <head>
 	<title>The Button</title>
+	<link rel="icon" 
+          type="image/png" 
+          href="/img/favicon.png">
 	<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-109579764-3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-109579764-3")</script>
 	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
 <script>
@@ -14,6 +17,7 @@ firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDom
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+	<p id="title"><h1>TheButton</h1></p>
 	<div class='visible' id='login-div'>
 		<p> TheButton is a King-of-the-Hill-esque game where the username of the last person to click a button is broadcast to everyone.</p>
 		<p> To join in on the fun, you can register or sign in with Google.</p>
@@ -24,13 +28,15 @@ firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDom
 		<button id="TheButton"><p class="rainbow">Click me.</p></button>
 		
 		<p id="label">Loading... (If this doesn't disappear in a few seconds, reload the page)</p>
+		<p id="user-time"></p>
 		
 		<table id="highscores">
 			<tr>
-				<th>Username</th> <th>Time</th>
+				<p id="usernametime"><th>Username</th> <th>Time</th></p>
 			</tr>
 		</table>
 	</div>
-	<p id="about"><a href="https://github.com/Legend-of-iPhoenix/TheButton/blob/master/README.md#thebutton">About</a></p>
+	<p id="about"><a href="https://raw.githubusercontent.com/Legend-of-iPhoenix/TheButton/master/README.txt">About</a></p>
+	<p id="repolink"><a href="https://github.com/Legend-of-iPhoenix/TheButton">GitHub Repo</a></p>
 </body>
 </html>
