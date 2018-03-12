@@ -30,10 +30,11 @@ div#main-div {
 }
 
 #title {
-  margin-top: 20px; 
-  margin-bottom: 50px;
+  margin-top: 20px;
   font-weight: 600;
+  text-align: center;
 }
+
 table#highscores {
   border: none;
   background-color: #fafafa;
