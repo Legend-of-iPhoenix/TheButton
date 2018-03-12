@@ -28,3 +28,4 @@ Credits
 _iPhoenix_ (GitHub: Legend-of-iPhoenix) made the majority of the JavaScript and HTML, did a bit of styling, helped jcgter777 with some CSS, and fixed most, if not all, of the bugs reported so far.
 jcgter777 (GitHub: jcgter777) helped expand the README file, style with CSS, and helped _iPhoenix_ fix several bugs.
 tev (GitHub: ticalc-travis) helped jcgter777 with almost everything he did.
+codepen.io for giving inspiration to jcgter777 for the current button (and some code). 
