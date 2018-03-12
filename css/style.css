@@ -80,7 +80,7 @@ table#highscores tr td:first-child:hover {
 }
 
  #TheButton:hover {
- box-shadow: none; transform: none
+ box-shadow: 1px 1px 1px 1px
 } 
 
 /* #TheButton:hover { 
