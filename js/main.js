@@ -111,7 +111,7 @@ function ready() {
     } else {
       span.innerHTML = span.innerText;
     }
-  }, 100);
+  }, 40);
   // </copyright>
   firebase.database().ref("/button/users/").orderByValue().limitToLast(5).on('value',function(snapshot) {
     var scores = document.getElementById("highscores");
