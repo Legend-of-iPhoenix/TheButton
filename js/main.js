@@ -100,7 +100,6 @@ function ready() {
     if(lastPress.u==username) {
       var length = span.innerText.length;
       var offset = span.id++;
-      span.id %= length + 1;
       var innerString = '';
       var length = span.innerText.length;
       span.innerText.split('').forEach(function (char, index) {
@@ -111,7 +110,7 @@ function ready() {
     } else {
       span.innerHTML = span.innerText;
     }
-  }, 100);
+  }, 50);
   // </copyright>
   firebase.database().ref("/button/users/").orderByValue().limitToLast(5).on('value',function(snapshot) {
     var scores = document.getElementById("highscores");

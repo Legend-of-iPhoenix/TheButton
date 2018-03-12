@@ -24,13 +24,16 @@ body {
   margin: auto auto;
   padding: 5px;
   background-color: #fff;
-  padding-top: 20px;
+  padding-top: 80px;
 }
 
 div#main-div {
   text-align: center;
 }
 
+#title {
+  font-weight: 600;
+}
 table#highscores {
   border: 
   background-color: #fafafa;
@@ -66,28 +69,40 @@ table#highscores tr td:first-child:hover {
 
 #TheButton {
   width: 400px;
-  transition: all .1s;
+  height: 45px;
+  transition: all .2s;
   color: #fff;
-  background-color: #39f;
+  background-color: #DCDCDC;
   padding: 15px 0px;
   border: none;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   font-size: 16px;
   margin: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  /* font-weight values for anything besides 300 or 600 don't work. Those are the two font weights we loaded in our HTML. */
+  font-weight: 600;
+  color: #000;
+  border: none;
+  border-radius: 45px;
+  transition: all 0.2s ease 0s;
   cursor: pointer;
 }
 
 #TheButton:hover {
-  
-  box-shadow: -1px 1px 3px 0px rgba(0,0,0,0.45);
-  transform: translateX(-1px) translateY(1px)
+  background-color: #DDDDDD;
+  box-shadow: 0px 15px 20px rgb(204, 255, 255);
+  transform: translateY(-7px);
 }
 
 #TheButton:active {
+  background-color: #DDDDDD;
   box-shadow: none;
-  transform: translateX(-1px) translateY(1px)
+  transform: translateY(3px);
 }
 
 p {
