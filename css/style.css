@@ -24,7 +24,6 @@ body {
   margin: auto auto;
   padding: 5px;
   background-color: #fff;
-  padding-top: 80px;
 }
 
 div#main-div {
@@ -32,6 +31,8 @@ div#main-div {
 }
 
 #title {
+  margin-top: 20px; 
+  margin-bottom: 50px;
   font-weight: 600;
 }
 table#highscores {
