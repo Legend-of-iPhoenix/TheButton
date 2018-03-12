@@ -20,7 +20,6 @@ html {
 
 body {
   width: 100%;
-  position: fixed;
   margin: auto auto;
   padding: 5px;
   background-color: #fff;
@@ -66,7 +65,7 @@ table#highscores tr td:first-child:hover {
 
 #TheButton {
   width: 400px;
-  height: auto;
+  height: 70px;
   transition: all .1s;
   color: #fff;
   background-color: #39f;
