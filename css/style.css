@@ -1,6 +1,5 @@
 * {
   font-family: 'Raleway', sans-serif;
-  width: fit-content;
   margin: auto auto;
 }
 
@@ -66,6 +65,7 @@ table#highscores tr td:first-child:hover {
 
 #TheButton {
   width: 400px;
+  height: 70px;
   transition: all .1s;
   color: #fff;
   background-color: #39f;
