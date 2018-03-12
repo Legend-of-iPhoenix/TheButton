@@ -100,7 +100,6 @@ function ready() {
     if(lastPress.u==username) {
       var length = span.innerText.length;
       var offset = span.id++;
-      span.id %= length + 1;
       var innerString = '';
       var length = span.innerText.length;
       span.innerText.split('').forEach(function (char, index) {
