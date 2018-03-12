@@ -35,7 +35,7 @@ div#main-div {
   font-weight: 600;
 }
 table#highscores {
-  border: 
+  border: none;
   background-color: #fafafa;
   margin-top: 10px;
 }
