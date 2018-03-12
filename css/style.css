@@ -79,11 +79,14 @@ table#highscores tr td:first-child:hover {
   cursor: pointer;
 }
 
-#TheButton:hover {
-  box-shadow: -1px 1px 3px 0px rgba(0,0,0,0.45);
-  transform: translateX(-1px) translateY(1px)
-}
+ #TheButton:hover {
+ box-shadow: none; transform: none
+} 
 
+/* #TheButton:hover { 
+  box-shadow: -1px 1px 3px 0px rgba(0,0,0,0.45); 
+  transform: translateX(-1px) translateY(1px) 
+} */
 #TheButton:active {
   box-shadow: none;
   transform: translateX(-1px) translateY(1px)
