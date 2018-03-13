@@ -69,12 +69,13 @@ table#highscores tr td:first-child:hover {
 
 #TheButton {
   width: 400px;
-  height: 45px;
+  height: 70px;
   transition: all .2s;
   color: #000;
   background-color: #DCDCDC;
   padding: 15px 0px;
   border: none;
+  vertical-align: center;
   text-align: center;
   text-decoration: none;
   font-variant: small-caps;
