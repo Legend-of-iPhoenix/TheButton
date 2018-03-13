@@ -79,7 +79,7 @@ table#highscores tr td:first-child:hover {
   text-align: center;
   text-decoration: none;
   font-variant: small-caps;
-  font-size: 16px;
+  font-size: 125%;
   margin: 20px;
   border-radius: 10px;
   cursor: pointer;
