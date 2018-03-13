@@ -29,9 +29,10 @@ div#main-div {
 }
 
 #title {
-  margin-top: 20px;
+  margin-top: 50px; 
+  margin-bottom: 30px;
   font-weight: 600;
-  text-align: center;
+  font-color: white; 
 }
 
 table#highscores {
@@ -69,7 +70,7 @@ table#highscores tr td:first-child:hover {
 
 #TheButton {
   width: 400px;
-  height: 70px;
+  height: 45px;
   transition: all .2s;
   color: #fff;
   background-color: #DCDCDC;
@@ -82,15 +83,16 @@ table#highscores tr td:first-child:hover {
   margin: 20px;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 125%;
+  font-size: 105%;
   letter-spacing: 2.5px;
-  /* font-weight values for anything besides 300 or 600 don't work. Those are the two font weights we loaded in our HTML. */
   font-weight: 600;
   color: #000;
-  border: none;
   border-radius: 45px;
   transition: all 0.2s ease 0s;
   cursor: pointer;
+  -webkit-box-shadow: outset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: outset 0px 0px 5px #c1c1c1;
+          box-shadow: outset 0px 0px 5px #c1c1c1;
 }
 
 #TheButton.lighted {
@@ -99,13 +101,18 @@ table#highscores tr td:first-child:hover {
 }
 
 #TheButton:hover {
+  background-color: #DCDCDC;
   box-shadow: 0px 15px 20px rgb(204, 255, 255);
   transform: translateY(-7px);
 }
 
 #TheButton:active {
   box-shadow: none;
+  border: none;
   transform: translateY(3px);
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
 p {
