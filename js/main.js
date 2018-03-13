@@ -109,11 +109,15 @@ function ready() {
       span.innerHTML = innerString;
       if (!document.getElementById("TheButton").className.match(/(^|\s)lighted($|\s)/)) {
         document.getElementById("TheButton").className += " lighted";
+        document.getElementById("TheButton").style.backgroundColor = "hsl(" + Math.floor(Math.random() * 360) + ", 100%, 70%)";
       }
     } else {
       span.innerHTML = span.innerText;
-      document.getElementById("TheButton").className =
-        document.getElementById("TheButton").className.replace(/(^|\s)lighted($|\s)/g, ' ');
+      if (document.getElementById("TheButton").className.match(/(^|\s)lighted($|\s)/)) {
+        document.getElementById("TheButton").className =
+          document.getElementById("TheButton").className.replace(/(^|\s)lighted($|\s)/g, ' ');
+        document.getElementById("TheButton").style.backgroundColor = null;
+      }
     }
   }, 50);
   // </copyright>
