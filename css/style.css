@@ -69,7 +69,7 @@ table#highscores tr td:first-child:hover {
 
 #TheButton {
   width: 400px;
-  height: 45px;
+  height: 60px;
   transition: all .2s;
   color: #fff;
   background-color: #DCDCDC;
@@ -89,9 +89,9 @@ table#highscores tr td:first-child:hover {
   border-radius: 45px;
   transition: all 0.2s ease 0s;
   cursor: pointer;
-  -webkit-box-shadow: outset 0px 0px 5px #c1c1c1;
-     -moz-box-shadow: outset 0px 0px 5px #c1c1c1;
-          box-shadow: outset 0px 0px 5px #c1c1c1;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
 #TheButton.lighted {
