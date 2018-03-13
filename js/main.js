@@ -109,7 +109,7 @@ function ready() {
       span.innerHTML = innerString;
       if (!document.getElementById("TheButton").className.match(/(^|\s)lighted($|\s)/)) {
         document.getElementById("TheButton").className += " lighted";
-        document.getElementById("TheButton").style.backgroundColor = "hsl(" + Math.floor(Math.random() * 360) + ", 100%, 70%)";
+        document.getElementById("TheButton").style.backgroundColor = "hsl(" + Math.floor(Math.random() * 230) + ", 100%, 70%)";
       }
     } else {
       span.innerHTML = span.innerText;
