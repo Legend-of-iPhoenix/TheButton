@@ -69,23 +69,20 @@ table#highscores tr td:first-child:hover {
 
 #TheButton {
   width: 400px;
-  height: 60px;
+  height: 45px;
   transition: all .2s;
-  color: #fff;
+  color: #000;
   background-color: #DCDCDC;
   padding: 15px 0px;
   border: none;
   text-align: center;
   text-decoration: none;
   font-variant: small-caps;
-  font-size: 125%;
+  font-size: 100%;
   margin: 20px;
-  border-radius: 10px;
   cursor: pointer;
-  font-size: 105%;
   letter-spacing: 2.5px;
   font-weight: 600;
-  color: #000;
   border-radius: 45px;
   transition: all 0.2s ease 0s;
   cursor: pointer;
