@@ -69,12 +69,12 @@ table#highscores tr td:first-child:hover {
 
 #TheButton {
   width: 400px;
-  height: 70px;
+  height: 55px;
   transition: all .2s;
   color: #000;
-  background-color: #DCDCDC;
-  padding: 15px 0px;
-  border: none;
+  background-color: #ededed;
+  padding: 10px 30px;
+  border: 1px solid #ccc;
   vertical-align: center;
   text-align: center;
   text-decoration: none;
@@ -92,13 +92,22 @@ table#highscores tr td:first-child:hover {
           box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-#TheButton.lighted {
-  background-color: #4FC;
-  font-style: bold;
+
+#TheButton {
+  background: #ededed;
+  border: 1px solid #ccc;
+  padding: 10px 30px;
+  border-radius: 45px;
+  cursor: pointer;
 }
 
+/* #TheButton.lighted {
+  background-color: #4FC;
+  font-style: bold;
+} */
+
 #TheButton:hover {
-  background-color: #DCDCDC;
+  background-color: #e5e5e5;
   box-shadow: 0px 15px 20px rgb(204, 255, 255);
   transform: translateY(-7px);
 }
