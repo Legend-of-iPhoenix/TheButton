@@ -30,9 +30,8 @@ div#main-div {
 
 #title {
   margin-top: 50px; 
-  margin-bottom: 30px;
   font-weight: 600;
-  font-color: white; 
+  text-align: center;
 }
 
 table#highscores {
