@@ -107,8 +107,13 @@ function ready() {
         innerString += '<span style="color: hsl(' + h + ', 100%, 50%);">' + char + "</span>";
       });
       span.innerHTML = innerString;
+      if (!document.getElementById("TheButton").className.match(/(^|\s)lighted($|\s)/)) {
+        document.getElementById("TheButton").className += " lighted";
+      }
     } else {
       span.innerHTML = span.innerText;
+      document.getElementById("TheButton").className =
+        document.getElementById("TheButton").className.replace(/(^|\s)lighted($|\s)/g, ' ');
     }
   }, 50);
   // </copyright>
