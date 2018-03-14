@@ -130,6 +130,7 @@ strong {
 }
 
 #about {
+  width: 60px;
   background-color: #DCDCDC;
   border: 1px solid #ccc;
   cursor: pointer;
@@ -144,7 +145,11 @@ strong {
 }
 
 #repolink {
+  width: 340px;
+  height: 30px;
+  vertical-align: center; 
   background-color: #DCDCDC;
+  padding-top: 10px;
   border: 1px solid #ccc;
   cursor: pointer;
   border-radius: 5px;
