@@ -24,6 +24,9 @@ If you see someone's time increasing faster than possible, live-updating, or see
 ## Auto-clicking disclaimer
 If you are using an auto-clicker, that shows that you are incompetent, and cannot try to play fairly and let others have fun. If we find out that you are using an auto-clicker, you will recieve a warning, and if you do it again, you will be banned for a time. (You can appeal your ban on a Google Form) Attempting to get around that ban will not get you anywhere, and you will be instantly banned, and have your ban time lengthened. This is supposed to be fun, and if you think it's so boring that you have to use an auto-clicker, then don't play. Trying to hack the database is also not accepted. the same consequences will apply, as well as the fact that you shouldn't play if you have to hack in order to "win". If you know someone is using an auto-clicker, whether they tell you, or you see them (if you are in the same place), report them to \_iPhoenix\_, but please do not lie. 
 
+## New features
+When you are in control of the button, tghe text "Click Me." will be an animated rainbow. The background color of the button will also be different, and it will be random. Enjoy!
+
 ## Credits
 - *\_iPhoenix\_* (GitHub: Legend-of-iPhoenix) made the majority of the JavaScript and HTML, did a bit of styling, helped jcgter777 with some CSS, and fixed most, if not all, of the bugs reported so far. 
 - *jcgter777* (GitHub: jcgter777) helped expand the README file, style with CSS, and helped \_iPhoenix\_ fix several bugs.

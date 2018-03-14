@@ -107,17 +107,8 @@ function ready() {
         innerString += '<span style="color: hsl(' + h + ', 100%, 50%);">' + char + "</span>";
       });
       span.innerHTML = innerString;
-      if (!document.getElementById("TheButton").className.match(/(^|\s)lighted($|\s)/)) {
-        document.getElementById("TheButton").className += " lighted";
-        document.getElementById("TheButton").style.backgroundColor = "hsl(" + Math.floor(Math.random() * 360) + ", 100%, 70%)";
-      }
     } else {
       span.innerHTML = span.innerText;
-      if (document.getElementById("TheButton").className.match(/(^|\s)lighted($|\s)/)) {
-        document.getElementById("TheButton").className =
-          document.getElementById("TheButton").className.replace(/(^|\s)lighted($|\s)/g, ' ');
-        document.getElementById("TheButton").style.backgroundColor = null;
-      }
     }
   }, 50);
   // </copyright>

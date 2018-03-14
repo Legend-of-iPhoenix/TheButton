@@ -30,11 +30,12 @@ firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDom
 		
 		<table id="highscores">
 			<tr id="usernametime">
-				<th>&nbsp;</th> <th>Username</th> <th>Time</th>
+				<th>Username</th><th>Time</th>
 			</tr>
 		</table>
 	</div>
-	<p id="about"><a href="/TheButton/about/">About</a></p>
-	<p id="repolink">GitHub Repo: <a href="https://github.com/ticalc-travis/TheButton">This fork</a> | <a href="https://github.com/Legend-of-iPhoenix/TheButton">Original by iPhoenix</a></p>
+	<p> </p>
+	<p id="repolink">GitHub Repo: <input id="thisfork" type="button" value="This fork" onclick="window.location.href='https://github.com/jcgter777/TheButton'" /> | <input id="original" type="button" value="Original by iPhoenix" onclick="window.location.href='https://github.com/Legend-of-iPhoenix/TheButton'" /></p>
+	<p id="about|tbgc"><input id="about" type="button" value="About" onclick="window.location.href='/TheButton/about/'" />  <button id="togglebgc">Toggle Background Color changing</button></p>
 </body>
 </html>
