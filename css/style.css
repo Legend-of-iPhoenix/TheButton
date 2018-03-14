@@ -101,10 +101,10 @@ table#highscores tr td:first-child:hover {
   cursor: pointer;
 }
 
-/* #TheButton.lighted {
+#TheButton.lighted {
   background-color: #4FC;
   font-style: bold;
-} */
+}
 
 #TheButton:hover {
   background-color: #e5e5e5;
@@ -125,20 +125,27 @@ p {
   text-align: center; 
 }
 
-p#about {
-  color: blue;
-  transition: all .25s .1s;
-  margin-top: 20px;
-}
-
 strong {
   font-weight: 600;
 }
 
-#about:hover {
-  color: white;
+#about {
+  background-color: #DCDCDC;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-#about:visited {
-  color: #0af;
+#togglebgc {
+  background-color: #DCDCDC;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#repolink {
+  background-color: #DCDCDC;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 5px;
 }
