@@ -107,7 +107,7 @@ table#highscores tr td:first-child:hover {
 }
 
 #TheButton:hover {
-  background-color: #e5e5e5;
+  background-color: #00BFFF;
   box-shadow: 0px 15px 20px rgb(204, 255, 255);
   transform: translateY(-7px);
 }
@@ -115,7 +115,7 @@ table#highscores tr td:first-child:hover {
 #TheButton:active {
   box-shadow: 0px 3px 4px rgb(204, 255, 255);
   transform: translateY(3px);
-  background: #e5e5e5;
+  background: #00BFFF;
   -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
      -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
           box-shadow: inset 0px 0px 5px #c1c1c1;
