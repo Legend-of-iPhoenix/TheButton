@@ -95,7 +95,7 @@ table#highscores tr td:first-child:hover {
 
 #TheButton.lighted {
   background-color: #4FC;
-  font-style: bold;
+  font-size: 150%;
 }
 
 #TheButton:hover {
@@ -105,12 +105,12 @@ table#highscores tr td:first-child:hover {
 }
 
 #TheButton:active {
-  box-shadow: 0px 3px 4px rgb(204, 255, 255);
+  box-shadow: 0px 6px 8px rgb(204, 255, 255);
   transform: translateY(3px);
   background: #00BFFF;
-  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+  /* -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
      -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-          box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1; */
 }
 
 p {
