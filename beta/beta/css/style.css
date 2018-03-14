@@ -1,5 +1,6 @@
 * {
   font-family: 'Raleway', sans-serif;
+  width: fit-content;
   margin: auto auto;
 }
 
@@ -19,23 +20,23 @@ html {
 
 body {
   width: 100%;
+  position: fixed;
   margin: auto auto;
   padding: 5px;
   background-color: #fff;
+  padding-top: 80px;
+}
+
+h1#title {
+  text-align: center;
 }
 
 div#main-div {
   text-align: center;
 }
 
-#title {
-  margin-top: 50px; 
-  font-weight: 600;
-  text-align: center;
-}
-
 table#highscores {
-  border: none;
+  border: 
   background-color: #fafafa;
   margin-top: 10px;
 }
@@ -69,56 +70,40 @@ table#highscores tr td:first-child:hover {
 
 #TheButton {
   width: 400px;
-  height: 55px;
-  transition: all .2s;
-  color: #000;
-  background-color: #ededed;
-  padding: 10px 30px;
-  border: 1px solid #ccc;
-  vertical-align: center;
+  height: auto;
+  transition: all .1s;
+  color: #fff;
+  background-color: #DCDCDC;
+  padding: 15px 0px;
+  border: none;
   text-align: center;
   text-decoration: none;
-  font-variant: small-caps;
-  font-size: 100%;
+  text-transform: uppercase;
+  font-size: 16px;
   margin: 20px;
+  border-radius: 10px;
   cursor: pointer;
+  font-size: 11px;
   letter-spacing: 2.5px;
-  font-weight: 600;
+  font-weight: bolder;
+  color: #000;
+  border: none;
   border-radius: 45px;
+  /* box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);*/
   transition: all 0.2s ease 0s;
   cursor: pointer;
-  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-          box-shadow: inset 0px 0px 5px #c1c1c1;
-}
-
-
-#TheButton {
-  background: #ededed;
-  border: 1px solid #ccc;
-  padding: 10px 30px;
-  border-radius: 45px;
-  cursor: pointer;
-}
-
-/* #TheButton.lighted {
-  background-color: #4FC;
-  font-style: bold;
-} */
+  }
 
 #TheButton:hover {
-  background-color: #e5e5e5;
-  box-shadow: 0px 15px 20px rgb(204, 255, 255);
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   transform: translateY(-7px);
 }
 
 #TheButton:active {
-  box-shadow: 0px 3px 4px rgb(204, 255, 255);
+  background-color: #2EE59D;
+  box-shadow: none;
   transform: translateY(3px);
-  background: #e5e5e5;
-  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-          box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
 p {
