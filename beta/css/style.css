@@ -1,6 +1,5 @@
 * {
   font-family: 'Raleway', sans-serif;
-  width: fit-content;
   margin: auto auto;
 }
 
@@ -20,23 +19,23 @@ html {
 
 body {
   width: 100%;
-  position: fixed;
   margin: auto auto;
   padding: 5px;
   background-color: #fff;
-  padding-top: 80px;
-}
-
-h1#title {
-  text-align: center;
 }
 
 div#main-div {
   text-align: center;
 }
 
+#title {
+  margin-top: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
 table#highscores {
-  border: 
+  border: none;
   background-color: #fafafa;
   margin-top: 10px;
 }
@@ -70,38 +69,41 @@ table#highscores tr td:first-child:hover {
 
 #TheButton {
   width: 400px;
-  height: auto;
-  transition: all .1s;
+  height: 70px;
+  transition: all .2s;
   color: #fff;
   background-color: #DCDCDC;
   padding: 15px 0px;
   border: none;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: 16px;
+  font-variant: small-caps;
+  font-size: 125%;
   margin: 20px;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 11px;
+  font-size: 125%;
   letter-spacing: 2.5px;
-  font-weight: bolder;
+  /* font-weight values for anything besides 300 or 600 don't work. Those are the two font weights we loaded in our HTML. */
+  font-weight: 600;
   color: #000;
   border: none;
   border-radius: 45px;
-  /* box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);*/
   transition: all 0.2s ease 0s;
   cursor: pointer;
-  }
+}
+
+#TheButton.lighted {
+  background-color: #4FC;
+  font-style: bold;
+}
 
 #TheButton:hover {
-  background-color: #2EE59D;
-  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  box-shadow: 0px 15px 20px rgb(204, 255, 255);
   transform: translateY(-7px);
 }
 
 #TheButton:active {
-  background-color: #2EE59D;
   box-shadow: none;
   transform: translateY(3px);
 }
