@@ -154,3 +154,17 @@ strong {
   cursor: pointer;
   border-radius: 5px;
 }
+
+#thisfork {
+  background-color: #DCDCDC;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#original {
+  background-color: #DCDCDC;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+}
