@@ -35,10 +35,8 @@ firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDom
 		</table>
 	</div>
 	
-	<input type="button" value="About" onclick="window.location.href='/TheButton/about/'" />
-	//<p id="about"><a href="/TheButton/about/">About</a></p>
-	//<input type="button" value="About" onclick="window.location.href='/TheButton/about/'" />
-	<p id="repolink">GitHub Repo: <a href="https://github.com/jcgter777/TheButton">This fork</a> | <a href="https://github.com/Legend-of-iPhoenix/TheButton">Original</a></p>
+	<input id="about" type="button" value="About" onclick="window.location.href='/TheButton/about/'" />
+	<p id="repolink">GitHub Repo: <input type="button" value="This fork" onclick="window.location.href='https://github.com/jcgter777/TheButton'" /> | <input type="button" value="Original by iPhoenix" onclick="window.location.href='https://github.com/Legend-of-iPhoenix/TheButton'" /></p>
 	<button id="togglebgc">Toggle Background Color changing</button>
 </body>
 </html>
