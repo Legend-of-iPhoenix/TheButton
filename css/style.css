@@ -92,12 +92,6 @@ table#highscores tr td:first-child:hover {
           box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-
-#TheButton.lighted {
-  background-color: #4FC;
-  font-size: 150%;
-}
-
 #TheButton:hover {
   background-color: #00BFFF;
   box-shadow: 0px 20px 20px rgb(204, 255, 255);
