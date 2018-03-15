@@ -107,21 +107,13 @@ function ready() {
         innerString += '<span style="color: hsl(' + h + ', 100%, 50%);">' + char + "</span>";
       });
       span.innerHTML = innerString;
-      if (!document.getElementById("TheButton").className.match(/(^|\s)lighted($|\s)/)) {
-        document.getElementById("TheButton").className += " lighted";
-        document.getElementById("TheButton").style.backgroundColor = "hsl(" + Math.floor(Math.random() * 230) + ", 100%, 70%)";
-      }
     } else {
       span.innerHTML = span.innerText;
-      if (document.getElementById("TheButton").className.match(/(^|\s)lighted($|\s)/)) {
-        document.getElementById("TheButton").className =
-          document.getElementById("TheButton").className.replace(/(^|\s)lighted($|\s)/g, ' ');
-        document.getElementById("TheButton").style.backgroundColor = null;
-      }
     }
   }, 50);
   // </copyright>
-  firebase.database().ref("/button/users/").orderByValue().limitToLast(5).on('value',function(snapshot) {
+  var leaderboardLength = 5;
+  firebase.database().ref("/button/users/").orderByValue().limitToLast(leaderboardLength).on('value',function(snapshot) {
     var scores = document.getElementById("highscores");
     scores.innerHTML = "";
     var x = n => {
@@ -138,12 +130,14 @@ function ready() {
       }
       return "N/A"
     }
+    var rank = leaderboardLength;
     snapshot.forEach(function(childSnapshot) {
-      scores.innerHTML+="<tr><td>"+cleanse(childSnapshot.key)+"</td><td>"+x(childSnapshot.val())+"</td></tr>"
+      scores.innerHTML+="<tr><td>"+rank+"</td><td>"+cleanse(childSnapshot.key)+"</td><td>"+x(childSnapshot.val())+"</td></tr>";
+      rank--;
     });
     //reverse ordering of elements
     (e=>{for(var d=0;d<e.childNodes.length;d++)e.insertBefore(e.childNodes[d],e.firstChild)})(document.getElementById("highscores"));
-    scores.innerHTML = "<tr><th>Username</th><th>Time</th></tr>" + scores.innerHTML;
+    scores.innerHTML = "<tr><th>&nbsp;</th><th>Username</th><th>Time</th></tr>" + scores.innerHTML;
   });
   document.getElementById("TheButton").click=x=>console.log("Abuse is not tolerated.");
   document.getElementById("TheButton").onfocus=x=>document.getElementById("TheButton").blur();
