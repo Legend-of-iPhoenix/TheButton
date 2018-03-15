@@ -38,6 +38,7 @@ table#highscores {
   border: none;
   background-color: #fafafa;
   margin-top: 10px;
+  width: 800px
 }
 
 table#highscores tr {
