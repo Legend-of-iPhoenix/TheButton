@@ -1,3 +1,4 @@
+var lightButtonEnabled = false;
 (x=>{
 var lastPress,lu;
 
@@ -97,6 +98,7 @@ function ready() {
   // <copyright author="_iPhoenix_">
   setInterval(function () {
     var span = document.getElementsByClassName('rainbow')[0];
+    var lightButton = false;
     if(lastPress.u==username) {
       var length = span.innerText.length;
       var offset = span.id++;
@@ -107,8 +109,22 @@ function ready() {
         innerString += '<span style="color: hsl(' + h + ', 100%, 50%);">' + char + "</span>";
       });
       span.innerHTML = innerString;
+      lightButton = lightButtonEnabled;
     } else {
       span.innerHTML = span.innerText;
+      lightButton = false;
+    }
+    if (lightButton) {
+      if (!document.getElementById("TheButton").className.match(/(^|\s)lighted($|\s)/)) {
+        document.getElementById("TheButton").className += " lighted";
+        document.getElementById("TheButton").style.backgroundColor = "hsl(" + Math.floor(Math.random() * 360) + ", 100%, 70%)";
+      }
+    } else {
+      if (document.getElementById("TheButton").className.match(/(^|\s)lighted($|\s)/)) {
+        document.getElementById("TheButton").className =
+          document.getElementById("TheButton").className.replace(/(^|\s)lighted($|\s)/g, ' ');
+        document.getElementById("TheButton").style.backgroundColor = null;
+      }
     }
   }, 50);
   // </copyright>
