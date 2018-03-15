@@ -124,22 +124,28 @@ strong {
 
 #about {
   width: 60px;
+  height: 30px;
   background-color: #DCDCDC;
   border: 1px solid #ccc;
   cursor: pointer;
   border-radius: 5px;
   font-size: 100%;
+  margin: 5px;
 }
 
 #togglebgc {
+  width: 270px;
+  height: 30px;
   background-color: #DCDCDC;
   border: 1px solid #ccc;
   cursor: pointer;
   border-radius: 5px;
   font-size: 100%;
+  margin: 5px;
 }
 
 #repolink {
+  margin-top: 10px;
   width: 380px;
   height: 45px;
   background-color: #DCDCDC;
