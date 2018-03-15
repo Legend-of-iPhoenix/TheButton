@@ -29,7 +29,7 @@ div#main-div {
 }
 
 #title {
-  margin-top: 50px; 
+  margin-top: 20px; 
   font-weight: 600;
   text-align: center;
 }
@@ -81,7 +81,7 @@ table#highscores tr td:first-child:hover {
   text-decoration: none;
   font-variant: small-caps;
   font-size: 120%;
-  margin: 20px;
+  margin: 10px;
   cursor: pointer;
   letter-spacing: 2.5px;
   font-weight: 600;
@@ -141,8 +141,7 @@ strong {
 
 #repolink {
   width: 380px;
-  height: 30px;
-  vertical-align: center; 
+  height: 45px;
   background-color: #DCDCDC;
   padding-top: 10px;
   border: 1px solid #ccc;
