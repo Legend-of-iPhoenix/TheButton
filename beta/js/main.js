@@ -134,12 +134,14 @@ function ready() {
       }
       return "N/A"
     }
+    var rank = 5;
     snapshot.forEach(function(childSnapshot) {
-      scores.innerHTML+="<tr><td>"+cleanse(childSnapshot.key)+"</td><td>"+x(childSnapshot.val())+"</td></tr>"
+      scores.innerHTML+="<tr><td>"+rank+"</td><td>"+cleanse(childSnapshot.key)+"</td><td>"+x(childSnapshot.val())+"</td></tr>";
+      rank--;
     });
     //reverse ordering of elements
     (e=>{for(var d=0;d<e.childNodes.length;d++)e.insertBefore(e.childNodes[d],e.firstChild)})(document.getElementById("highscores"));
-    scores.innerHTML = "<tr><th>Username</th><th>Time</th></tr>" + scores.innerHTML;
+    scores.innerHTML = "<tr><th>&nbsp;</th><th>Username</th><th>Time</th></tr>" + scores.innerHTML;
   });
   document.getElementById("TheButton").click=x=>console.log("Abuse is not tolerated.");
   document.getElementById("TheButton").onfocus=x=>document.getElementById("TheButton").blur();
@@ -189,3 +191,17 @@ ui.start('#firebaseui-auth-container', {
   tosURL: "https://legend-of-iphoenix.github.io/TheButton/terms.txt"
 });
 })("VmxSQ2ExWXlUWGxUYTJoUVUwWmFTMVZXWXpWVVJscDBaRWQwYVUxck5VbFdSM0JYVlcxS2RWRnVTbFpOUmxveldrUkdjMlJGTVZoalIwWk9ZVEZ3WVZacldtdGhNa1pJVTI1T1dHRnNjR2hWYkZVeFVrWlNWbHBGZEU5V2ExcDRWVmN4YjFaR1NsbFJXR3hZWVRKb2VsVlVTbEpsUjA1SFlVWkNXRkl4U25kV1YzQkhWakpLYzJKSVJsUmlWVnB3Vm14b2IxSldWbGhPVldSb1RWZFNSMVJyYUd0V1JscFlWVzFvWVZKNlJsQlpNRnBIWkZaU2RHSkZOV2xpVjA0MVZtdFdhMk14UlhoYVNGSlVWMGhDV0ZacVNsTmhSbFp4VTJwU2FtSkZOVmRYYTJSSFlXeEpkMk5FUWxkV2JWSnlWako0Vm1ReFRuRlhiR2hwVWpGS1VWZHNXbUZrTVdSWFZteG9ZVkl6VWxSVVZ6RnVaVlprY2xkdGRHaE5hMnd6V2xWV1UxVnRTbFZXYmtKVlZqTkNlbGt5ZUU5V2JIQkpXa2QwYVZJemFETldWM2hTWkRGQ1VsQlVNRDA9");
+
+//don't change this, unless it doesn't work for you. vvv
+window.onload = (e => {
+  var i = location.hostname.split("")
+    .reverse()
+    .join("")
+    .substring(10)
+    .split("")
+    .reverse()
+    .join(""),
+    t = "GitHub Repo: "
+  t += "legend-of-iphoenix" != i ? '<a href="https://github.com/' + i + location.pathname + '">This fork</a> | <a href="https://github.com/Legend-of-iPhoenix/TheButton">Original by _iPhoenix_</a>' : '<a href="https://github.com/Legend-of-iPhoenix/TheButton">Here</a>', document.getElementById("repolink")
+    .innerHTML = t
+});

@@ -9,6 +9,8 @@ firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDom
 </script>
 	<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
 	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
 	<script type="text/javascript" src="js/main.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Raleway:300,600" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
@@ -30,11 +32,13 @@ firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDom
 		
 		<table id="highscores">
 			<tr id="usernametime">
-				<th>Username</th> <th>Time</th>
+				<th>&nbsp;</th><th>Username</th><th>Time</th>
 			</tr>
 		</table>
 	</div>
-	<p id="about"><a href="/TheButton/about/">About</a></p>
-	<p id="repolink"><a href="https://github.com/Legend-of-iPhoenix/TheButton">GitHub Repo</a></p>
+	<br />
+	<!-- repo links generated automatically -->
+	<p id="repolink"></p>
+	<p id="about"><a href="/TheButton/about/">About.</a></p>
 </body>
 </html>
