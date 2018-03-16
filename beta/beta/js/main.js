@@ -1,3 +1,4 @@
+var lightButtonEnabled = false;
 (x=>{
 var lastPress,lu;
 
@@ -78,13 +79,29 @@ function ready() {
     document.getElementById('label').innerHTML = "The Button was last clicked <strong>" + x(lastPress.t) + "</strong> by <strong>" + cleanse(lastPress.u) + "</strong>"
   }, 100);
   var username=firebase.auth().currentUser.displayName;
+  firebase.database().ref("/button/users/"+username).on('value',function(snapshot) {
+        document.getElementById('user-time').innerText = "You have " + (n => {
+      if (n) {
+        var r = n / 1e3,
+          t = r / 60,
+          o = t / 60,
+          e = o / 24
+
+        function u(n, r) {
+          return (n = Math.floor(n)) + " " + r + (1 == n ? "" : "s") + ", "
+        }
+        return t %= 60, o %= 24, r = u(r %= 60, "second"), t = u(t, "minute"), o = u(o, "hour"), (e = u(e, "day")) + o + t + "and " + (r = r.substring(0, r.length - 2))
+      }
+      return "No time."
+      })(snapshot.val())
+  });
   // <copyright author="_iPhoenix_">
   setInterval(function () {
     var span = document.getElementsByClassName('rainbow')[0];
+    var lightButton = false;
     if(lastPress.u==username) {
       var length = span.innerText.length;
       var offset = span.id++;
-      span.id %= length + 1;
       var innerString = '';
       var length = span.innerText.length;
       span.innerText.split('').forEach(function (char, index) {
@@ -92,12 +109,27 @@ function ready() {
         innerString += '<span style="color: hsl(' + h + ', 100%, 50%);">' + char + "</span>";
       });
       span.innerHTML = innerString;
+      lightButton = lightButtonEnabled;
     } else {
       span.innerHTML = span.innerText;
+      lightButton = false;
+    }
+    if (lightButton) {
+      if (!document.getElementById("TheButton").className.match(/(^|\s)lighted($|\s)/)) {
+        document.getElementById("TheButton").className += " lighted";
+        document.getElementById("TheButton").style.backgroundColor = "hsl(" + Math.floor(Math.random() * 220) + ", 100%, 70%)";
+      }
+    } else {
+      if (document.getElementById("TheButton").className.match(/(^|\s)lighted($|\s)/)) {
+        document.getElementById("TheButton").className =
+          document.getElementById("TheButton").className.replace(/(^|\s)lighted($|\s)/g, ' ');
+        document.getElementById("TheButton").style.backgroundColor = null;
+      }
     }
   }, 50);
   // </copyright>
-  firebase.database().ref("/button/users/").orderByValue().limitToLast(5).on('value',function(snapshot) {
+  var leaderboardLength = 5;
+  firebase.database().ref("/button/users/").orderByValue().limitToLast(leaderboardLength).on('value',function(snapshot) {
     var scores = document.getElementById("highscores");
     scores.innerHTML = "";
     var x = n => {
@@ -114,12 +146,14 @@ function ready() {
       }
       return "N/A"
     }
+    var rank = leaderboardLength;
     snapshot.forEach(function(childSnapshot) {
-      scores.innerHTML+="<tr><td>"+cleanse(childSnapshot.key)+"</td><td>"+x(childSnapshot.val())+"</td></tr>"
+      scores.innerHTML+="<tr><td>"+rank+"</td><td>"+cleanse(childSnapshot.key)+"</td><td>"+x(childSnapshot.val())+"</td></tr>";
+      rank--;
     });
     //reverse ordering of elements
     (e=>{for(var d=0;d<e.childNodes.length;d++)e.insertBefore(e.childNodes[d],e.firstChild)})(document.getElementById("highscores"));
-    scores.innerHTML = "<tr><th>Username</th><th>Time</th></tr>" + scores.innerHTML;
+    scores.innerHTML = "<tr><th>&nbsp;</th><th>Username</th><th>Time</th></tr>" + scores.innerHTML;
   });
   document.getElementById("TheButton").click=x=>console.log("Abuse is not tolerated.");
   document.getElementById("TheButton").onfocus=x=>document.getElementById("TheButton").blur();
