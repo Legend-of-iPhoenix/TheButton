@@ -29,7 +29,7 @@ div#main-div {
 }
 
 #title {
-  margin-top: 50px; 
+  margin-top: 20px; 
   font-weight: 600;
   text-align: center;
 }
@@ -38,6 +38,7 @@ table#highscores {
   border: none;
   background-color: #fafafa;
   margin-top: 10px;
+  width: 700px
 }
 
 table#highscores tr {
@@ -79,8 +80,8 @@ table#highscores tr td:first-child:hover {
   text-align: center;
   text-decoration: none;
   font-variant: small-caps;
-  font-size: 100%;
-  margin: 20px;
+  font-size: 120%;
+  margin: 10px;
   cursor: pointer;
   letter-spacing: 2.5px;
   font-weight: 600;
@@ -92,53 +93,75 @@ table#highscores tr td:first-child:hover {
           box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-
-#TheButton {
-  background: #ededed;
-  border: 1px solid #ccc;
-  padding: 10px 30px;
-  border-radius: 45px;
-  cursor: pointer;
-}
-
-/* #TheButton.lighted {
-  background-color: #4FC;
-  font-style: bold;
-} */
-
 #TheButton:hover {
-  background-color: #e5e5e5;
-  box-shadow: 0px 15px 20px rgb(204, 255, 255);
+  background-color: #00BFFF;
+  border: none;
+  box-shadow: 0px 20px 20px rgb(204, 255, 255);
   transform: translateY(-7px);
 }
 
 #TheButton:active {
-  box-shadow: 0px 3px 4px rgb(204, 255, 255);
+  box-shadow: 0px 6px 8px rgb(204, 255, 255);
   transform: translateY(3px);
-  background: #e5e5e5;
-  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+  background: #00BFFF;
+  /* -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
      -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-          box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1; */
 }
 
 p {
   text-align: center; 
 }
 
-p#about {
-  color: blue;
-  transition: all .25s .1s;
-  margin-top: 20px;
-}
-
 strong {
   font-weight: 600;
 }
 
-#about:hover {
-  color: white;
+#about {
+  width: 60px;
+  height: 30px;
+  background-color: #DCDCDC;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 100%;
+  margin: 5px;
 }
 
-#about:visited {
-  color: #0af;
+#togglebgc {
+  width: 270px;
+  height: 30px;
+  background-color: #DCDCDC;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 100%;
+  margin: 5px;
+}
+
+#repolink {
+  margin-top: 10px;
+  width: 380px;
+  height: 45px;
+  background-color: #DCDCDC;
+  padding-top: 10px;
+  border: 1px solid #ccc;
+  cursor: auto;
+  border-radius: 5px;
+}
+
+#thisfork {
+  background-color: #DCDCDC;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 100%;
+}
+
+#original {
+  background-color: #DCDCDC;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 100%;
 }
