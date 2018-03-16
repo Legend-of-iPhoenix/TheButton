@@ -33,6 +33,8 @@ firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDom
 				<th>Username</th> <th>Time</th>
 			</tr>
 		</table>
+		<p id="lastReset">Last leaderboard reset at&nbsp</p>
+		<script id="lastResetScript">document.getElementById("lastReset").innerText += new Date("14 Mar 2018 3:00 pm").toLocaleString(); document.getElementById("lastResetScript").remove();</script>
 	</div>
 	<p id="about"><a href="/TheButton/about/">About</a></p>
 	<p id="repolink"><a href="https://github.com/Legend-of-iPhoenix/TheButton">GitHub Repo</a></p>
