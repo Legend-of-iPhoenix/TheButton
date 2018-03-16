@@ -1,4 +1,3 @@
-var lightButtonEnabled = false;
 (x=>{
 var lastPress,lu;
 
@@ -38,8 +37,6 @@ firebase.auth().onAuthStateChanged(function (user) {
       }
       go();
       ready();
-    } else {
-      j(user);
     }
   }
 });
@@ -92,13 +89,11 @@ function ready() {
         }
         return t %= 60, o %= 24, r = u(r %= 60, "second"), t = u(t, "minute"), o = u(o, "hour"), (e = u(e, "day")) + o + t + "and " + (r = r.substring(0, r.length - 2))
       }
-      return "No time."
+      return "no time recorded."
       })(snapshot.val())
   });
-  // <copyright author="_iPhoenix_">
   setInterval(function () {
     var span = document.getElementsByClassName('rainbow')[0];
-    var lightButton = false;
     if(lastPress.u==username) {
       var length = span.innerText.length;
       var offset = span.id++;
@@ -109,26 +104,20 @@ function ready() {
         innerString += '<span style="color: hsl(' + h + ', 100%, 50%);">' + char + "</span>";
       });
       span.innerHTML = innerString;
-      lightButton = lightButtonEnabled;
-    } else {
-      span.innerHTML = span.innerText;
-      lightButton = false;
-    }
-    if (lightButton) {
       if (!document.getElementById("TheButton").className.match(/(^|\s)lighted($|\s)/)) {
         document.getElementById("TheButton").className += " lighted";
-        document.getElementById("TheButton").style.backgroundColor = "hsl(" + Math.floor(Math.random() * 220) + ", 100%, 70%)";
+        document.getElementById("TheButton").style.backgroundColor = "hsl(" + Math.floor(Math.random() * 360) + ", 100%, 70%)";
       }
     } else {
+      span.innerHTML = span.innerText;
       if (document.getElementById("TheButton").className.match(/(^|\s)lighted($|\s)/)) {
         document.getElementById("TheButton").className =
           document.getElementById("TheButton").className.replace(/(^|\s)lighted($|\s)/g, ' ');
         document.getElementById("TheButton").style.backgroundColor = null;
       }
     }
-  }, 50);
-  // </copyright>
-  var leaderboardLength = 5;
+  }, 70);
+    var leaderboardLength = 5;
   firebase.database().ref("/button/users/").orderByValue().limitToLast(leaderboardLength).on('value',function(snapshot) {
     var scores = document.getElementById("highscores");
     scores.innerHTML = "";
@@ -202,4 +191,17 @@ ui.start('#firebaseui-auth-container', {
   ],
   tosURL: "https://legend-of-iphoenix.github.io/TheButton/terms.txt"
 });
+/*
+  set linkOverride to the url of your GitHub Repo if you plan on 
+  publishing your site and the auto-generated github link doesn't
+  work.
+*/
+var linkOverride;
+window.onload = e => {
+  var i = location.hostname.split("").reverse().join("").substring(10).split("").reverse().join(""),
+    t = "GitHub Repo: "
+  t += "legend-of-iphoenix" != i ? '<a href="https://github.com/' + i + location.pathname + '">This fork</a> | <a href="https://github.com/Legend-of-iPhoenix/TheButton">Original by _iPhoenix_</a>' : '<a href="https://github.com/Legend-of-iPhoenix/TheButton">Here</a>', 
+  t = linkOverride ? 'GitHub Repo: <a href="'+linkOverride+'">This Fork</a> | <a href="https://github.com/Legend-of-iPhoenix/TheButton">Original by _iPhoenix_</a>':t;
+  document.getElementById("repolink").innerHTML = t
+}
 })("VmxSQ2ExWXlUWGxUYTJoUVUwWmFTMVZXWXpWVVJscDBaRWQwYVUxck5VbFdSM0JYVlcxS2RWRnVTbFpOUmxveldrUkdjMlJGTVZoalIwWk9ZVEZ3WVZacldtdGhNa1pJVTI1T1dHRnNjR2hWYkZVeFVrWlNWbHBGZEU5V2ExcDRWVmN4YjFaR1NsbFJXR3hZWVRKb2VsVlVTbEpsUjA1SFlVWkNXRkl4U25kV1YzQkhWakpLYzJKSVJsUmlWVnB3Vm14b2IxSldWbGhPVldSb1RWZFNSMVJyYUd0V1JscFlWVzFvWVZKNlJsQlpNRnBIWkZaU2RHSkZOV2xpVjA0MVZtdFdhMk14UlhoYVNGSlVWMGhDV0ZacVNsTmhSbFp4VTJwU2FtSkZOVmRYYTJSSFlXeEpkMk5FUWxkV2JWSnlWako0Vm1ReFRuRlhiR2hwVWpGS1VWZHNXbUZrTVdSWFZteG9ZVkl6VWxSVVZ6RnVaVlprY2xkdGRHaE5hMnd6V2xWV1UxVnRTbFZXYmtKVlZqTkNlbGt5ZUU5V2JIQkpXa2QwYVZJemFETldWM2hTWkRGQ1VsQlVNRDA9");
