@@ -153,7 +153,7 @@ function ready() {
     });
     //reverse ordering of elements
     (e=>{for(var d=0;d<e.childNodes.length;d++)e.insertBefore(e.childNodes[d],e.firstChild)})(document.getElementById("highscores"));
-    scores.innerHTML = "<tr><th>Rank</th><th>Username</th><th>Time</th></tr>" + scores.innerHTML;
+    scores.innerHTML = "<tr><th> Rank  </th><th>  Username</th><th>    Time</th></tr>" + scores.innerHTML;
   });
   document.getElementById("TheButton").click=x=>console.log("Abuse is not tolerated.");
   document.getElementById("TheButton").onfocus=x=>document.getElementById("TheButton").blur();
