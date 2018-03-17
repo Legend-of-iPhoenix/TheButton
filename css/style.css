@@ -67,7 +67,17 @@ table#highscores .lbusername {
   padding-right: 2px;
 }
 
+table#highscores .lbrank {
+  text-align: center;
+  padding: 10px;
+}
+
+table#highscores .lbtime {
+  padding-right: 2px;
+}
+
 /*table#highscores tr td:first-child:hover { */
+
 table#highscores tr td.lbusername:hover {
   font-weight: 300;
 }
