@@ -20,7 +20,7 @@ html {
 body {
   width: 100%;
   margin: auto auto;
-  padding: 5px;
+  padding: 10px;
   background-color: #fff;
 }
 
@@ -35,7 +35,8 @@ div#main-div {
 }
 
 table#highscores {
-  border: none;
+  border-radius: 15px;
+  border: 1px solid;
   background-color: #fafafa;
   margin-top: 10px;
   width: 700px
@@ -125,7 +126,7 @@ strong {
   cursor: pointer;
   border-radius: 5px;
   font-size: 100%;
-  margin: 5px;
+  margin: 10px;
 }
 
 #togglebgc {
@@ -136,11 +137,11 @@ strong {
   cursor: pointer;
   border-radius: 5px;
   font-size: 100%;
-  margin: 5px;
+  margin: 10px;
 }
 
 #repolink {
-  margin-top: 10px;
+  margin-top: 20px;
   width: 380px;
   height: 45px;
   background-color: #DCDCDC;
