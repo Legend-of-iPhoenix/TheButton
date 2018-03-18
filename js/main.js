@@ -191,6 +191,10 @@ ui.start('#firebaseui-auth-container', {
   ],
   tosURL: "https://legend-of-iphoenix.github.io/TheButton/terms.txt"
 });
+if (location.href.endsWith("?logout")) {
+  firebase.auth().signOut();
+  location.href = location.href.replace(location.search, '');
+}
 /*
   set linkOverride to the url of your GitHub Repo if you plan on 
   publishing your site and the auto-generated github link doesn't
