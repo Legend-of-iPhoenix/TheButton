@@ -51,7 +51,11 @@ firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDom
 		</table>
 	</div>
 	<p id="repolink">GitHub Repo: <input id="thisfork" type="button" value="This fork" onclick="window.location.href='https://github.com/jcgter777/TheButton'" /> | <input id="original" type="button" value="Original by iPhoenix" onclick="window.location.href='https://github.com/Legend-of-iPhoenix/TheButton'" /></p>
-	<p id="about|tbgc"><input id="about" type="button" value="About" onclick="window.location.href='/TheButton/about/'" />  <button id="togglebgc" onclick="lightButtonEnabled=!lightButtonEnabled;">Toggle Background Color changing</button></p>
+	<p id="about|tbgc"><p id="about"><a
+ href="/TheButton/about/"
+ target="aboutPage"
+ onclick="openAbout(); return false;"
+>About</a>  <button id="togglebgc" onclick="lightButtonEnabled=!lightButtonEnabled;">Toggle Background Color changing</button></p>
 <br />
 	<!-- repo links generated automatically -->
 	<p id="repolink"></p>
@@ -78,11 +82,5 @@ function openAbout() {
   };
 }
 </script>
-
-<p id="about"><a
- href="/TheButton/about/"
- target="aboutPage"
- onclick="openAbout(); return false;"
->About</a></p>
 </body>
 </html>
