@@ -50,8 +50,39 @@ firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDom
 			</tr>
 		</table>
 	</div>
-	<p> </p>
 	<p id="repolink">GitHub Repo: <input id="thisfork" type="button" value="This fork" onclick="window.location.href='https://github.com/jcgter777/TheButton'" /> | <input id="original" type="button" value="Original by iPhoenix" onclick="window.location.href='https://github.com/Legend-of-iPhoenix/TheButton'" /></p>
 	<p id="about|tbgc"><input id="about" type="button" value="About" onclick="window.location.href='/TheButton/about/'" />  <button id="togglebgc" onclick="lightButtonEnabled=!lightButtonEnabled;">Toggle Background Color changing</button></p>
+<br />
+	<!-- repo links generated automatically -->
+	<p id="repolink"></p>
+	<!-- ripped shamelessly from the MDN -->
+	<script type="text/javascript">
+var windowObjectReference = null; // global variable
+function openAbout() {
+  if(windowObjectReference == null || windowObjectReference.closed)
+  /* if the pointer to the window object in memory does not exist
+     or if such pointer exists but the window was closed */
+  {
+    windowObjectReference = window.open("/TheButton/about/",
+   "aboutPage", "resizable,scrollbars,status");
+    /* then create it. The new window will be created and
+       will be brought on top of any other window. */
+  }
+  else
+  {
+    windowObjectReference.focus();
+    /* else the window reference must exist and the window
+       is not closed; therefore, we can bring it back on top of any other
+       window with the focus() method. There would be no need to re-create
+       the window or to reload the referenced resource. */
+  };
+}
+</script>
+
+<p id="about"><a
+ href="/TheButton/about/"
+ target="aboutPage"
+ onclick="openAbout(); return false;"
+>About</a></p>
 </body>
 </html>
