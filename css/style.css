@@ -155,6 +155,19 @@ strong {
   background-color: #fafafa;
 }
 
+#abouttbgc a {
+  width: 270px;
+  height: 30px;
+  background-color: #DCDCDC;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 100%;
+  margin: 10px;
+  border: 1px solid black;
+  background-color: #fafafa;
+  padding: 5px 20px;
+}
+
 #repolink {
   margin-top: 20px;
   width: 380px;
