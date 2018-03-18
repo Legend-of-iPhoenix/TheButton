@@ -140,6 +140,8 @@ strong {
   border-radius: 5px;
   font-size: 100%;
   margin: 10px;
+  border: 1px solid;
+  background-color: #fafafa;
 }
 
 #togglebgc {
@@ -151,6 +153,8 @@ strong {
   border-radius: 5px;
   font-size: 100%;
   margin: 10px;
+  border: 1px solid;
+  background-color: #fafafa;
 }
 
 #repolink {
@@ -162,6 +166,8 @@ strong {
   border: 1px solid #ccc;
   cursor: auto;
   border-radius: 5px;
+  border: 1px solid;
+  background-color: #fafafa;
 }
 
 #thisfork {
