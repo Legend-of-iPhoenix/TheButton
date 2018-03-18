@@ -60,26 +60,24 @@ table#highscores th {
   border-bottom: 1px solid black;
 }
 
-/*table#highscores th:first-child,
-table#highscores td:first-child {*/
-
 table#highscores .lbusername {
   padding-right: 2px;
+  //border: 1px solid black;
 }
 
 table#highscores .lbrank {
   text-align: center;
   padding: 10px;
+  //border: 1px solid black;
 }
 
 table#highscores .lbtime {
   padding-right: 2px;
+ // border: 1px solid black;
 }
 
-/*table#highscores tr td:first-child:hover { */
-
 table#highscores tr td.lbusername:hover {
-  font-weight: 300;
+  font-weight: 600;
 }
 
 #TheButton {
@@ -127,18 +125,24 @@ p {
   text-align: center; 
 }
 
+a {
+  text-align: center; 
+}
+
 strong {
   font-weight: 600;
 }
 
 #about {
+  position: relative;
+  left: 1px;
   width: 60px;
   height: 30px;
   background-color: #DCDCDC;
   cursor: pointer;
   border-radius: 5px;
   font-size: 100%;
-  margin: 10px;
+  margin: 9px;
   border: 1px solid black;
   background-color: #fafafa;
 }
@@ -150,27 +154,15 @@ strong {
   cursor: pointer;
   border-radius: 5px;
   font-size: 100%;
-  margin: 10px;
+  color: #039be5;
+  margin: 9px;
   border: 1px solid black;
   background-color: #fafafa;
-}
-
-#abouttbgc a {
-  width: 270px;
-  height: 30px;
-  background-color: #DCDCDC;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 100%;
-  margin: 10px;
-  border: 1px solid black;
-  background-color: #fafafa;
-  padding: 5px 20px;
 }
 
 #repolink {
   margin-top: 20px;
-  width: 380px;
+  width: 376px;
   height: 45px;
   background-color: #DCDCDC;
   padding-top: 10px;
