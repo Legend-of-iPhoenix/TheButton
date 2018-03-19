@@ -63,17 +63,20 @@ table#highscores th {
 
 table#highscores .lbusername {
   padding-right: 2px;
+  border-bottom: 1px solid;
   /* border-bottom: 1px solid; */
 }
 
 table#highscores .lbrank {
   text-align: center;
   padding: 10px;
+  border-bottom: 1px solid;
   /* border-bottom: 1px solid; */
 }
 
 table#highscores .lbtime {
   padding-right: 2px;
+  border-bottom: 1px solid;
   /* border-bottom: 1px solid; */
 }
 
