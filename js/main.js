@@ -148,7 +148,7 @@ function ready() {
     }
     var rank = leaderboardLength;
     snapshot.forEach(function(childSnapshot) {
-      scores.innerHTML+="<tr><td class=\"lbrank\">"+rank+"</td><td class=\"lbusername\">"+cleanse(childSnapshot.key)+"</td><td class\"lbtime\">"+x(childSnapshot.val())+"</td></tr>";
+      scores.innerHTML+="<tr><td class=\"lbrank\">"+rank+"</td><td class=\"lbusername\">"+cleanse(childSnapshot.key)+"</td><td class=\"lbtime\">"+x(childSnapshot.val())+"</td></tr>";
       rank--;
     });
     //reverse ordering of elements
