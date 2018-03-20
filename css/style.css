@@ -143,6 +143,10 @@ strong {
   background-color: #fafafa;
 }
 
+#about:active {
+  background-color: #A9A9A9;
+}
+
 #togglebgc {
   width: 270px;
   height: 30px;
@@ -169,6 +173,14 @@ strong {
   padding: 5px 20px;
 }
 
+#abouttbgc a:active {
+  background-color: #A9A9A9;  
+}
+
+#togglebgc:active {
+  background-color: #A9A9A9;
+}
+
 #repolink {
   margin-top: 20px;
   width: 380px;
@@ -189,10 +201,27 @@ strong {
   font-size: 100%;
 }
 
+
 #original {
   background-color: #DCDCDC;
   border: 1px solid #ccc;
   cursor: pointer;
   border-radius: 5px;
   font-size: 100%;
+}
+
+#logout {
+  margin-top: 0;
+  width: 100px;
+  height: 35px;
+  background-color: #DCDCDC;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: #fafafa;
+}
+
+#logout:active {
+  background-color: #A9A9A9;
 }
