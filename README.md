@@ -26,6 +26,9 @@ We want TheButton to be fun and fair, so players who feel the need to use an aut
 ## New Features
 When you are in control of the button, it will have a random background color and the "Click Me" text will become an animated rainbow. Enjoy!
 
+## New features
+When you are in control of the button, tghe text "Click Me." will be an animated rainbow. The background color of the button will also be different, and it will be random. Enjoy!
+
 ## Credits
 - *\_iPhoenix\_* (GitHub: Legend-of-iPhoenix) made the majority of the JavaScript and HTML, did a bit of styling, helped jcgter777 with some CSS, and fixed most, if not all, of the bugs reported so far. 
 - *jcgter777* (GitHub: jcgter777) helped expand the README file, style with CSS, and helped \_iPhoenix\_ fix several bugs.
