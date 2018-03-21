@@ -126,7 +126,9 @@ table#highscores tr td.lbusername:hover {
 
 p {
   text-align: center; 
+  color: #fff;
 }
+
 a {
   text-align: center;
 }
