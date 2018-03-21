@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>TheButton</title>
+	<link rel="shortcut icon" href="img/icon.png">
 	<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-109579764-3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-109579764-3")</script>
 	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
 <script>
@@ -9,14 +10,27 @@ firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDom
 </script>
 	<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
 	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
-        <!-- This makes it hard for me personally to use the iOS site, but feel free to add it back in if others have objections. <meta name="viewport" content="width=device-width, initial-scale=1.0"/> -->
+	<!--materialize stuff begins here-->
+	<!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!--materialize for head done-->
     </head>
 	<script type="text/javascript" src="js/main.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Raleway:300,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<base target="_blank">
 </head>
 <body>
+	<!--materialize starts here again-->	
+	<!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+	<!--materialize for head done-->
 	<h1 id="title">TheButton</h1>
 	<div class='visible' id='login-div'>
 		<p> TheButton is a King-of-the-Hill-esque game where the username of the last person to click a button is broadcast to everyone.</p>
@@ -32,22 +46,22 @@ firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDom
 		
 		<table id="highscores">
 			<tr id="usernametime">
-				<th>&nbsp;</th><th>Username</th><th>Time</th>
+				<th class="lbrank">Rank</th> <th class="lbusername">Username</th> <th class="lbtime">Time</th>
 			</tr>
 		</table>
 	</div>
-	<br />
-	<!-- repo links generated automatically -->
-	<p id="repolink"></p>
-	<!-- ripped shamelessly from the MDN -->
+	<p id="repolink">GitHub Repos: <input id="thisfork" type="button" value="This fork" onclick="window.location.href='https://github.com/jcgter777/TheButton'" /> | <input id="original" type="button" value="Original by iPhoenix" onclick="window.location.href='https://github.com/Legend-of-iPhoenix/TheButton'" /></p>
+	<p id="abouttbgc"><a href="/TheButton/about/" target="aboutPage" onclick="openAbout(); return false;">About</a>|<button id="togglebgc" onclick="lightButtonEnabled=!lightButtonEnabled;">Toggle Background Color changing</button></p>
+	<p id="logoutline"><a href="/TheButton/hicontrast/" target="hicontrastPage" onclick="openHicontrast(); return false;">Open high contrast mode</a>|<button id="logout" onclick="firebase.auth().signOut(); 
+                             location.reload();"">Log out</button></p>
+
+<!-- ripped shamelessly from the MDN -->
 	<script type="text/javascript">
 var windowObjectReference = null; // global variable
-
 function openAbout() {
   if(windowObjectReference == null || windowObjectReference.closed)
   /* if the pointer to the window object in memory does not exist
      or if such pointer exists but the window was closed */
-
   {
     windowObjectReference = window.open("/TheButton/about/",
    "aboutPage", "resizable,scrollbars,status");
@@ -64,12 +78,27 @@ function openAbout() {
   };
 }
 </script>
-
-<p id="about"><a
- href="/TheButton/about/"
- target="aboutPage"
- onclick="openAbout(); return false;"
->About</a></p>
-<input type="button" value="Log Out" id="logoutbutton">
+	<script type="text/javascript">
+var windowObjectReference = null; // global variable
+function openHicontrast() {
+  if(windowObjectReference == null || windowObjectReference.closed)
+  /* if the pointer to the window object in memory does not exist
+     or if such pointer exists but the window was closed */
+  {
+    windowObjectReference = window.open("/TheButton/hicontrast/",
+   "hicontrastPage", "resizable,scrollbars,status");
+    /* then create it. The new window will be created and
+       will be brought on top of any other window. */
+  }
+  else
+  {
+    windowObjectReference.focus();
+    /* else the window reference must exist and the window
+       is not closed; therefore, we can bring it back on top of any other
+       window with the focus() method. There would be no need to re-create
+       the window or to reload the referenced resource. */
+  };
+}
+</script>
 </body>
 </html>
