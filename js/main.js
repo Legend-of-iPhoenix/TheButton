@@ -26,6 +26,10 @@ function go() {
   document.getElementById('login-div').classList = 'hidden';
 }
 
+function out() {
+  document.getElementById('main-div').classList = 'hidden';
+  document.getElementById('login-div').classList = 'visible';
+}
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     if (user.photoURL == "https://legend-of-iphoenix.github.io/TheButton/img/authenticated.png" && /^\w{1,32}$/.test(user.displayName) && user.displayName) {
@@ -215,6 +219,5 @@ window.onload = e => {
   t = linkOverride ? 'GitHub Repo: <a href="'+linkOverride+'">This Fork</a> | <a href="https://github.com/Legend-of-iPhoenix/TheButton">Original by _iPhoenix_</a>':t;
   document.getElementById("repolink").innerHTML = t
 }
-button.innerHTML = 'Log Out';
-  button.onclick = firebase.auth().signOut{
+document.getElementById('TheButton').onclick = function (out) {}
 })("VmxSQ2ExWXlUWGxUYTJoUVUwWmFTMVZXWXpWVVJscDBaRWQwYVUxck5VbFdSM0JYVlcxS2RWRnVTbFpOUmxveldrUkdjMlJGTVZoalIwWk9ZVEZ3WVZacldtdGhNa1pJVTI1T1dHRnNjR2hWYkZVeFVrWlNWbHBGZEU5V2ExcDRWVmN4YjFaR1NsbFJXR3hZWVRKb2VsVlVTbEpsUjA1SFlVWkNXRkl4U25kV1YzQkhWakpLYzJKSVJsUmlWVnB3Vm14b2IxSldWbGhPVldSb1RWZFNSMVJyYUd0V1JscFlWVzFvWVZKNlJsQlpNRnBIWkZaU2RHSkZOV2xpVjA0MVZtdFdhMk14UlhoYVNGSlVWMGhDV0ZacVNsTmhSbFp4VTJwU2FtSkZOVmRYYTJSSFlXeEpkMk5FUWxkV2JWSnlWako0Vm1ReFRuRlhiR2hwVWpGS1VWZHNXbUZrTVdSWFZteG9ZVkl6VWxSVVZ6RnVaVlprY2xkdGRHaE5hMnd6V2xWV1UxVnRTbFZXYmtKVlZqTkNlbGt5ZUU5V2JIQkpXa2QwYVZJemFETldWM2hTWkRGQ1VsQlVNRDA9");
