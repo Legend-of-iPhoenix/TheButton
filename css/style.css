@@ -32,6 +32,7 @@ div#main-div {
   margin-top: 20px; 
   font-weight: 600;
   text-align: center;
+  color: #000;
 }
 
 table#highscores {
@@ -126,7 +127,9 @@ table#highscores tr td.lbusername:hover {
 p {
   text-align: center; 
 }
-
+a {
+  text-align: center;
+}
 strong {
   font-weight: 600;
 }
@@ -213,7 +216,7 @@ strong {
 #logout {
   margin-top: 0;
   width: 100px;
-  height: 35px;
+  height: 30px;
   background-color: #DCDCDC;
   padding: 0;
   cursor: pointer;
@@ -221,8 +224,32 @@ strong {
   border: 1px solid black;
   background-color: #fafafa;
   color: #039be5;
+  margin-left: 25px;
 }
 
 #logout:active {
   background-color: #A9A9A9;
+}
+
+#loading {
+  text-align: center;
+}
+
+#logoutline a {
+  width: 270px;
+  height: 30px;
+  background-color: #DCDCDC;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 100%;
+  margin: 10px;
+  margin-right: 25px;
+  margin-left: 0px;
+  border: 1px solid black;
+  background-color: #fafafa;
+  padding: 5px 20px;
+}
+
+#logoutline a:active {
+  background-color: #A9A9A9;  
 }
