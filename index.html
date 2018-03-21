@@ -55,8 +55,7 @@ firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDom
 	<p id="logoutline"><button id="logout" onclick="logout()">Log out</button></p>
 	<script>
 		function logout();
-		firebase.auth().signOut(); 
-		location.reload();
+		x=>{firebase.auth().signOut(); location.reload()}
 	</script>
 <!-- ripped shamelessly from the MDN -->
 	<script type="text/javascript">
