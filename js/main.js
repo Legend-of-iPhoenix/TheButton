@@ -1,7 +1,8 @@
 var lightButtonEnabled = false;
 (x=>{
 var lastPress,lu;
-
+var signedOut = true;
+  
 function j(user, error) {
   var nextName = prompt("Please select a username: " + (error || ""));
   if (/^\w{1,32}$/.test(nextName) && nextName) {
@@ -30,6 +31,7 @@ function out() {
   document.getElementById('main-div').classList = 'hidden';
   document.getElementById('login-div').classList = 'visible';
 }
+
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     if (user.photoURL == "https://legend-of-iphoenix.github.io/TheButton/img/authenticated.png" && /^\w{1,32}$/.test(user.displayName) && user.displayName) {
