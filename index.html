@@ -1,75 +1,94 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>TheButton</title>
-	<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-109579764-3"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-109579764-3")</script>
-	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
-<script>
-firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDomain:"demos-and-stuff.firebaseapp.com",databaseURL:"https://demos-and-stuff.firebaseio.com",projectId:"demos-and-stuff",storageBucket:"demos-and-stuff.appspot.com",messagingSenderId:"66793199620"})
-</script>
-	<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
-	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
-        <!-- This makes it hard for me personally to use the iOS site, but feel free to add it back in if others have objections. <meta name="viewport" content="width=device-width, initial-scale=1.0"/> -->
-    </head>
-	<script type="text/javascript" src="js/main.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Raleway:300,600" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet" type="text/css">
-	<base target="_blank">
+  <title>TheButton</title>
+  <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-109579764-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag("js", new Date), gtag("config", "UA-109579764-3")
+
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+  <script>
+    firebase.initializeApp({
+      apiKey: "AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",
+      authDomain: "demos-and-stuff.firebaseapp.com",
+      databaseURL: "https://demos-and-stuff.firebaseio.com",
+      projectId: "demos-and-stuff",
+      storageBucket: "demos-and-stuff.appspot.com",
+      messagingSenderId: "66793199620"
+    })
+
+  </script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+  <!-- This makes it hard for me personally to use the iOS site, but feel free to add it back in if others have objections. <meta name="viewport" content="width=device-width, initial-scale=1.0"/> -->
 </head>
+<script type="text/javascript" src="js/main.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,600" rel="stylesheet">
+<link rel="icon" href="img/favicon.png" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<base target="_blank" />
+</head>
+
 <body>
-	<h1 id="title">TheButton</h1>
-	<div class='visible' id='login-div'>
-		<p> TheButton is a King-of-the-Hill-esque game where the username of the last person to click a button is broadcast to everyone.</p>
-		<p> To join in on the fun, you can register or sign in with Google.</p>
-		<div id="firebaseui-auth-container"></div>
-		<div id="loading-auth">Loading authentication scripts...</div>
-	</div>
-	<div class='hidden' id='main-div'>
-		<button id="TheButton"><p class="rainbow">Click Me</p></button>
-		
-		<p id="label">Loading... (If this doesn't disappear in a few seconds, reload the page)</p>
-		<p id="user-time"></p>
-		
-		<table id="highscores">
-			<tr id="usernametime">
-				<th>&nbsp;</th><th>Username</th><th>Time</th>
-			</tr>
-		</table>
-	</div>
-	<br />
-	<!-- repo links generated automatically -->
-	<p id="repolink"></p>
-	<!-- ripped shamelessly from the MDN -->
-	<script type="text/javascript">
-var windowObjectReference = null; // global variable
+  <h1 id="title">TheButton</h1>
+  <div class='visible' id='login-div'>
+    <p> TheButton is a King-of-the-Hill-esque game where the username of the last person to click a button is broadcast to everyone.</p>
+    <p> To join in on the fun, you can register or sign in with Google.</p>
+    <div id="firebaseui-auth-container"></div>
+    <div id="loading-auth">Loading authentication scripts...</div>
+  </div>
+  <div class='hidden' id='main-div'>
+    <button id="TheButton"><p class="rainbow">Click Me</p></button>
 
-function openAbout() {
-  if(windowObjectReference == null || windowObjectReference.closed)
-  /* if the pointer to the window object in memory does not exist
-     or if such pointer exists but the window was closed */
+    <p id="label">Loading... (If this doesn't disappear in a few seconds, reload the page)</p>
+    <p id="user-time"></p>
 
-  {
-    windowObjectReference = window.open("/TheButton/about/",
-   "aboutPage", "resizable,scrollbars,status");
-    /* then create it. The new window will be created and
-       will be brought on top of any other window. */
-  }
-  else
-  {
-    windowObjectReference.focus();
-    /* else the window reference must exist and the window
-       is not closed; therefore, we can bring it back on top of any other
-       window with the focus() method. There would be no need to re-create
-       the window or to reload the referenced resource. */
-  };
-}
-</script>
+    <table id="highscores">
+      <tr id="usernametime">
+        <th>&nbsp;</th>
+        <th>Username</th>
+        <th>Time</th>
+      </tr>
+    </table>
+  </div>
+  <br />
+  <!-- repo links generated automatically -->
+  <p id="repolink"></p>
+  <!-- ripped shamelessly from the MDN -->
+  <script type="text/javascript">
+    var windowObjectReference = null; // global variable
 
-<p id="about"><a
- href="/TheButton/about/"
- target="aboutPage"
- onclick="openAbout(); return false;"
->About</a></p>
-<input type="button" value="Log Out" id="logoutbutton">
+    function openAbout() {
+      if (windowObjectReference == null || windowObjectReference.closed)
+      /* if the pointer to the window object in memory does not exist
+         or if such pointer exists but the window was closed */
+
+      {
+        windowObjectReference = window.open("/TheButton/about/",
+          "aboutPage", "resizable,scrollbars,status");
+        /* then create it. The new window will be created and
+           will be brought on top of any other window. */
+      } else {
+        windowObjectReference.focus();
+        /* else the window reference must exist and the window
+           is not closed; therefore, we can bring it back on top of any other
+           window with the focus() method. There would be no need to re-create
+           the window or to reload the referenced resource. */
+      };
+    }
+
+  </script>
+
+  <p id="about"><a href="/TheButton/about/" target="aboutPage" onclick="openAbout(); return false;">About</a></p>
+  <input type="button" value="Log Out" id="logoutbutton">
 </body>
+
 </html>
