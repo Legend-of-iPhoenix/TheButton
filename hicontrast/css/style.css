@@ -21,7 +21,7 @@ body {
   width: 100%;
   margin: auto auto;
   padding: 10px;
-  background-color: #fff;
+  background-color: #000;
 }
 
 div#main-div {
@@ -32,6 +32,7 @@ div#main-div {
   margin-top: 20px; 
   font-weight: 600;
   text-align: center;
+  color: #fff;
 }
 
 table#highscores {
@@ -225,4 +226,8 @@ strong {
 
 #logout:active {
   background-color: #A9A9A9;
+}
+
+#loading {
+  text-align: center;
 }
