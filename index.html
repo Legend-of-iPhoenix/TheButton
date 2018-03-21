@@ -52,8 +52,8 @@ firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDom
 	</div>
 	<p id="repolink">GitHub Repos: <input id="thisfork" type="button" value="This fork" onclick="window.location.href='https://github.com/jcgter777/TheButton'" /> | <input id="original" type="button" value="Original by iPhoenix" onclick="window.location.href='https://github.com/Legend-of-iPhoenix/TheButton'" /></p>
 	<p id="abouttbgc"><a href="/TheButton/about/" target="aboutPage" onclick="openAbout(); return false;">About</a>|<button id="togglebgc" onclick="lightButtonEnabled=!lightButtonEnabled;">Toggle Background Color changing</button></p>
-	<p id="logoutline"><button id="logout" onclick="firebase.auth().signOut(); 
-                             location.reload();"">Log out</button>|<a href="/TheButton/hicontrast/" target="aboutPage" onclick="openAbout(); return false;">Toggle high contrast mode</a></p>
+	<p id="logoutline"><a href="/TheButton/hicontrast/" target="aboutPage" onclick="openAbout(); return false;">Toggle high contrast mode</a>|<button id="logout" onclick="firebase.auth().signOut(); 
+                             location.reload();"">Log out</button></p>
 
 <!-- ripped shamelessly from the MDN -->
 	<script type="text/javascript">
