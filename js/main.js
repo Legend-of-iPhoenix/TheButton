@@ -211,11 +211,11 @@ window.onload = e => {
   this_repo_url = (linkOverride ? linkOverride : 'https://github.com/' + i + '/' + location.pathname.split('/')[1]);
   is_original = i == 'legend-of-iphoenix';
   tr = 'GitHub repo: <a href="' + this_repo_url + '">' + (is_original ? 'Here' : i + ' (this fork)') + '</a>';
-  if (!is_original) tr += ' | <a href="https://github.com/Legend-of-iPhoenix/TheButton">_iPhoenix_ (original)</a>';
+  if (!is_original) tr += ' | <a href="https://github.com/Legend-of-iPhoenix/TheButton">Legend-of-iPhoenix (original)</a>';
 
   tl = '';
   if (!is_original) {
-    tl += '<b>' + i + '</b> | <a href="https://legend-of-iphoenix.github.io/TheButton/">iPhoenix</a>';
+    tl += '<b>' + i + '</b> | <a href="https://legend-of-iphoenix.github.io/TheButton/">Legend-of-iPhoenix</a>';
   } else if (otherRepos.length) {
     tl += '<b>' + i + '</b>';
   }
