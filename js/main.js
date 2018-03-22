@@ -214,8 +214,10 @@ window.onload = e => {
   if (!is_original) tr += ' | <a href="https://github.com/Legend-of-iPhoenix/TheButton">_iPhoenix_ (original)</a>';
 
   tl = '';
-  if ('legend-of-iphoenix' != i) {
+  if (!is_original) {
     tl += '<b>' + i + '</b> | <a href="https://legend-of-iphoenix.github.io/TheButton/">iPhoenix</a>';
+  } else if (otherRepos.length) {
+    tl += '<b>' + i + '</b>';
   }
   for (i=0; i<otherRepos.length; i++) {
     repo = otherRepos[i].split('/');
