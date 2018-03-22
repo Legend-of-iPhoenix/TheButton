@@ -1,0 +1,129 @@
+* {
+  font-family: 'Raleway', sans-serif;
+  width: fit-content;
+  margin: auto auto;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.visible {
+  display: block;
+  visibility: visible;
+}
+
+html {
+  margin: 0 0;
+}
+
+body {
+  width: 100%;
+  position: fixed;
+  margin: auto auto;
+  padding: 5px;
+  background-color: #fff;
+  padding-top: 80px;
+}
+
+h1#title {
+  text-align: center;
+}
+
+div#main-div {
+  text-align: center;
+}
+
+table#highscores {
+  border: 
+  background-color: #fafafa;
+  margin-top: 10px;
+}
+
+table#highscores tr {
+  transition: all .1s;
+}
+
+table#highscores td {
+  text-align: left;
+}
+
+table#highscores tr:hover {
+  background-color: #eee;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+table#highscores th {
+  border-bottom: 1px solid black;
+}
+
+table#highscores th:first-child,
+table#highscores td:first-child {
+  padding-right: 2px;
+}
+
+table#highscores tr td:first-child:hover {
+  font-weight: 300;
+}
+
+#TheButton {
+  width: 400px;
+  height: auto;
+  transition: all .1s;
+  color: #fff;
+  background-color: #DCDCDC;
+  padding: 15px 0px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  font-weight: bolder;
+  color: #000;
+  border: none;
+  border-radius: 45px;
+  /* box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);*/
+  transition: all 0.2s ease 0s;
+  cursor: pointer;
+  }
+
+#TheButton:hover {
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  transform: translateY(-7px);
+}
+
+#TheButton:active {
+  background-color: #2EE59D;
+  box-shadow: none;
+  transform: translateY(3px);
+}
+
+p {
+  text-align: center; 
+}
+
+p#about {
+  color: blue;
+  transition: all .25s .1s;
+  margin-top: 20px;
+}
+
+strong {
+  font-weight: 600;
+}
+
+#about:hover {
+  color: white;
+}
+
+#about:visited {
+  color: #0af;
+}

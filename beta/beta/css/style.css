@@ -95,6 +95,7 @@ table#highscores tr td:first-child:hover {
 
 #TheButton:hover {
   background-color: #00BFFF;
+  border: none;
   box-shadow: 0px 20px 20px rgb(204, 255, 255);
   transform: translateY(-7px);
 }
