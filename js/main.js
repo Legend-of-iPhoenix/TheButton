@@ -22,6 +22,7 @@ function j(user, error) {
 }
 function go() {
   document.getElementById('main-div').classList = 'visible';
+  document.getElementById('logoutbutton').classList = 'visible';
   document.getElementById('login-div').classList = 'hidden';
 }
 
