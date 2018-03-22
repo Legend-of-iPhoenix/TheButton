@@ -201,12 +201,35 @@ if (location.href.endsWith("?logout")) {
   work.
 */
 var linkOverride;
+/*
+  add strings to otherRepos (in “username/repo-name” format) as
+  desired to produce additional links for forks
+*/
+var otherRepos = [];
 window.onload = e => {
   var i = location.hostname.split("").reverse().join("").substring(10).split("").reverse().join(""),
-    t = "GitHub Repo: "
-  t += "legend-of-iphoenix" != i ? '<a href="https://github.com/' + i + location.pathname + '">This fork</a> | <a href="https://github.com/Legend-of-iPhoenix/TheButton">Original by _iPhoenix_</a>' : '<a href="https://github.com/Legend-of-iPhoenix/TheButton">Here</a>', 
-  t = linkOverride ? 'GitHub Repo: <a href="'+linkOverride+'">This Fork</a> | <a href="https://github.com/Legend-of-iPhoenix/TheButton">Original by _iPhoenix_</a>':t;
-  document.getElementById("repolink").innerHTML = t
+  this_repo_url = (linkOverride ? linkOverride : 'https://github.com/' + i + '/' + location.pathname.split('/')[1]);
+  is_original = i == 'legend-of-iphoenix';
+  tr = 'GitHub repo: <a href="' + this_repo_url + '">' + (is_original ? 'Here' : i + ' (this fork)') + '</a>';
+  if (!is_original) tr += ' | <a href="https://github.com/Legend-of-iPhoenix/TheButton">_iPhoenix_ (original)</a>';
+
+  tl = '';
+  if ('legend-of-iphoenix' != i) {
+    tl += '<b>' + i + '</b> | <a href="https://legend-of-iphoenix.github.io/TheButton/">iPhoenix</a>';
+  }
+  for (i=0; i<otherRepos.length; i++) {
+    repo = otherRepos[i].split('/');
+    tr += ' | <a href="https://github.com/' + repo[0] + '/' + repo[1] + '">' + repo[0] + '</a>';
+    tl += (tl ? ' | ' : '') + '<a href="https://' + repo[0] + '.github.io/' + repo[1] + '">' + repo[0] + '</a>';
+  }
+  if (tl) tl = 'Live site: ' + tl;
+
+  document.getElementById("repolink").innerHTML = tr;
+  if (tl) {
+    document.getElementById("livelink").innerHTML = tl;
+  } else {
+    document.getElementById("livelink").remove();
+  }
   document.getElementById("logoutbutton").onclick = function() {
     firebase.auth().signOut();
     location.reload();
