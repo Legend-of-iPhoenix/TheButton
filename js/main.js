@@ -23,11 +23,13 @@ function j(user, error) {
 }
 function go() {
   document.getElementById('main-div').classList = 'visible';
+  document.getElementById('logout').classList = 'visible';
   document.getElementById('login-div').classList = 'hidden';
 }
 
 function logout() {
   document.getElementById('main-div').classList = 'hidden';
+  document.getElementById('logout').classList = 'hidden';
   document.getElementById('login-div').classList = 'visible';
   x=>{firebase.auth().signOut(); location.reload()}
 }
