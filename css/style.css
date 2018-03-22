@@ -13,6 +13,10 @@
   visibility: visible;
 }
 
+span.visible {
+  display: inline;
+}
+
 html {
   margin: 0 0;
 }
@@ -25,6 +29,10 @@ body {
 }
 
 div#main-div {
+  text-align: center;
+}
+
+div#footer {
   text-align: center;
 }
 
