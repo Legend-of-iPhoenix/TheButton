@@ -267,7 +267,7 @@ strong {
   background-color: #A9A9A9;  
 }
 
-/* materialize stuff here */
+/* materialize stuff below  */
 
 html {
   font-family: sans-serif;
@@ -278,16 +278,6 @@ html {
   /* 2 */
 }
 
-hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  height: 0;
-}
-
-pre {
-  overflow: auto;
-}
-
 code,
 kbd,
 pre,
@@ -296,8 +286,7 @@ samp {
   font-size: 1em;
 }
 
-button,
-textarea {
+button {
   color: inherit;
   /* 1 */
   font: inherit;
@@ -310,13 +299,11 @@ button {
   overflow: visible;
 }
 
-button,
-select {
+button {
   text-transform: none;
 }
 
-button[disabled],
-html input[disabled] {
+button[disabled] {
   cursor: default;
 }
 
@@ -328,10 +315,6 @@ input::-moz-focus-inner {
 
 input {
   line-height: normal;
-}
-
-textarea {
-  overflow: auto;
 }
 
 table {
