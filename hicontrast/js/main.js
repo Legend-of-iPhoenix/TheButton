@@ -33,7 +33,7 @@ function logout() {
   document.getElementById('login-div').classList = 'visible';
   x=>{firebase.auth().signOut(); location.reload()}
 }
-
+  
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     if (user.photoURL == "https://legend-of-iphoenix.github.io/TheButton/img/authenticated.png" && /^\w{1,32}$/.test(user.displayName) && user.displayName) {
