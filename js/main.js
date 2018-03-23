@@ -34,10 +34,6 @@ function logout() {
   x=>{firebase.auth().signOut(); location.reload()}
 }
   
-  document.querySelector('[data-switch-contrast]').addEventListener('click', function() {
-  document.body.classList.toggle('nightmode');
-});
-  
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     if (user.photoURL == "https://legend-of-iphoenix.github.io/TheButton/img/authenticated.png" && /^\w{1,32}$/.test(user.displayName) && user.displayName) {
