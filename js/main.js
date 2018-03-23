@@ -26,7 +26,11 @@ function go() {
   document.getElementById('logout-span').classList = 'visible';
   document.getElementById('login-div').classList = 'hidden';
 }
-
+  
+  document.querySelector('[data-switch-contrast]').addEventListener('click', function() {
+  document.body.classList.toggle('nightmode');
+});
+  
 function logout() {
   document.getElementById('main-div').classList = 'hidden';
   document.getElementById('logout-span').classList = 'hidden';
