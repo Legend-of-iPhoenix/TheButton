@@ -261,3 +261,16 @@ strong {
 #logoutline a:active {
   background-color: #A9A9A9;  
 }
+
+body, button, textarea, a, p, div{
+  -webkit-filter: invert(1) hue-rotate(180deg);
+  filter: invert(1) hue-rotate(180deg);
+}
+
+body {
+  background: black;
+}
+
+#TheButton {
+  color: #000;
+}
