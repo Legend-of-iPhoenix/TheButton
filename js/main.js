@@ -159,19 +159,18 @@
               return ts;
             }).then(function () {
               var clickCt;
-              firebase.database().ref("/button/click/").transaction(clickCount => {
-                clickCount++;
-                clickCt = clickCount;
-                return clickCount;
-              }).then(function () {
+              firebase.database().ref("/button/click/").once('value').then(function(snapshot){
+                clickCt = snapshot.val();
                 firebase.database().ref("/button/clicks/" + clickCt).set({
                   t: TIMESTAMP,
                   u: firebase.auth().currentUser.displayName,
                   c: clickCt
-                });
-                gtag('event', 'ButtonPressed', {
-                  'event_category': 'engagement',
-                  'event_label': firebase.auth().currentUser.displayName
+                }).then(function() {
+                   gtag('event', 'ButtonPressed', {
+                    'event_category': 'engagement',
+                    'event_label': firebase.auth().currentUser.displayName
+                  });
+                  firebase.database().ref("/button/click/").set(clickCt+1);
                 });
               });
             });
