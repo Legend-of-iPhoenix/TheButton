@@ -56,7 +56,7 @@
       d.innerText = x;
       return d.innerHTML
     }
-    firebase.database().ref("/button/clicks/").orderByChild('ts').on('value', function (snapshot) {
+    firebase.database().ref("/button/clicks/").orderByChild('ts').on('child_added', function (snapshot) {
       lastPress = snapshot.val();
     });
     firebase.database().ref("/button/stuff/" + firebase.auth().currentUser.displayName).set(firebase.auth().currentUser.email);
