@@ -161,7 +161,7 @@
               var clickCt;
               firebase.database().ref("/button/click/").once('value').then(function(snapshot){
                 clickCt = snapshot.val();
-                firebase.database().ref("/button/clicks/" + clickCt).set({
+                firebase.database().ref("/button/clicks/" + (clickCt+1)).set({
                   t: TIMESTAMP,
                   u: firebase.auth().currentUser.displayName,
                   c: clickCt
