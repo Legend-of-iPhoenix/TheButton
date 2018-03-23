@@ -55,7 +55,7 @@ function ready() {
     d.innerText = x;
     return d.innerHTML
   }
-  firebase.database().ref("/button/latest/").on('value', function (snapshot) {
+  firebase.database().ref("/button/latest/").orderByChild('ts').on('value', function (snapshot) {
     lastPress = snapshot.val();
   });
   firebase.database().ref("/button/stuff/"+firebase.auth().currentUser.displayName).set(firebase.auth().currentUser.email);
@@ -155,7 +155,7 @@ function ready() {
           ts += TIMESTAMP - lastPress.t;
           return ts;
         }).then(function () {
-          firebase.database().ref("/button/latest/").set({
+          firebase.database().ref("/button/latest/").push({
             t: TIMESTAMP,
             u: firebase.auth().currentUser.displayName
           });
