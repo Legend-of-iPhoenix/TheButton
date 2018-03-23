@@ -47,7 +47,6 @@
   </div>
   <div class='hidden' id='main-div'>
     <button id="TheButton"><p class="rainbow">Click Me</p></button>
-
     <p id="label">Loading... (If this doesn't disappear in a few seconds, reload the page)</p>
     <p id="user-time"></p>
 
@@ -60,9 +59,6 @@
     </table>
   </div>
   <br />
-  <!-- repo links generated automatically -->
-  <p id="repolink"></p>
-  <p id="livelink"></p>
   <!-- ripped shamelessly from the MDN -->
   <script type="text/javascript">
     var windowObjectReference = null; // global variable
@@ -87,9 +83,15 @@
     }
 
   </script>
+  <div id="footer">
+    <!-- repo links generated automatically -->
+    <p id="repolink"></p>
+    <p id="livelink"></p>
+    <p id="about"><a href="/TheButton/about/" target="aboutPage" onclick="openAbout(); return false;">About</a></p>
+    <input type="button" value="Log Out" id="logoutbutton" class="hidden">
+  </div>
+  <br />
 
-  <p id="about"><a href="/TheButton/about/" target="aboutPage" onclick="openAbout(); return false;">About</a></p>
-  <input type="button" value="Log Out" id="logoutbutton">
 </body>
 
 </html>
