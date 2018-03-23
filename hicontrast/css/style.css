@@ -262,7 +262,7 @@ strong {
   background-color: #A9A9A9;  
 }
 
-body, button, textarea, a, p, div{
+body {
   -webkit-filter: invert(1) hue-rotate(180deg);
   filter: invert(1) hue-rotate(180deg);
 }
