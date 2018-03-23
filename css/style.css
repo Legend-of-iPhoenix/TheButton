@@ -28,6 +28,10 @@ div#main-div {
   text-align: center;
 }
 
+div#footer {
+  text-align: center;
+}
+
 #title {
   margin-top: 20px; 
   font-weight: 600;
