@@ -16,6 +16,22 @@
 span.visible {
   display: inline;
 }
+/* experiment starts here */
+.nightmode {
+  body {
+    -webkit-filter: invert(1) hue-rotate(180deg);
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  body {
+    background: black;
+  }
+
+  #TheButton {
+    color: #000;
+  }
+}
+/* experiment ends here */
 
 html {
   margin: 0 0;
