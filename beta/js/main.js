@@ -1,6 +1,6 @@
 (x => {
   var lastPress, lu;
-
+  
   function j(user, error) {
     var nextName = prompt("Please select a username: " + (error || ""));
     if (/^\w{1,32}$/.test(nextName) && nextName) {
@@ -142,16 +142,17 @@
         scores.innerHTML += "<tr><td>" + rank + "</td><td>" + cleanse(childSnapshot.key) + "</td><td>" + x(childSnapshot.val()) + "</td></tr>";
         rank--;
       });
-      //reverse ordering of elements
+      //reverse ordering of elements, because firebase orders things backwards.
       (e => {
         for (var d = 0; d < e.childNodes.length; d++) e.insertBefore(e.childNodes[d], e.firstChild)
       })(document.getElementById("highscores"));
       scores.innerHTML = "<tr><th>&nbsp;</th><th>Username</th><th>Time</th></tr>" + scores.innerHTML;
     });
+    
     document.getElementById("TheButton").click = x => console.log("Abuse is not tolerated.");
     document.getElementById("TheButton").onfocus = x => document.getElementById("TheButton").blur();
     document.getElementById('TheButton').onclick = function (event) {
-      if (firebase.auth().currentUser.displayName != lastPress.u) {
+      if (firebase.auth().currentUser.displayName != lastPress.u && event.isTrusted ) {
         getReliableTimestamp(function (TIMESTAMP) {
           if (TIMESTAMP >= 500 + lastPress.t) {
             firebase.database().ref("/button/users/" + lastPress.u).transaction(function (ts) {
@@ -164,7 +165,6 @@
                 firebase.database().ref("/button/clicks/" + (clickCt+1)).set({
                   t: TIMESTAMP,
                   u: firebase.auth().currentUser.displayName,
-                  c: clickCt
                 }).then(function() {
                    gtag('event', 'ButtonPressed', {
                     'event_category': 'engagement',
