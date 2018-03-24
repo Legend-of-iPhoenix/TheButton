@@ -18,6 +18,7 @@ firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDom
 	<base target="_blank">
 </head>
 <body class="mode">
+	<main class="content-box">
 <div id="mode">
 	<h1 id="title">TheButton</h1>
 	<div class='visible' id='login-div'>
@@ -43,7 +44,7 @@ firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDom
 	<p id="logoutline"><a href="/TheButton/hicontrast/" target="hicontrastPage" onclick="openHicontrast(); return false;">Open high contrast mode</a><span id="logout-span" class="hidden">|<button id="logout" onclick="firebase.auth().signOut(); 
                              location.reload();">Log out</button></span></p>
 	
-	<p><button onclick="nightMode();">Night Mode</button></p>
+	<p><button class="night-mode-button">Night Mode</button></p>
 
 	<script type="text/javascript">
 		function nightMode() {
@@ -98,5 +99,6 @@ function openHicontrast() {
 }
 </script>
 </div>
+	</main>
 </body>
 </html>
