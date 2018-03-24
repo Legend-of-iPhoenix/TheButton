@@ -35,7 +35,7 @@ function logout() {
 }
 
 function nightMode() {
-  var element = document.getElementsByTagName("body");
+  var element = document.getElementById("mode");
   element.classList.toggle("nightmode");
 }
   
