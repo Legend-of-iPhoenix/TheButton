@@ -13,6 +13,10 @@
   visibility: visible;
 }
 
+span.visible {
+  display: inline;
+}
+
 html {
   margin: 0 0;
 }
@@ -21,10 +25,14 @@ body {
   width: 100%;
   margin: auto auto;
   padding: 10px;
-  background-color: #000;
+  background-color: #fff;
 }
 
 div#main-div {
+  text-align: center;
+}
+
+div#footer {
   text-align: center;
 }
 
@@ -32,7 +40,7 @@ div#main-div {
   margin-top: 20px; 
   font-weight: 600;
   text-align: center;
-  color: #fff;
+  color: #000;
 }
 
 table#highscores {
@@ -126,9 +134,7 @@ table#highscores tr td.lbusername:hover {
 
 p {
   text-align: center; 
-  color: #fff;
 }
-
 a {
   text-align: center;
 }
@@ -254,4 +260,17 @@ strong {
 
 #logoutline a:active {
   background-color: #A9A9A9;  
+}
+
+body {
+  -webkit-filter: invert(1) hue-rotate(180deg);
+  filter: invert(1) hue-rotate(180deg);
+}
+
+body {
+  background: black;
+}
+
+#TheButton {
+  color: #000;
 }

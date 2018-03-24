@@ -14,6 +14,7 @@ firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDom
 	<script type="text/javascript" src="js/main.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/stylish.css" rel="stylesheet" type="text/css">
 	<base target="_blank">
 </head>
 <body>
@@ -38,8 +39,8 @@ firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDom
 	</div>
 	<p id="repolink">GitHub Repos: <input id="thisfork" type="button" value="This fork" onclick="window.location.href='https://github.com/jcgter777/TheButton'" /> | <input id="original" type="button" value="Original by iPhoenix" onclick="window.location.href='https://github.com/Legend-of-iPhoenix/TheButton'" /></p>
 	<p id="abouttbgc"><a href="/TheButton/about/" target="aboutPage" onclick="openAbout(); return false;">About</a>|<button id="togglebgc" onclick="lightButtonEnabled=!lightButtonEnabled;">Toggle Background Color changing</button></p>
-	<p id="logoutline"><a href="/TheButton/hicontrast/" target="hicontrastPage" onclick="openHicontrast(); return false;">Open high contrast mode</a>|<button id="logout" onclick="firebase.auth().signOut(); 
-                             location.reload();"">Log out</button></p>
+	<p id="logoutline"><a href="/TheButton/hicontrast/" target="hicontrastPage" onclick="openHicontrast(); return false;">Open high contrast mode</a><span id="logout-span" class="hidden">|<button id="logout" onclick="firebase.auth().signOut(); 
+                             location.reload();">Log out</button></span></p>
 
 <!-- ripped shamelessly from the MDN -->
 	<script type="text/javascript">
