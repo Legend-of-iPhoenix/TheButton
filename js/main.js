@@ -38,6 +38,15 @@ function nightMode() {
   var element = document.getElementById("mode");
   element.classList.toggle("nightmode");
 }
+
+$(document).ready(function(){
+  var button = $('.night-mode-button');
+  var container = $('.content-box');
+  
+  button.click(function() {
+    container.toggleClass('-nightmode');
+  });
+});
   
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
