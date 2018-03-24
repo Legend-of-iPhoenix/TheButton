@@ -155,6 +155,7 @@
       if (firebase.auth().currentUser.displayName != lastPress.u && event.isTrusted) {
         getReliableTimestamp(function (TIMESTAMP) {
           if (TIMESTAMP >= 500 + lastPress.t) {
+            var lastUser = lastPress.u;
             var clickCt;
             firebase.database().ref("/button/click/").once('value').then(function (snapshot) {
               clickCt = snapshot.val();
@@ -166,7 +167,7 @@
                   'event_category': 'engagement',
                   'event_label': firebase.auth().currentUser.displayName
                 });
-                firebase.database().ref("/button/users/" + lastPress.u).transaction(function (ts) {
+                firebase.database().ref("/button/users/" + lastUser).transaction(function (ts) {
                   ts += TIMESTAMP - lastPress.t;
                   return ts;
                 }).then(function () {
