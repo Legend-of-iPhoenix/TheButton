@@ -33,6 +33,11 @@ function logout() {
   document.getElementById('login-div').classList = 'visible';
   x=>{firebase.auth().signOut(); location.reload()}
 }
+
+function nightMode() {
+    var element = document.getElementById("BODY");
+    element.classList.toggle("nightmode");
+}
   
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
