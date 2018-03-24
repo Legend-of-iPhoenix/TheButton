@@ -35,8 +35,8 @@ function logout() {
 }
 
 function nightMode() {
-    var element = document.getElementById("BODY");
-    element.classList.toggle("nightmode");
+  var element = document.getElementsByTagName("body");
+  element.classList.toggle("nightmode");
 }
   
 firebase.auth().onAuthStateChanged(function (user) {
