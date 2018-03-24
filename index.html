@@ -41,7 +41,16 @@ firebase.initializeApp({apiKey:"AIzaSyBaQl6IKSIYHXne5trRPgrbAEqu_1vYgbU",authDom
 	<p id="abouttbgc"><a href="/TheButton/about/" target="aboutPage" onclick="openAbout(); return false;">About</a>|<button id="togglebgc" onclick="lightButtonEnabled=!lightButtonEnabled;">Toggle Background Color changing</button></p>
 	<p id="logoutline"><a href="/TheButton/hicontrast/" target="hicontrastPage" onclick="openHicontrast(); return false;">Open high contrast mode</a><span id="logout-span" class="hidden">|<button id="logout" onclick="firebase.auth().signOut(); 
                              location.reload();">Log out</button></span></p>
+	
+	<button onclick="nightMode();">Night Mode</button>
 
+	<script type="text/javascript">
+		function nightMode() {
+			var element = document.getElementsByTagName("body");
+                        element.classList.toggle("nightmode");
+		}
+	</script>
+	
 <!-- ripped shamelessly from the MDN -->
 	<script type="text/javascript">
 var windowObjectReference = null; // global variable
