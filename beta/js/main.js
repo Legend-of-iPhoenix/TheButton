@@ -1,6 +1,6 @@
 (x => {
   var lastPress, lu;
-  
+
   function j(user, error) {
     var nextName = prompt("Please select a username: " + (error || ""));
     if (/^\w{1,32}$/.test(nextName) && nextName) {
@@ -148,29 +148,29 @@
       })(document.getElementById("highscores"));
       scores.innerHTML = "<tr><th>&nbsp;</th><th>Username</th><th>Time</th></tr>" + scores.innerHTML;
     });
-    
+
     document.getElementById("TheButton").click = x => console.log("Abuse is not tolerated.");
     document.getElementById("TheButton").onfocus = x => document.getElementById("TheButton").blur();
     document.getElementById('TheButton').onclick = function (event) {
-      if (firebase.auth().currentUser.displayName != lastPress.u && event.isTrusted ) {
+      if (firebase.auth().currentUser.displayName != lastPress.u && event.isTrusted) {
         getReliableTimestamp(function (TIMESTAMP) {
           if (TIMESTAMP >= 500 + lastPress.t) {
-            firebase.database().ref("/button/users/" + lastPress.u).transaction(function (ts) {
-              ts += TIMESTAMP - lastPress.t;
-              return ts;
-            }).then(function () {
-              var clickCt;
-              firebase.database().ref("/button/click/").once('value').then(function(snapshot){
-                clickCt = snapshot.val();
-                firebase.database().ref("/button/clicks/" + (clickCt+1)).set({
-                  t: TIMESTAMP,
-                  u: firebase.auth().currentUser.displayName,
-                }).then(function() {
-                   gtag('event', 'ButtonPressed', {
-                    'event_category': 'engagement',
-                    'event_label': firebase.auth().currentUser.displayName
-                  });
-                  firebase.database().ref("/button/click/").set(clickCt+1);
+            var clickCt;
+            firebase.database().ref("/button/click/").once('value').then(function (snapshot) {
+              clickCt = snapshot.val();
+              firebase.database().ref("/button/clicks/" + (clickCt + 1)).set({
+                t: TIMESTAMP,
+                u: firebase.auth().currentUser.displayName,
+              }).then(function () {
+                gtag('event', 'ButtonPressed', {
+                  'event_category': 'engagement',
+                  'event_label': firebase.auth().currentUser.displayName
+                });
+                firebase.database().ref("/button/users/" + lastPress.u).transaction(function (ts) {
+                  ts += TIMESTAMP - lastPress.t;
+                  return ts;
+                }).then(function () {
+                  firebase.database().ref("/button/click/").set(clickCt + 1);
                 });
               });
             });
