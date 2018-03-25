@@ -34,11 +34,6 @@ function logout() {
   x=>{firebase.auth().signOut(); location.reload()}
 }
 
-function nightMode() {
-  var element = document.getElementById("mode");
-  element.classList.toggle("nightmode");
-}
-
 $(document).ready(function(){
   var button = $('.night-mode-button');
   var container = $('.content-box');
