@@ -22,12 +22,8 @@ span.visible {
   body {
     background: #000 !important;
     color: #333 !important;    
-  }  
-.content-inner {
-  body {
-      -webkit-filter: invert(1) hue-rotate(180deg);
-      filter: invert(1) hue-rotate(180deg);    
-    }    
+    -webkit-filter: invert(1) hue-rotate(180deg);
+    filter: invert(1) hue-rotate(180deg);    
   }
 }
 /* experiment ends here */
