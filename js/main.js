@@ -26,14 +26,7 @@ function go() {
   document.getElementById('logout-span').classList = 'visible';
   document.getElementById('login-div').classList = 'hidden';
 }
-
-function logout() {
-  document.getElementById('main-div').classList = 'hidden';
-  document.getElementById('logout-span').classList = 'hidden';
-  document.getElementById('login-div').classList = 'visible';
-  x=>{firebase.auth().signOut(); location.reload()}
-}
-
+  
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     if (user.photoURL == "https://legend-of-iphoenix.github.io/TheButton/img/authenticated.png" && /^\w{1,32}$/.test(user.displayName) && user.displayName) {
