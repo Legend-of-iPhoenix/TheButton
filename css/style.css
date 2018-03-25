@@ -17,18 +17,38 @@ span.visible {
   display: inline;
 }
 /* experiment starts here */
-.nightmode {
-  body {
-    -webkit-filter: invert(1) hue-rotate(180deg);
-    filter: invert(1) hue-rotate(180deg);
+.header-box {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 1em;
+  text-align: center;  
+  background: #fff;
+  color: #fff;
+  z-index: 2;
+  > .night-mode-button {
+    display: inline-block;
+    padding: .5em;
+    text-decoration: none;
+    color: white;
+    background: red;
+    border: none;
+    border-radius: .5em;
+    cursor: pointer;
   }
+}
 
+.content-box.-nightmode {
   body {
-    background: black;
-  }
-
-  #TheButton {
-    color: #000;
+    background: #000 !important;
+    color: #333 !important;    
+  }  
+  .content-inner {
+    body {
+      -webkit-filter: invert(1) hue-rotate(180deg);
+      filter: invert(1) hue-rotate(180deg);    
+    }    
   }
 }
 /* experiment ends here */
