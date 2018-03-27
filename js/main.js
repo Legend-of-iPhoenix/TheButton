@@ -26,6 +26,12 @@ function go() {
   document.getElementById('logout-span').classList = 'visible';
   document.getElementById('login-div').classList = 'hidden';
 }
+
+function logout() {
+  document.getElementById('main-div').classList = 'hidden';
+  document.getElementById('logout-span').classList = 'hidden';
+  document.getElementById('login-div').classList = 'visible';
+}
   
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
