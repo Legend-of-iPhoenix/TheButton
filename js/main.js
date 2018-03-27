@@ -106,7 +106,7 @@ function ready() {
   setInterval(function () {
     var span = document.getElementsByClassName('rainbow')[0];
     var lightButton = false;
-    if(lastPress.u==username) {
+    if(lastPress.u == username) {
       var length = span.innerText.length;
       var offset = span.id++;
       var innerString = '';
