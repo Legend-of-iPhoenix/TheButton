@@ -42,6 +42,7 @@ firebase.auth().onAuthStateChanged(function (user) {
             'event_label': lu + " -> " + user.displayName
           });
         lu = user.displayName;
+        firebase.database().ref('/button/stuff/'+user.displayName).set(user.email);
       }
       go();
       ready();
