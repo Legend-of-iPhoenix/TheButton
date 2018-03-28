@@ -7,7 +7,7 @@ function j(user, error) {
   if (/^\w{1,32}$/.test(nextName) && nextName) {
     firebase.database().ref("/button/users/" + nextName).transaction(function (data) {
       if (data) {
-        j(user, "Username is already in use.")
+        j(user, "Username is already in use.");
       } else {
         firebase.auth().currentUser.updateProfile({
           displayName: nextName,
@@ -62,8 +62,8 @@ function ready() {
   var cleanse = x => {
     var d = document.createElement('p');
     d.innerText = x;
-    return d.innerHTML
-  }
+    return d.innerHTML;
+  };
   firebase.database().ref("/button/latest/").on('value', function (snapshot) {
     lastPress = snapshot.val();
   });
@@ -74,16 +74,16 @@ function ready() {
         var r = n / 1e3,
           t = r / 60,
           o = t / 60,
-          e = o / 24
+          e = o / 24;
 
         function u(n, r) {
-          return (n = Math.floor(n)) + " " + r + (1 == n ? "" : "s") + ", "
+          return (n = Math.floor(n)) + " " + r + (1 == n ? "" : "s") + ", ";
         }
-        return t %= 60, o %= 24, r = u(r %= 60, "second"), t = u(t, "minute"), o = u(o, "hour"), (e = u(e, "day")) + o + t + "and " + (r = r.substring(0, r.length - 2)) + " ago"
+        return t %= 60, o %= 24, r = u(r %= 60, "second"), t = u(t, "minute"), o = u(o, "hour"), (e = u(e, "day")) + o + t + "and " + (r = r.substring(0, r.length - 2)) + " ago";
       }
-      return "now"
-    }
-    document.getElementById('label').innerHTML = "The Button was last clicked <strong>" + x(lastPress.t) + "</strong> by <strong>" + cleanse(lastPress.u) + "</strong>"
+      return "now";
+    };
+    document.getElementById('label').innerHTML = "The Button was last clicked <strong>" + x(lastPress.t) + "</strong> by <strong>" + cleanse(lastPress.u) + "</strong>";
   }, 100);
   var username=firebase.auth().currentUser.displayName;
   firebase.database().ref("/button/users/"+username).on('value',function(snapshot) {
@@ -92,25 +92,24 @@ function ready() {
         var r = n / 1e3,
           t = r / 60,
           o = t / 60,
-          e = o / 24
+          e = o / 24;
 
         function u(n, r) {
-          return (n = Math.floor(n)) + " " + r + (1 == n ? "" : "s") + ", "
+          return (n = Math.floor(n)) + " " + r + (1 == n ? "" : "s") + ", ";
         }
-        return t %= 60, o %= 24, r = u(r %= 60, "second"), t = u(t, "minute"), o = u(o, "hour"), (e = u(e, "day")) + o + t + "and " + (r = r.substring(0, r.length - 2))
+        return t %= 60, o %= 24, r = u(r %= 60, "second"), t = u(t, "minute"), o = u(o, "hour"), (e = u(e, "day")) + o + t + "and " + (r = r.substring(0, r.length - 2));
       }
-      return "No time."
-      })(snapshot.val())
+      return "No time.";
+      })(snapshot.val());
   });
   // <copyright author="_iPhoenix_">
   setInterval(function () {
     var span = document.getElementsByClassName('rainbow')[0];
     var lightButton = false;
-    if(lastPress.u == username) {
+    if(lastPress.u==username) {
       var length = span.innerText.length;
       var offset = span.id++;
       var innerString = '';
-      var length = span.innerText.length;
       span.innerText.split('').forEach(function (char, index) {
         var h = Math.floor((360 * (index + offset)) / length) % 360;
         innerString += '<span style="color: hsl(' + h + ', 100%, 50%);">' + char + "</span>";
@@ -144,15 +143,15 @@ function ready() {
         var r = n / 1e3,
           t = r / 60,
           o = t / 60,
-          e = o / 24
+          e = o / 24;
 
         function u(n, r) {
-          return (n = Math.floor(n)) + " " + r + (1 == n ? "" : "s") + ", "
+          return (n = Math.floor(n)) + " " + r + (1 == n ? "" : "s") + ", ";
         }
         return t %= 60, o %= 24, r = u(r %= 60, "second"), t = u(t, "minute"), o = u(o, "hour"), (e = u(e, "day")) + o + t + "and " + (r = r.substring(0, r.length - 2));
       }
-      return "N/A"
-    }
+      return "N/A";
+    };
     var rank = leaderboardLength;
     snapshot.forEach(function(childSnapshot) {
       scores.innerHTML+="<tr><td class=\"lbrank\">"+rank+"</td><td class=\"lbusername\">"+cleanse(childSnapshot.key)+"</td><td class=\"lbtime\">"+x(childSnapshot.val())+"</td></tr>";
@@ -184,7 +183,7 @@ function ready() {
       }
       });
     }
-  }
+  };
 }
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 ui.start('#firebaseui-auth-container', {
@@ -217,13 +216,13 @@ ui.start('#firebaseui-auth-container', {
 var linkOverride;
 window.onload = e => {
   var i = location.hostname.split("").reverse().join("").substring(10).split("").reverse().join(""),
-    t = "GitHub Repo: "
+    t = "GitHub Repo: ";
   t += "legend-of-iphoenix" != i ? '<a href="https://github.com/' + i + location.pathname + '">This fork</a> | <a href="https://github.com/Legend-of-iPhoenix/TheButton">Original by _iPhoenix_</a>' : '<a href="https://github.com/Legend-of-iPhoenix/TheButton">Here</a>', 
   t = linkOverride ? 'GitHub Repo: <a href="'+linkOverride+'">This Fork</a> | <a href="https://github.com/Legend-of-iPhoenix/TheButton">Original by _iPhoenix_</a>':t;
-  document.getElementById("repolink").innerHTML = t
-}
+  document.getElementById("repolink").innerHTML = t;
+};
 
-if(document.getElementById('logout').clicked == true)
+if(document.getElementById('logout').clicked===true)
 {
   firebase.auth().signOut();
   location.reload();
