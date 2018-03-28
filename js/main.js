@@ -208,24 +208,50 @@ ui.start('#firebaseui-auth-container', {
   ],
   tosURL: "https://legend-of-iphoenix.github.io/TheButton/terms.txt"
 });
+if (location.href.endsWith("?logout")) {
+  firebase.auth().signOut();
+  location.href = location.href.replace(location.search, '');
+}
 /*
   set linkOverride to the url of your GitHub Repo if you plan on 
   publishing your site and the auto-generated github link doesn't
   work.
 */
 var linkOverride;
+/*
+  add strings to otherRepos (in “username/repo-name” format) as
+  desired to produce additional links for forks
+*/
+var otherRepos = [];
 window.onload = e => {
   var i = location.hostname.split("").reverse().join("").substring(10).split("").reverse().join(""),
-    t = "GitHub Repo: ";
-  t += "legend-of-iphoenix" != i ? '<a href="https://github.com/' + i + location.pathname + '">This fork</a> | <a href="https://github.com/Legend-of-iPhoenix/TheButton">Original by _iPhoenix_</a>' : '<a href="https://github.com/Legend-of-iPhoenix/TheButton">Here</a>', 
-  t = linkOverride ? 'GitHub Repo: <a href="'+linkOverride+'">This Fork</a> | <a href="https://github.com/Legend-of-iPhoenix/TheButton">Original by _iPhoenix_</a>':t;
-  document.getElementById("repolink").innerHTML = t;
-};
+  this_repo_url = (linkOverride ? linkOverride : 'https://github.com/' + i + '/' + location.pathname.split('/')[1]);
+  is_original = i == 'legend-of-iphoenix';
+  tr = 'GitHub repo: <a href="' + this_repo_url + '">' + (is_original ? 'Here' : i + ' (this fork)') + '</a>';
+  if (!is_original) tr += ' | <a href="https://github.com/Legend-of-iPhoenix/TheButton">Legend-of-iPhoenix (original)</a>';
 
-if(document.getElementById('logout').clicked===true)
-{
-  firebase.auth().signOut();
-  location.reload();
+  tl = '';
+  if (!is_original) {
+    tl += '<b>' + i + '</b> | <a href="https://legend-of-iphoenix.github.io/TheButton/">Legend-of-iPhoenix</a> (link for posterity, site is down) ';
+  } else if (otherRepos.length) {
+    tl += '<b>' + i + '</b>';
+  }
+  for (i=0; i<otherRepos.length; i++) {
+    repo = otherRepos[i].split('/');
+    tr += ' | <a href="https://github.com/' + repo[0] + '/' + repo[1] + '">' + repo[0] + '</a>';
+    tl += (tl ? ' | ' : '') + '<a href="https://' + repo[0] + '.github.io/' + repo[1] + '">' + repo[0] + '</a>';
+  }
+  if (tl) tl = 'Live site: ' + tl;
+
+  document.getElementById("repolink").innerHTML = tr;
+  if (tl) {
+    document.getElementById("livelink").innerHTML = tl;
+  } else {
+    document.getElementById("livelink").remove();
+  }
+  document.getElementById("logoutbutton").onclick = function() {
+    firebase.auth().signOut();
+    location.reload();
+  }
 }
-document.getElementById('TheButton').onclick = function (out) {};
 })("VmxSQ2ExWXlUWGxUYTJoUVUwWmFTMVZXWXpWVVJscDBaRWQwYVUxck5VbFdSM0JYVlcxS2RWRnVTbFpOUmxveldrUkdjMlJGTVZoalIwWk9ZVEZ3WVZacldtdGhNa1pJVTI1T1dHRnNjR2hWYkZVeFVrWlNWbHBGZEU5V2ExcDRWVmN4YjFaR1NsbFJXR3hZWVRKb2VsVlVTbEpsUjA1SFlVWkNXRkl4U25kV1YzQkhWakpLYzJKSVJsUmlWVnB3Vm14b2IxSldWbGhPVldSb1RWZFNSMVJyYUd0V1JscFlWVzFvWVZKNlJsQlpNRnBIWkZaU2RHSkZOV2xpVjA0MVZtdFdhMk14UlhoYVNGSlVWMGhDV0ZacVNsTmhSbFp4VTJwU2FtSkZOVmRYYTJSSFlXeEpkMk5FUWxkV2JWSnlWako0Vm1ReFRuRlhiR2hwVWpGS1VWZHNXbUZrTVdSWFZteG9ZVkl6VWxSVVZ6RnVaVlprY2xkdGRHaE5hMnd6V2xWV1UxVnRTbFZXYmtKVlZqTkNlbGt5ZUU5V2JIQkpXa2QwYVZJemFETldWM2hTWkRGQ1VsQlVNRDA9");
