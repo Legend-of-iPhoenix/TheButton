@@ -98,7 +98,8 @@ table#highscores .lbtime {
 }
 
 table#highscores tr td.lbusername:hover {
-  font-weight: 300;
+  font-weight: 600;
+  font-size: 115%;
 }
 
 #TheButton {
@@ -279,7 +280,7 @@ div {
   text-align: center;
 }
 
-#iChat-input {
+/* #iChat-input {
   display: block;
   border: 1px solid black;
   margin-top: 5px;
@@ -291,4 +292,4 @@ div {
   width: 50%;
   text-align: left;
   overflow: auto;
-}
+} */
