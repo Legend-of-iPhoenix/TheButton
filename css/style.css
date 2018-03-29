@@ -286,6 +286,7 @@ div {
 }
 
 #iChat-messages {
+  background-color: #eee;
   height: 25vh;
   width: 50%;
   text-align: left;
