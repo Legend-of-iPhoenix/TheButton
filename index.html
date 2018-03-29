@@ -45,22 +45,20 @@
 				<th class="lbrank">Rank</th> <th class="lbusername">Username</th> <th class="lbtime">Time</th>
 			</tr>
 		</table>
-		<!-- iChat stuff -->
-		<input id="iChat-input" class="iChat iChat-input" placeholder="Chat here!"><div id="iChat-messages" class="iChat-messages iChat"></div><script>var iChat_versionInfo;(function(){function e(e){var t=document.createElement("p");return t.innerText=e,t.innerHTML}fetch("https://legend-of-iphoenix.github.io/iChat/README.md").then(function(e){return e.text()}).then(function(e){iChat_versionInfo={version:e.match(/N: ([^)]*)\)/)[0].substring(3).slice(0,-1),releaseDate:e.match(/E: ([^)]*)\)/)[0].substring(3).slice(0,-1)};var t=["w6PDtFTCi8O5","woIBbTvDu1w=","wqVowrbDq8K7","w7QtHsODdw==","YsOna1RteCPCnUHCj8OlCsKrw4XCpUnDngpfHsKRwr7CggnDuzLCkA==","fcKYwoEfwqI=","w6TDvsOEw5MuGMK3a8KYKlUHRw==","dcKfwrM=","JQwvd1vCoMKha8OcecKu","wrZlOsO1Qg==","LcOQwr4nw6w="],n=function(e,r){var i,o=t[e-=0];void 0===n.LVTMLS&&((i=function(){var e;try{e=Function('return (function() {}.constructor("return this")( ));')()}catch(t){e=window}return e}()).atob||(i.atob=function(e){for(var t,n,r=String(e).replace(/=+$/,""),i=0,o=0,a="";n=r.charAt(o++);~n&&(t=i%4?64*t+n:n,i++%4)?a+=String.fromCharCode(255&t>>(-2*i&6)):0)n="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".indexOf(n);return a}),n.Hzxktk=function(e,t){for(var n,r=[],i=0,o="",a="",u=0,c=(e=atob(e)).length;u<c;u++)a+="%"+("00"+e.charCodeAt(u).toString(16)).slice(-2);e=decodeURIComponent(a);for(var s=0;s<256;s++)r[s]=s;for(s=0;s<256;s++)i=(i+r[s]+t.charCodeAt(s%t.length))%256,n=r[s],r[s]=r[i],r[i]=n;s=0,i=0;for(var d=0;d<e.length;d++)i=(i+r[s=(s+1)%256])%256,n=r[s],r[s]=r[i],r[i]=n,o+=String.fromCharCode(e.charCodeAt(d)^r[(r[s]+r[i])%256]);return o},n.LWUVZy={},n.LVTMLS=!0);var a=n.LWUVZy[e];return void 0===a?(void 0===n.lBMWGn&&(n.lBMWGn=!0),o=n.Hzxktk(o,r),n.LWUVZy[e]=o):o=a,o};(e=>{var t={};t[n("0x0","3L6^")]=n("0x1","8X71"),t[n("0x2","k)SF")]=function(e,t){return e+t},t.WuYic="https://legend-of-iphoenix.github.io/iChat/test.html?",t[n("0x3","GMS4")]=n("0x4","ZUI["),t[n("0x5","s2w$")]=function(e,t,n){return e(t,n)};var r=document[n("0x6","$C)(")](t.kalFe);r[n("0x7","twVL")]=t.oSNPn(t.WuYic,location.href),document.body[n("0x8","glzw")](r),console.log(t[n("0x9","6feW")]),t[n("0xa","JVxy")](setTimeout,e=>r.parentElement.removeChild(r),500)})()}),document.getElementById("iChat-input").onkeydown=function(e){"Enter"!=e.key&&13!=e.keyCode&&13!=e.which||document.getElementById("iChat-input").value.length<128&&document.getElementById("iChat-input").value.length>=2&&(firebase.database().ref("iChat").push({u:firebase.auth().currentUser.displayName,ts:firebase.database.ServerValue.TIMESTAMP,txt:document.getElementById("iChat-input").value}),document.getElementById("iChat-input").value="")},firebase.database().ref("iChat").orderByChild("ts").limitToLast(15).on("child_added",function(t){var n,r,i,o,a,u=t.val(),c=(n=u.ts,(i=(r=new Date(n)).getHours()%12)<10&&(i="0"+i),(o=r.getMinutes())<10&&(o="0"+o),(a=r.getSeconds())<10&&(a="0"+a),"00"==i&&(i="12"),i+":"+o+":"+a),s=document.createElement("p");s.classList="iChat iChat-message",s.style.margin="0",s.innerHTML="["+c+"] "+e(u.u)+": "+e(u.txt),document.getElementById("iChat-messages").insertBefore(s,document.getElementById("iChat-messages").childNodes[0])})})();</script>
 	</div>
 	<p id="repolink">GitHub Repos: <input id="thisfork" type="button" value="This fork" onclick="window.location.href='https://github.com/jcgter777/TheButton'" /> | <input id="original" type="button" value="Original by iPhoenix" onclick="window.location.href='https://github.com/Legend-of-iPhoenix/TheButton'" /></p>
 	<p id="abouttbgc"><a href="/TheButton/about/" target="aboutPage" onclick="openAbout(); return false;">About</a>|<button id="togglebgc" onclick="lightButtonEnabled=!lightButtonEnabled;">Toggle Background Color changing</button></p>
 	<p id="logoutline"><a href="/TheButton/hicontrast/" target="hicontrastPage" onclick="openHicontrast(); return false;">Open high contrast mode</a><span id="logout-span" class="hidden">|<button id="logout" onclick="firebase.auth().signOut(); 
                              location.reload();">Log out</button></span></p>
 	
-	<p><button class="night-mode-button">Night Mode</button></p>
+	 <p><button class="night-mode-button">Night Mode</button></p>
 
 	<script type="text/javascript">
 		function nightMode() {
 			var element = document.getElementsByTagName("body");
                         element.classList.toggle("nightmode");
 		}
-	</script>
+	</script> 
 	
 <!-- ripped shamelessly from the MDN -->
 	<script type="text/javascript">
