@@ -51,15 +51,6 @@
 	<p id="logoutline"><a href="/TheButton/hicontrast/" target="hicontrastPage" onclick="openHicontrast(); return false;">Open high contrast mode</a><span id="logout-span" class="hidden">|<button id="logout" onclick="firebase.auth().signOut(); 
                              location.reload();">Log out</button></span></p>
 	
-	 <p><button class="night-mode-button">Night Mode</button></p>
-
-	<script type="text/javascript">
-		function nightMode() {
-			var element = document.getElementsByTagName("body");
-                        element.classList.toggle("nightmode");
-		}
-	</script> 
-	
 <!-- ripped shamelessly from the MDN -->
 	<script type="text/javascript">
 var windowObjectReference = null; // global variable
