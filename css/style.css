@@ -147,9 +147,11 @@ table#highscores tr td.lbusername:hover {
 p {
   text-align: center; 
 }
+
 a {
   text-align: center;
 }
+
 strong {
   font-weight: 600;
 }
