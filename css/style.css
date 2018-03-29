@@ -284,3 +284,10 @@ div {
   border: 1px solid black;
   margin-top: 5px;
 }
+
+#iChat-messages {
+  height: 25vh;
+  width: 50%;
+  text-align: left;
+  overflow: auto;
+}
