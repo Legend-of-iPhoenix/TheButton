@@ -228,34 +228,5 @@ window.onload = e => {
   if (window.top !== window.self) {
     document.body.innerHTML = "<p><strong>Please do not load TheButton in an iFrame element. If you think this is an error, please contact _iPhoenix_</strong></p><br /><p>Thank you.</p>"
   }
-  /* var i = location.hostname.split("").reverse().join("").substring(10).split("").reverse().join(""),
-  this_repo_url = (linkOverride ? linkOverride : 'https://github.com/' + i + '/' + location.pathname.split('/')[1]);
-  is_original = i == 'legend-of-iphoenix';
-  tr = 'GitHub repo: <a href="' + this_repo_url + '">' + (is_original ? 'Here' : i + ' (this fork)') + '</a>';
-  if (!is_original) tr += ' | <a href="https://github.com/Legend-of-iPhoenix/TheButton">Legend-of-iPhoenix (original)</a>';
-
-  tl = '';
-  if (!is_original) {
-    tl += '<b>' + i + '</b> | <a href="https://legend-of-iphoenix.github.io/TheButton/">Legend-of-iPhoenix</a> (link for posterity, site is down) ';
-  } else if (otherRepos.length) {
-    tl += '<b>' + i + '</b>';
-  }
-  for (i=0; i<otherRepos.length; i++) {
-    repo = otherRepos[i].split('/');
-    tr += ' | <a href="https://github.com/' + repo[0] + '/' + repo[1] + '">' + repo[0] + '</a>';
-    tl += (tl ? ' | ' : '') + '<a href="https://' + repo[0] + '.github.io/' + repo[1] + '">' + repo[0] + '</a>';
-  }
-  if (tl) tl = 'Live site: ' + tl;
-
-  document.getElementById("repolink").innerHTML = tr;
-  if (tl) {
-    document.getElementById("livelink").innerHTML = tl;
-  } else {
-    document.getElementById("livelink").remove();
-  }
-  document.getElementById("logoutbutton").onclick = function() {
-    firebase.auth().signOut();
-    location.reload();
-  } */
 }
 })("VmxSQ2ExWXlUWGxUYTJoUVUwWmFTMVZXWXpWVVJscDBaRWQwYVUxck5VbFdSM0JYVlcxS2RWRnVTbFpOUmxveldrUkdjMlJGTVZoalIwWk9ZVEZ3WVZacldtdGhNa1pJVTI1T1dHRnNjR2hWYkZVeFVrWlNWbHBGZEU5V2ExcDRWVmN4YjFaR1NsbFJXR3hZWVRKb2VsVlVTbEpsUjA1SFlVWkNXRkl4U25kV1YzQkhWakpLYzJKSVJsUmlWVnB3Vm14b2IxSldWbGhPVldSb1RWZFNSMVJyYUd0V1JscFlWVzFvWVZKNlJsQlpNRnBIWkZaU2RHSkZOV2xpVjA0MVZtdFdhMk14UlhoYVNGSlVWMGhDV0ZacVNsTmhSbFp4VTJwU2FtSkZOVmRYYTJSSFlXeEpkMk5FUWxkV2JWSnlWako0Vm1ReFRuRlhiR2hwVWpGS1VWZHNXbUZrTVdSWFZteG9ZVkl6VWxSVVZ6RnVaVlprY2xkdGRHaE5hMnd6V2xWV1UxVnRTbFZXYmtKVlZqTkNlbGt5ZUU5V2JIQkpXa2QwYVZJemFETldWM2hTWkRGQ1VsQlVNRDA9");
