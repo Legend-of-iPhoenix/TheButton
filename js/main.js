@@ -223,12 +223,12 @@ var linkOverride;
   add strings to otherRepos (in “username/repo-name” format) as
   desired to produce additional links for forks
 */
-/* var otherRepos = []; */
+var otherRepos = []; 
 window.onload = e => {
   if (window.top !== window.self) {
     document.body.innerHTML = "<p><strong>Please do not load TheButton in an iFrame element. If you think this is an error, please contact _iPhoenix_</strong></p><br /><p>Thank you.</p>"
   }
-  /* var i = location.hostname.split("").reverse().join("").substring(10).split("").reverse().join(""),
+  var i = location.hostname.split("").reverse().join("").substring(10).split("").reverse().join(""),
   this_repo_url = (linkOverride ? linkOverride : 'https://github.com/' + i + '/' + location.pathname.split('/')[1]);
   is_original = i == 'legend-of-iphoenix';
   tr = 'GitHub repo: <a href="' + this_repo_url + '">' + (is_original ? 'Here' : i + ' (this fork)') + '</a>';
