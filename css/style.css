@@ -17,17 +17,6 @@ span.visible {
   display: inline;
 }
 
-/* experiment starts here */
-.content-box.-nightmode {
-  body {
-    background: #000 !important;
-    color: #333 !important;    
-    -webkit-filter: invert(1) hue-rotate(180deg);
-    filter: invert(1) hue-rotate(180deg);    
-  }
-}
-/* experiment ends here */
-
 html {
   margin: 0 0;
 }
@@ -98,8 +87,7 @@ table#highscores .lbtime {
 }
 
 table#highscores tr td.lbusername:hover {
-  font-weight: 600;
-  font-size: 115%;
+  font-weight: 300;
 }
 
 #TheButton {
@@ -147,11 +135,9 @@ table#highscores tr td.lbusername:hover {
 p {
   text-align: center; 
 }
-
 a {
   text-align: center;
 }
-
 strong {
   font-weight: 600;
 }
@@ -211,7 +197,7 @@ strong {
   position: relative;
   margin-top: 20px;
   width: 378px;
-  height: 60px;
+  height: 45px;
   background-color: #DCDCDC;
   padding-top: 10px;
   cursor: auto;
@@ -280,18 +266,4 @@ strong {
 
 div {
   text-align: center;
-}
-
-#iChat-input {
-  display: block;
-  border: 1px solid black;
-  margin-top: 5px;
-}
-
-#iChat-messages {
-  background-color: #eee;
-  height: 25vh;
-  width: 50%;
-  text-align: left;
-  overflow: auto;
 }
