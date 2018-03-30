@@ -296,4 +296,5 @@ div {
   width: 50%;
   text-align: left;
   overflow: auto;
+  cursor: pointer;
 }
