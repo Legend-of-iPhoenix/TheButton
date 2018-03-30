@@ -294,6 +294,7 @@ div {
   background-color: #eee;
   height: 25vh;
   width: 50%;
+  border: 1px solid black;
   text-align: left;
   overflow: auto;
   cursor: pointer;
