@@ -303,3 +303,11 @@ div {
   overflow: auto;
   cursor: pointer;
 }
+
+#iChat-messages strong {
+  font-weight: bold;
+}
+
+.iChat-highlight {
+  font-weight: bold;
+}
