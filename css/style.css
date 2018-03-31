@@ -285,9 +285,12 @@ div {
 
 
 #iChat-input {
+  height: 30px;
+  width: 200px;
   display: block;
   border: 1px solid black;
   margin-top: 5px;
+  background-color: #F8F8F8;
 }
 
 #iChat-messages {
