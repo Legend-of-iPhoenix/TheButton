@@ -279,10 +279,9 @@ strong {
   background-color: #A9A9A9;  
 }
 
-/* div {
+div {
   text-align: center;
-} */
-
+}
 
 #iChat-input {
   height: 30px;
@@ -290,21 +289,17 @@ strong {
   display: block;
   border: 1px solid black;
   margin-top: 5px;
-  background-color: #F8F8F8;
-  font-size: 125%;
+  background-color: #fff;
+  font-size: 105%;
 }
 
 #iChat-messages {
   background-color: #eee;
-  height: 25vh;
+  height: 200px;
   width: 50%;
   font-size: 100%;
   border: 1px solid black;
   text-align: left;
   overflow: auto;
   cursor: pointer;
-}
-
-div#iChat-messages {
-  text-align: left;
 }
