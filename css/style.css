@@ -279,9 +279,9 @@ strong {
   background-color: #A9A9A9;  
 }
 
-div {
+/* div {
   text-align: center;
-}
+} */
 
 
 #iChat-input {
@@ -303,4 +303,8 @@ div {
   text-align: left;
   overflow: auto;
   cursor: pointer;
+}
+
+div#iChat-messages {
+  text-align: left;
 }
