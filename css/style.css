@@ -109,7 +109,7 @@ table#highscores tr td.lbusername:hover {
   color: #000;
   background-color: #ededed;
   padding: 10px 30px;
-  border: 1px solid #ccc;
+  border: none;
   vertical-align: center;
   text-align: center;
   text-decoration: none;
@@ -123,9 +123,9 @@ table#highscores tr td.lbusername:hover {
   border-radius: 45px;
   transition: all 0.2s ease 0s;
   cursor: pointer;
-  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+  /* -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
      -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-          box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;*/
 }
 
 #TheButton:hover {
@@ -284,7 +284,7 @@ div {
 }
 
 #iChat-input {
-  height: 30px;
+  height: 25px;
   width: 200px;
   display: block;
   border: 1px solid black;
