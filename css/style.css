@@ -283,11 +283,14 @@ div {
   text-align: center;
 }
 
+/* iChat styling */
+
 #iChat-input {
   height: 25px;
-  width: 200px;
+  width: 400px;
   display: block;
   border: 1px solid black;
+  border-radius: 2px;
   margin-top: 5px;
   background-color: #fff;
   font-size: 105%;
@@ -304,7 +307,12 @@ div {
   cursor: pointer;
 }
 
-#iChat-messages strong {
+.iChat-message {
+  margin: 2px;
+  text-align: left;
+}
+
+.iChat-message strong {
   font-weight: bold;
 }
 
