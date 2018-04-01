@@ -39,11 +39,12 @@ firebase.initializeApp({apiKey: "AIzaSyC-Jm0sMAlcsur-z4yS3cY0XdrR1F9WjGw",authDo
 	</div>
 	<p id="repolink">GitHub Repos: <input id="thisfork" type="button" value="This fork" onclick="window.location.href='https://github.com/jcgter777/TheButton'" /> | <input id="original" type="button" value="Original by iPhoenix" onclick="window.location.href='https://github.com/Legend-of-iPhoenix/TheButton'" /></p>
 	<p id="abouttbgc"><a href="/TheButton/about/" target="aboutPage" onclick="openAbout(); return false;">About</a>|<button id="togglebgc" onclick="lightButtonEnabled=!lightButtonEnabled;">Toggle Background Color changing</button></p>
-	<p id="logoutline"><a href="/TheButton/hicontrast/" target="hicontrastPage" onclick="openHicontrast(); return false;">Open high contrast mode</a><span id="logout-span" class="hidden">|<button id="logout" onclick="firebase.auth().signOut(); 
+	<p id="logoutline"><button onclick="togglenightmode();">Turn on night mode</button><span id="logout-span" class="hidden">|<button id="logout" onclick="firebase.auth().signOut(); 
                              location.reload();">Log out</button></span></p>
 
 	<!-- iChat stuff here -->
-	<input id="iChat-input" class="iChat iChat-input" placeholder="Chat here! "><div id="iChat-messages" class="iChat-messages iChat"></div><script src="https://legend-of-iphoenix.github.io/iChat/js/iChat.min.js"></script>
+	<label for="iChat-input">iChat</label>
+	<input id="iChat-input" class="iChat iChat-input" placeholder="Chat here!"><div id="iChat-messages" class="iChat-messages iChat"></div><script src="https://legend-of-iphoenix.github.io/iChat/js/iChat.min.js"></script>
 	
 <!-- ripped shamelessly from the MDN -->
 	<script type="text/javascript">
