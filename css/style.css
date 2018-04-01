@@ -13,6 +13,12 @@
   visibility: visible;
 }
 
+body.nightmode {
+  background: black;
+  -webkit-filter: invert(1) hue-rotate(180deg);
+  filter: invert(1) hue-rotate(180deg);
+}
+
 span.visible {
   display: inline;
 }
@@ -27,7 +33,6 @@ span.visible {
   }
 } */
 /* experiment ends here */
-
 
 html {
   margin: 0 0;
