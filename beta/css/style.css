@@ -13,21 +13,15 @@
   visibility: visible;
 }
 
+body.nightmode {
+  background: black;
+  -webkit-filter: invert(1) hue-rotate(180deg);
+  filter: invert(1) hue-rotate(180deg);
+}
+
 span.visible {
   display: inline;
 }
-
-/* experiment starts here */
-/* .content-box.-nightmode {
-  body {
-    background: #000 !important;
-    color: #333 !important;    
-    -webkit-filter: invert(1) hue-rotate(180deg);
-    filter: invert(1) hue-rotate(180deg);    
-  }
-} */
-/* experiment ends here */
-
 
 html {
   margin: 0 0;
@@ -49,18 +43,22 @@ div#footer {
 }
 
 #title {
-  margin-top: 20px; 
+  margin-top: 10px; 
+  margin-bottom: 0px;
   font-weight: 600;
   text-align: center;
   color: #000;
+  font-size: 350%;
 }
 
 table#highscores {
-  border-radius: 15px;
-  border: 1px solid;
+  border-radius: 0px;
+  border: 1px solid black;
   background-color: #fafafa;
   margin-top: 10px;
-  width: 700px
+  width: 700px;
+  height: 40px;
+  padding: none;
 }
 
 table#highscores tr {
@@ -68,7 +66,7 @@ table#highscores tr {
 }
 
 table#highscores td {
-  text-align: left;
+  text-align: center;
 }
 
 table#highscores tr:hover {
@@ -78,23 +76,18 @@ table#highscores tr:hover {
 }
 
 table#highscores th {
+  text-align: center;
   border-bottom: 1px solid black;
-}
-
-table#highscores .lbusername {
-  padding-right: 2px;
-  /* border-bottom: 1px solid; */
 }
 
 table#highscores .lbrank {
   text-align: center;
-  padding: 10px;
-  /* border-bottom: 1px solid; */
+  padding: 1px;
 }
 
 table#highscores .lbtime {
   padding-right: 2px;
-  /* border-bottom: 1px solid; */
+  margin-left: 5px;
 }
 
 table#highscores tr td.lbusername:hover {
@@ -109,33 +102,42 @@ table#highscores tr td.lbusername:hover {
   color: #000;
   background-color: #ededed;
   padding: 10px 30px;
-  border: 1px solid #ccc;
+  border: none;
   vertical-align: center;
   text-align: center;
   text-decoration: none;
   font-variant: small-caps;
   font-size: 120%;
-  margin: 5px;
-  margin-top: 0px;
+  margin: 0px;
+  margin-top: 5px;
   cursor: pointer;
   letter-spacing: 5px;
   font-weight: 600;
   border-radius: 45px;
   transition: all 0.2s ease 0s;
   cursor: pointer;
-  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+  /* -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
      -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-          box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;*/
 }
 
-#TheButton:hover {
+#TheButton.lighted {
+  box-shadow: 0px 20px 20px;
+}
+
+#TheButton-div {
+  display: inline-block;
+  padding: 5px;
+}
+
+#TheButton-div:hover #TheButton {
   background-color: #00BFFF;
   border: none;
   box-shadow: 0px 20px 20px rgb(204, 255, 255);
   transform: translateY(-7px);
 }
 
-#TheButton:active {
+#TheButton-div:active #TheButton {
   box-shadow: 0px 6px 8px rgb(204, 255, 255);
   transform: translateY(3px);
   background: #00BFFF;
@@ -144,12 +146,8 @@ table#highscores tr td.lbusername:hover {
           box-shadow: inset 0px 0px 5px #c1c1c1; */
 }
 
-p {
+p, a {
   text-align: center; 
-}
-
-a {
-  text-align: center;
 }
 
 strong {
@@ -209,7 +207,7 @@ strong {
 
 #repolink {
   position: relative;
-  margin-top: 20px;
+  margin-top: 10px;
   width: 378px;
   height: 60px;
   /* was 45px ^^ */
@@ -283,19 +281,55 @@ div {
   text-align: center;
 }
 
+/* iChat styling */
 
-#iChat-input {
-  display: block;
-  border: 1px solid black;
+input#iChat-input {
+  width: 60ex;
+  margin: .5ex;
   margin-top: 5px;
 }
 
-#iChat-messages {
-  background-color: #eee;
-  height: 25vh;
-  width: 50%;
-  border: 1px solid black;
+div#iChat-messages {
+  overflow: scroll;
+  width: 60ex;
+  height: 10ex;
+  border: solid thin black;
+  padding: .4ex;
+  margin-top: 5px;
+  cursor: default;
+}
+
+div#iChat-messages {
   text-align: left;
-  overflow: auto;
-  cursor: pointer;
+}
+
+span.iChat-timestamp {
+  font-family: monospace;
+  font-weight: bold;
+  background-color: #eef;
+  color: #66b;
+}
+
+span.iChat-username {
+  display: inline-block;
+  font-weight: bold;
+  margin: 0 0 0 .5ex;
+}
+
+span.iChat-text {
+  font-weight: normal;
+}
+
+.iChat-message {
+  margin: 2px;
+  text-align: left;
+}
+
+.iChat-message strong {
+  font-weight: bold;
+}
+
+.iChat-highlight .iChat-text {
+  font-weight: bold;
+
 }
