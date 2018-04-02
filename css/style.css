@@ -67,7 +67,7 @@ table#highscores tr {
 }
 
 table#highscores td {
-  text-align: left;
+  text-align: center;
   height: 1px;
 }
 
@@ -78,19 +78,19 @@ table#highscores tr:hover {
 }
 
 table#highscores th {
+  text-align: center;
   border-bottom: 1px solid black;
   height: 1px;
 }
 
 table#highscores .lbusername {
-  padding-right: 2px;
   height: 1px;
   /* border-bottom: 1px solid; */
 }
 
 table#highscores .lbrank {
   text-align: center;
-  padding: 5px;
+  padding: 1px;
   height: 1px;
   /* border-bottom: 1px solid; */
 }
@@ -98,7 +98,6 @@ table#highscores .lbrank {
 table#highscores .lbtime {
   padding-right: 2px;
   margin-left: 5px;
-  height: 1px;
   /* border-bottom: 1px solid; */
 }
 
