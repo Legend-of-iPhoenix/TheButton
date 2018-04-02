@@ -23,17 +23,6 @@ span.visible {
   display: inline;
 }
 
-/* experiment starts here */
-/* .content-box.-nightmode {
-  body {
-    background: #000 !important;
-    color: #333 !important;    
-    -webkit-filter: invert(1) hue-rotate(180deg);
-    filter: invert(1) hue-rotate(180deg);    
-  }
-} */
-/* experiment ends here */
-
 html {
   margin: 0 0;
 }
@@ -149,12 +138,8 @@ table#highscores tr td.lbusername:hover {
           box-shadow: inset 0px 0px 5px #c1c1c1; */
 }
 
-p {
+p, a {
   text-align: center; 
-}
-
-a {
-  text-align: center;
 }
 
 strong {
