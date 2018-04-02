@@ -43,7 +43,7 @@ div#footer {
 }
 
 #title {
-  margin-top: 20px; 
+  margin-top: 10px; 
   margin-bottom: 0px;
   font-weight: 600;
   text-align: center;
@@ -52,11 +52,13 @@ div#footer {
 }
 
 table#highscores {
-  border-radius: 15px;
-  border: 1px solid;
+  border-radius: 0px;
+  border: 1px solid black;
   background-color: #fafafa;
   margin-top: 10px;
-  width: 700px
+  width: 700px;
+  height: 40px;
+  padding: none;
 }
 
 table#highscores tr {
