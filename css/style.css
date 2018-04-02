@@ -44,9 +44,11 @@ div#footer {
 
 #title {
   margin-top: 20px; 
+  margin-bottom: 0px;
   font-weight: 600;
   text-align: center;
   color: #000;
+  font-size: 350%;
 }
 
 table#highscores {
@@ -59,10 +61,12 @@ table#highscores {
 
 table#highscores tr {
   transition: all .1s;
+  height: 1px;
 }
 
 table#highscores td {
   text-align: left;
+  height: 1px;
 }
 
 table#highscores tr:hover {
@@ -73,21 +77,26 @@ table#highscores tr:hover {
 
 table#highscores th {
   border-bottom: 1px solid black;
+  height: 1px;
 }
 
 table#highscores .lbusername {
   padding-right: 2px;
+  height: 1px;
   /* border-bottom: 1px solid; */
 }
 
 table#highscores .lbrank {
   text-align: center;
   padding: 10px;
+  height: 1px;
   /* border-bottom: 1px solid; */
 }
 
 table#highscores .lbtime {
   padding-right: 2px;
+  margin-left: 5px;
+  height: 1px;
   /* border-bottom: 1px solid; */
 }
 
@@ -109,8 +118,8 @@ table#highscores tr td.lbusername:hover {
   text-decoration: none;
   font-variant: small-caps;
   font-size: 120%;
-  margin: 5px;
-  margin-top: 0px;
+  margin: 0px;
+  margin-top: 5px;
   cursor: pointer;
   letter-spacing: 5px;
   font-weight: 600;
@@ -124,7 +133,7 @@ table#highscores tr td.lbusername:hover {
 
 #TheButton-div {
   display: inline-block;
-  padding: 20px;
+  padding: 5px;
 }
 
 #TheButton-div:hover #TheButton {
@@ -204,7 +213,7 @@ strong {
 
 #repolink {
   position: relative;
-  margin-top: 20px;
+  margin-top: 10px;
   width: 378px;
   height: 60px;
   /* was 45px ^^ */
@@ -263,7 +272,7 @@ strong {
   border-radius: 5px;
   font-size: 100%;
   margin: 10px;
-  margin-right: 31px;
+  margin-right: 39px;
   margin-left: 0px;
   border: 1px solid black;
   background-color: #fafafa;
@@ -283,14 +292,17 @@ div {
 input#iChat-input {
   width: 60ex;
   margin: .5ex;
+  margin-top: 5px;
 }
 
 div#iChat-messages {
   overflow: scroll;
   width: 60ex;
-  height: 30ex;
+  height: 10ex;
   border: solid thin black;
   padding: .4ex;
+  cursor: pointer;
+  margin-top: 5px;
 }
 
 div#iChat-messages p {
@@ -315,7 +327,7 @@ span.iChat-text {
   font-weight: normal;
 }
 
-/* .iChat-message {
+.iChat-message {
   margin: 2px;
   text-align: left;
 }
@@ -326,4 +338,4 @@ span.iChat-text {
 
 .iChat-highlight {
   font-weight: bold;
-} */
+}
