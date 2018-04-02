@@ -122,6 +122,10 @@ table#highscores tr td.lbusername:hover {
           box-shadow: inset 0px 0px 5px #c1c1c1;*/
 }
 
+#TheButton.lighted {
+  box-shadow: 0px 20px 20px;
+}
+
 #TheButton-div {
   display: inline-block;
   padding: 20px;

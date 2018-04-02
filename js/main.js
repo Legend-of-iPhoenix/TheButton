@@ -112,6 +112,7 @@ var lightButtonEnabled = false;
     // <copyright author="_iPhoenix_">
     setInterval(function () {
       var span = document.getElementsByClassName('rainbow')[0];
+      var theButton = document.getElementById("TheButton");
       var lightButton = false;
       if (lastPress.u == username) {
         var length = span.innerText.length;
@@ -128,18 +129,24 @@ var lightButtonEnabled = false;
         lightButton = false;
       }
       if (lightButton) {
-        if (!document.getElementById("TheButton").className.match(/(^|\s)lighted($|\s)/)) {
-          document.getElementById("TheButton").className += " lighted";
-          document.getElementById("TheButton").style.backgroundColor = "hsl(" + Math.floor(Math.random() * 220) + ", 100%, 70%)";
-        }
+        theButton.classList.add("lighted");
       } else {
-        if (document.getElementById("TheButton").className.match(/(^|\s)lighted($|\s)/)) {
-          document.getElementById("TheButton").className =
-            document.getElementById("TheButton").className.replace(/(^|\s)lighted($|\s)/g, ' ');
-          document.getElementById("TheButton").style.backgroundColor = null;
+        if (theButton.classList.contains("lighted")) {
+          theButton.classList.remove("lighted");
+          theButton.style.backgroundColor = null;
+          theButton.style.boxShadow = null;
         }
       }
     }, 50);
+    setInterval(function buttonRainbowBG () {
+      var theButton = document.getElementById("TheButton");
+      if (typeof buttonRainbowBG.cycle == 'undefined') buttonRainbowBG.cycle = 0;
+      if (theButton.classList.contains("lighted")) {
+        buttonRainbowBG.cycle += 3;
+        theButton.style.backgroundColor = "hsl(" + (buttonRainbowBG.cycle % 360) + ", 100%, 70%)";
+        theButton.style.boxShadow = "0px 20px 20px hsl(" + (buttonRainbowBG.cycle % 360) + ", 100%, 85%)";
+      }
+    }, 100);
     // </copyright>
     var leaderboardLength = 5;
     firebase.database().ref("/button/users/").orderByValue().limitToLast(leaderboardLength).on('value', function (snapshot) {
