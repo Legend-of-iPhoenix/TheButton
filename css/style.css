@@ -133,14 +133,19 @@ table#highscores tr td.lbusername:hover {
           box-shadow: inset 0px 0px 5px #c1c1c1;*/
 }
 
-#TheButton:hover {
+#TheButton-div {
+  display: inline-block;
+  padding: 20px;
+}
+
+#TheButton-div:hover #TheButton {
   background-color: #00BFFF;
   border: none;
   box-shadow: 0px 20px 20px rgb(204, 255, 255);
   transform: translateY(-7px);
 }
 
-#TheButton:active {
+#TheButton-div:active #TheButton {
   box-shadow: 0px 6px 8px rgb(204, 255, 255);
   transform: translateY(3px);
   background: #00BFFF;
