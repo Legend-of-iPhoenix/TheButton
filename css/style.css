@@ -290,27 +290,41 @@ div {
 
 /* iChat styling */
 
-#iChat-input {
-  height: 25px;
-  width: 400px;
-  display: block;
-  border: 1px solid black;
-  border-radius: 2px;
-  margin-top: 5px;
-  background-color: #fff;
-  font-size: 105%;
+input#iChat-input {
+  width: 60ex;
+  margin: .5ex;
 }
 
-#iChat-messages {
-  background-color: #eee;
-  height: 200px;
-  width: 50%;
-  font-size: 100%;
-  border: 1px solid black;
-  text-align: left;
-  overflow: auto;
-  cursor: pointer;
+div#iChat-messages {
+  overflow: scroll;
+  width: 60ex;
+  height: 30ex;
+  border: solid thin black;
+  padding: .4ex;
 }
+
+div#iChat-messages p {
+  text-align: left;
+  font-weight: bold;
+}
+
+span.iChat-timestamp {
+  font-family: monospace;
+  font-weight: bold;
+  background-color: #eef;
+  color: #66b;
+}
+
+span.iChat-username {
+  display: inline-block;
+  font-weight: bold;
+  margin: 0 0 0 .5ex;
+}
+
+span.iChat-text {
+  font-weight: normal;
+}
+
 
 .iChat-message {
   margin: 2px;
