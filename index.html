@@ -17,7 +17,8 @@ firebase.initializeApp({apiKey: "AIzaSyC-Jm0sMAlcsur-z4yS3cY0XdrR1F9WjGw",authDo
 	<base target="_blank">
 </head>
 <body id="body">
-	<h1 id="title">TheButton</h1>
+	<div id="mydiv">
+	<h1 id="title">TheButton</h1><button id="togBut" data-target="mydiv" data-mode="on">Toggle Night Mode</button>
 	<div class='visible' id='login-div'>
 		<p> TheButton is a King-of-the-Hill-esque game where the username of the last person to click a button is broadcast to everyone.</p>
 		<p> To join in on the fun, you can register or sign in with Google.</p>
@@ -89,5 +90,6 @@ function openHicontrast() {
   };
 }
 </script>
+	</div>
 </body>
 </html>
