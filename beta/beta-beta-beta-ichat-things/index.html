@@ -51,14 +51,14 @@ document.addEventListener("DOMContentLoaded", x => {
       this.plugins = [];
       this.registerPlugin = function(plugin) {
         var parser = plugin.parser;
-        if ((typeof parser == 'function') && parser.length === 1 && !iChat.plugins.find(plugin => plugin.name === parser.name) && plugin.isPrototypeOf(iChatPlugin)) {
+        if ((typeof parser == 'function') && parser.length === 1 && !iChat.plugins.find(plugin => plugin.name === parser.name) && plugin.constructor == iChatPlugin) {
           iChat.plugins.push(plugin)
         }
       }
       this.registerPlugins = function(...plugins) {
         plugins.forEach(function(plugin) {
           var parser = plugin.parser;
-          if ((typeof parser == 'function') && parser.length === 1 && !iChat.plugins.find(plugin => plugin.name === parser.name) && plugin.isPrototypeOf(iChatPlugin)) {
+          if ((typeof parser == 'function') && parser.length === 1 && !iChat.plugins.find(plugin => plugin.name === parser.name) && plugin.constructor == iChatPlugin) {
             iChat.plugins.push(plugin)
           }
         });
