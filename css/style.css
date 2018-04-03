@@ -64,11 +64,13 @@ table#highscores {
 table#highscores tr {
   transition: all .1s;
   height: 1px;
+  background-color: #E8E8E8;
 }
 
 table#highscores td {
   text-align: center;
   height: 1px;
+  background-color: #F8F8F8;
 }
 
 table#highscores tr:hover {
@@ -81,6 +83,7 @@ table#highscores th {
   text-align: center;
   border-bottom: 1px solid black;
   height: 1px;
+  background-color: #E8E8E8;
 }
 
 table#highscores .lbusername {
