@@ -348,3 +348,18 @@ span.iChat-text {
 .iChat-highlight {
   font-weight: bold;
 }
+
+#togBut {
+  border: 2px solid white;
+  border-radius: 25px;
+  background: #8296DF;
+  padding: 5px;  
+
+}
+
+#togBut:hover {
+  background: black;
+  color: white;
+  
+  
+}
